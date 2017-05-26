@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-culture-component',
@@ -7,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CultureComponentComponent implements OnInit {
 
-  constructor() { }
+  perks: FirebaseListObservable<any>;
+
+  constructor(db: AngularFireDatabase) {
+    this.perks = db.list('/perks');
+    /*this.perks.subscribe(snapshots => {
+      snapshots.forEach(snapshot => {
+        console.log(snapshot.key);
+        console.log(snapshot.val());
+      });
+    });*/
+  }
 
   ngOnInit() {
   }

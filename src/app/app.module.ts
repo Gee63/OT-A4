@@ -8,11 +8,11 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
-import { OsirisDataService } from './osiris-data.service';
 import { CareersComponentComponent } from './careers-component/careers-component.component';
 import { CultureComponentComponent } from './culture-component/culture-component.component';
 import { ContactComponentComponent } from './contact-component/contact-component.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
+
 
 @NgModule({
   declarations: [
@@ -47,7 +47,7 @@ import { HomeComponentComponent } from './home-component/home-component.componen
       }
     ])
   ],
-  providers: [OsirisDataService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

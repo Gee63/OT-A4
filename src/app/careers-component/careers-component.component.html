@@ -1,3 +1,12 @@
 <div id="careers-container">
   careers-component works!
+
+
+    <div style="border: 1px #000 solid" *ngFor="let vacancy of vacancies | async">
+      <p>{{vacancy.description }}</p>
+      <p>{{vacancy.positionTitle}}</p>
+      <p>{{vacancy.team}}</p>
+  </div>
+
 </div>
+
