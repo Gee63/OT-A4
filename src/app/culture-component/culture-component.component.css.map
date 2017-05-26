@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,kBAAkB;EAChB,OAAO,EAAE,KAAK",
+"sources": ["culture-component.component.scss"],
+"names": [],
+"file": "culture-component.component.css"
+}
