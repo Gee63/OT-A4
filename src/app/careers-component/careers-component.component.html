@@ -1,12 +1,45 @@
 <div id="careers-container">
   careers-component works!
 
+  <br>
 
-    <div style="border: 1px #000 solid" *ngFor="let vacancy of vacancies | async">
-      <p>{{vacancy.description }}</p>
-      <p>{{vacancy.positionTitle}}</p>
-      <p>{{vacancy.team}}</p>
+  <div [ngSwitch]="this.isMobile">
+    <ng-template [ngSwitchCase]="true">
+
+      <div class="vacancy mobile" *ngFor="let vacancy of vacancies | async">
+      <div class="multiple-mobile-wrapper">
+        <div class="multiple-mobile"></div>
+        <div class="multiple-comile-content">
+          mobile
+          <p>{{vacancy.description }}</p>
+          <p>{{vacancy.positionTitle}}</p>
+          <p>{{vacancy.team}}</p>
+        </div>
+      </div>
+    </div>
+
+    </ng-template>
+
+    <ng-template [ngSwitchCase]="false">
+
+      <div class="vacancy desktop multiple-desktop" *ngFor="let vacancy of vacancies | async">
+        <div class="content">
+          desktop
+          <p>{{vacancy.description }}</p>
+          <p>{{vacancy.positionTitle}}</p>
+          <p>{{vacancy.team}}</p>
+        </div>
+      </div>
+
+    </ng-template>
+
+
+
   </div>
+
+  <!---->
+
+  <!---->
 
 </div>
 

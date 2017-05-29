@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import {Component, OnInit} from '@angular/core';
+import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 
 @Component({
   selector: 'app-careers-component',
@@ -8,14 +8,29 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 })
 export class CareersComponentComponent implements OnInit {
 
-  vacancies: FirebaseListObservable<any>;
+  public isMobile: boolean;
 
-  constructor(db: AngularFireDatabase) {
+  vacancies:FirebaseListObservable<any>;
+
+  constructor(db:AngularFireDatabase) {
     this.vacancies = db.list('/vacancies');
+
+
   }
 
   ngOnInit() {
+    console.log('do something on init: ' + this.isMobile);
+    if(window.innerWidth <= 800 && window.innerHeight <= 600){
+      this.isMobile = true;
+      console.log('true: ' + this.isMobile);
+    }
+    else{
+      this.isMobile = false;
+      console.log('false: ' + this.isMobile);
+    }
+    console.log('do something end of init: ' + this.isMobile);
   }
+
 }
 
 

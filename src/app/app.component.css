@@ -1,4 +1,6 @@
-.test {
-  display: block; }
+body {
+  width: 100%;
+  margin: 0;
+  padding: 10px; }
 
 /*# sourceMappingURL=app.component.css.map */
