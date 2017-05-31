@@ -3,43 +3,46 @@
 
   <br>
 
+  <input type="text" [(ngModel)]="term">
+
+  <br>
+
+
   <div [ngSwitch]="this.isMobile">
     <ng-template [ngSwitchCase]="true">
 
-      <div class="vacancy mobile" *ngFor="let vacancy of vacancies | async">
+
+      <pre *ngIf="!(vacancies | async)">loading...</pre>
+
+      <div class="vacancy mobile" *ngFor="let vacancy of vacancies | async | filter:term">
       <div class="multiple-mobile-wrapper">
         <div class="multiple-mobile"></div>
         <div class="multiple-comile-content">
           mobile
           <p>{{vacancy.description }}</p>
-          <p>{{vacancy.positionTitle}}</p>
-          <p>{{vacancy.team}}</p>
+          <p>{{vacancy.positionTitle }}</p>
+          <p>{{vacancy.team }}</p>
         </div>
       </div>
     </div>
 
     </ng-template>
-
     <ng-template [ngSwitchCase]="false">
 
-      <div class="vacancy desktop multiple-desktop" *ngFor="let vacancy of vacancies | async">
+      <pre *ngIf="!(vacancies | async )">loading...</pre>
+
+      <div class="vacancy desktop multiple-desktop" *ngFor="let vacancy of vacancies | async | filter:term">
         <div class="content">
           desktop
           <p>{{vacancy.description }}</p>
-          <p>{{vacancy.positionTitle}}</p>
-          <p>{{vacancy.team}}</p>
+          <p>{{vacancy.positionTitle }}</p>
+          <p>{{vacancy.team }}</p>
         </div>
       </div>
 
     </ng-template>
 
-
-
   </div>
-
-  <!---->
-
-  <!---->
 
 </div>
 

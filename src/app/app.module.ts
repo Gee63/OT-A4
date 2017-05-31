@@ -6,6 +6,7 @@ import {RouterModule} from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { AppComponent } from './app.component';
 import { CareersComponentComponent } from './careers-component/careers-component.component';
@@ -24,10 +25,11 @@ import { HomeComponentComponent } from './home-component/home-component.componen
   ],
   imports: [
     BrowserModule,
+    Ng2SearchPipeModule,
     FormsModule,
     HttpModule,
     AngularFireModule.initializeApp(environment.firebase),// imports firebase/app needed for everything
-    AngularFireDatabaseModule, // imports firebase/database, only needed for database features
+    AngularFireDatabaseModule, // imports firebase/database, only needed for database features. database config its in environmets
     RouterModule.forRoot([
       {
         path: '',
@@ -51,3 +53,4 @@ import { HomeComponentComponent } from './home-component/home-component.componen
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

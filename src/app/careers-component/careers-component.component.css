@@ -6,7 +6,8 @@
     height: 200px;
     position: relative;
     display: inline-block;
-    margin: 5px; }
+    margin: 5px;
+    animation: stagger 200ms linear; }
     #careers-container .vacancy.mobile .multiple-mobile-wrapper {
       position: absolute;
       height: 100%;
@@ -47,7 +48,8 @@
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
-      background-repeat: no-repeat; }
+      background-repeat: no-repeat;
+      opacity: 0.9; }
       #careers-container .vacancy.desktop.multiple-desktop .content {
         padding: 5px; }
         #careers-container .vacancy.desktop.multiple-desktop .content p {
@@ -55,23 +57,20 @@
 
 @media screen and (min-width: 1025px) {
   .vacancy {
-    width: 24%; }
-    .vacancy.mobile {
-      display: none !important; }
-    .vacancy.desktop {
-      display: inline-block !important; } }
+    width: 24%; } }
 @media screen and (max-width: 1024px) {
   .vacancy {
-    width: 30%; }
-    .vacancy.mobile {
-      display: inline-block !important; }
-    .vacancy.desktop {
-      display: none !important; } }
+    width: 30%; } }
 @media screen and (max-width: 600px) {
   .vacancy {
     width: 45%; } }
 @media screen and (max-width: 413px) {
   .vacancy {
     width: 98%; } }
+@keyframes stagger {
+  0% {
+    transform: scale(0.5); }
+  100% {
+    transform: scale(1); } }
 
 /*# sourceMappingURL=careers-component.component.css.map */

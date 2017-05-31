@@ -9,6 +9,8 @@
     display: inline-block;
     margin: 5px;
 
+    animation: stagger 200ms linear;
+
     &.mobile{
 
       .multiple-mobile-wrapper {
@@ -64,6 +66,7 @@
         background-position: center;
         background-attachment: fixed;
         background-repeat: no-repeat;
+      opacity: 0.9;
 
       .content{
         padding: 5px;
@@ -80,24 +83,12 @@
 @media screen and (min-width: 1025px) {
   .vacancy{
     width: 24%;
-    &.mobile{
-      display: none !important;
-    }
-    &.desktop{
-      display: inline-block !important;
-    }
   }
 }
 
 @media screen and (max-width: 1024px) {
   .vacancy{
     width: 30%;
-    &.mobile{
-      display: inline-block !important;
-    }
-  &.desktop{
-    display: none !important;
-  }
   }
 }
 
@@ -111,6 +102,15 @@
   .vacancy {
     width: 98%;
   }
+}
+
+@keyframes stagger {
+  0%{
+    transform: scale(0.5);
+  }
+  100%{
+   transform: scale(1);
+}
 }
 
 
