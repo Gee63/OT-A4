@@ -1,5 +1,6 @@
 import {Component, OnInit } from '@angular/core';
 import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
+import {stringDistance} from "codelyzer/util/utils";
 
 @Component({
   selector: 'app-careers-component',
@@ -11,11 +12,35 @@ export class CareersComponentComponent implements OnInit  {
   public isMobile: boolean;
   vacancies:FirebaseListObservable<any>;
 
+  //modal setup
+  jobTitle;
+  jobDescription;
+  jobTeam;
   constructor(db:AngularFireDatabase) {
+    /*db code*/
     this.vacancies = db.list('/vacancies');
+    /*this.vacancies.subscribe(snapshots => {
+        snapshots.forEach(snapshot => {
+          console.log(snapshot.key);
+          console.log(snapshot.val());
+        });
+      });*/
+    /*modal setup*/
   }
 
-  state: string = 'small';
+
+  openModalContent(description, title, team){
+    document.getElementById('modal').classList.add('active');
+    console.log(description + ' ,' + title + ' ,' + team);
+    this.jobTitle = title;
+    this.jobDescription = description;
+    this.jobTeam = team;
+  }
+
+  closeModal(){
+    document.getElementById('modal').classList.remove('active');
+  }
+
 
   ngOnInit() {
     console.log('do something on init: ' + this.isMobile);
