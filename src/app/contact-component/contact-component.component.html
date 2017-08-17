@@ -1,3 +1,25 @@
+<navigation></navigation>
 <div id="contact-container">
-  contact-component works!
+
+  <agm-map [latitude]="lat"
+           [longitude]="lng"
+           [zoom]="zoom"
+           [disableDefaultUI]="true"
+           [zoomControl]="false">
+
+   <agm-marker *ngFor="let m of marker; let i = index"
+               (markerClick)="clickedMarker(m.label, i)"
+               [latitude]="m.lat"
+               [longitude]="m.lng"
+               [iconUrl] = "m.iconUrl">
+
+     <agm-info-window>
+       <strong>{{m.label}}</strong>
+     </agm-info-window>
+
+    </agm-marker>
+
+  </agm-map>
+
 </div>
+

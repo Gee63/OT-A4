@@ -1,1 +1,117 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'aileronregular';
+  src: url("assets/fonts/aileron-regular/aileron-regular-webfont.eot");
+  src: url("assets/fonts/aileron-regular/aileron-regular-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/aileron-regular/aileron-regular-webfont.woff2") format("woff2"), url("assets/fonts/aileron-regular/aileron-regular-webfont.woff") format("woff"), url("assets/fonts/aileron-regular/aileron-regular-webfont.ttf") format("truetype"), url("assets/fonts/aileron-regular/aileron-regular-webfont.svg#aileronregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  width: 100%;
+  margin: 122px 0 0 0; }
+
+nav#mobile {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  nav#mobile .nav-bar {
+    height: 70px;
+    background-color: #fff;
+    width: 100%; }
+    nav#mobile .nav-bar .hamburger {
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      margin-left: 10px; }
+      nav#mobile .nav-bar .hamburger .line {
+        width: 40px;
+        height: 4px;
+        background: #54a6d7;
+        display: block; }
+      nav#mobile .nav-bar .hamburger .line2 {
+        margin: 5px 0; }
+    nav#mobile .nav-bar .logo {
+      display: block;
+      margin: auto;
+      width: 180px;
+      height: 58px;
+      transform: translateY(-50%);
+      top: 50%;
+      position: relative; }
+      nav#mobile .nav-bar .logo img {
+        width: 100%; }
+  nav#mobile .nav-slide {
+    position: absolute;
+    background-color: #fff;
+    width: 85%;
+    height: 100vh;
+    top: 0;
+    left: -85%; }
+    nav#mobile .nav-slide .closeHamburger {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      margin-left: 10px; }
+      nav#mobile .nav-slide .closeHamburger .line {
+        width: 40px;
+        height: 4px;
+        background: #54a6d7;
+        display: block; }
+      nav#mobile .nav-slide .closeHamburger .line1 {
+        -webkit-animation: closeMenuLine1 0.5s linear forwards;
+        -o-animation: closeMenuLine1 0.5s linear forwards;
+        animation: closeMenuLine1 0.5s linear forwards; }
+      nav#mobile .nav-slide .closeHamburger .line2 {
+        margin: 5px 0;
+        -webkit-animation: closeMenuLine2 0.5s linear forwards;
+        -o-animation: closeMenuLine2 0.5s linear forwards;
+        animation: closeMenuLine2 0.5s linear forwards; }
+      nav#mobile .nav-slide .closeHamburger .line3 {
+        -webkit-animation: closeMenuLine3 0.5s linear forwards;
+        -o-animation: closeMenuLine3 0.5s linear forwards;
+        animation: closeMenuLine3 0.5s linear forwards; }
+    nav#mobile .nav-slide.open {
+      transition: 0.5s linear;
+      left: 0; }
+    nav#mobile .nav-slide a {
+      display: block; }
+
+@media screen and (max-width: 1024px) {
+  nav#mobile {
+    display: block; } }
+@keyframes closeMenuLine1 {
+  0% {
+    -ms-transform: rotate(0deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(0deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(0deg);
+    transform-origin: 20%; }
+  100% {
+    -ms-transform: rotate(45deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(45deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(45deg);
+    transform-origin: 20%; } }
+@keyframes closeMenuLine2 {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes closeMenuLine3 {
+  0% {
+    -ms-transform: rotate(0deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(0deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(0deg);
+    transform-origin: 20%; }
+  100% {
+    -ms-transform: rotate(-45deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(-45deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(-45deg);
+    transform-origin: 20%; } }
+
+/*# sourceMappingURL=styles.css.map */

@@ -7,12 +7,18 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { AgmCoreModule } from '@agm/core';
 
+/*component additions*/
 import { AppComponent } from './app.component';
 import { CareersComponentComponent } from './careers-component/careers-component.component';
 import { CultureComponentComponent } from './culture-component/culture-component.component';
 import { ContactComponentComponent } from './contact-component/contact-component.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
+import { AdminComponentComponent } from './admin-component/admin-component.component';
+import { NavigationComponentComponent } from './navigation-component/navigation-component.component';
+import { WhatWeDoComponentComponent } from './what-we-do-component/what-we-do-component.component';
+import { MobileMenuComponentComponent } from './mobile-menu-component/mobile-menu-component.component';
 
 
 @NgModule({
@@ -21,7 +27,11 @@ import { HomeComponentComponent } from './home-component/home-component.componen
     CareersComponentComponent,
     CultureComponentComponent,
     ContactComponentComponent,
-    HomeComponentComponent
+    HomeComponentComponent,
+    AdminComponentComponent,
+    NavigationComponentComponent,
+    WhatWeDoComponentComponent,
+    MobileMenuComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +39,7 @@ import { HomeComponentComponent } from './home-component/home-component.componen
     FormsModule,
     HttpModule,
     AngularFireModule.initializeApp(environment.firebase),// imports firebase/app needed for everything
-    AngularFireDatabaseModule, // imports firebase/database, only needed for database features. database config its in environmets
+    AngularFireDatabaseModule, // imports firebase/database, only needed for database features. database config its in environments
     RouterModule.forRoot([
       {
         path: '',
@@ -46,12 +56,24 @@ import { HomeComponentComponent } from './home-component/home-component.componen
       {
         path: 'culture',
         component: CultureComponentComponent
+      },
+      {
+        path: 'whatwedo',
+        component: WhatWeDoComponentComponent
+      },
+      {
+        path: 'admin',
+        component: AdminComponentComponent
       }
-    ])
+    ]),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyC3gnMnMA7wLIBe8g7oBr3AqaUFMkhHcHI'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
 
 

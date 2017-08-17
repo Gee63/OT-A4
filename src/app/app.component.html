@@ -1,24 +1,4 @@
-<a routerLink="/">home</a>
-<a routerLink="/careers">careers</a>
-<a routerLink="/culture">culture</a>
-<a routerLink="/contact">contact</a>
-<br>
-
-<ul>
-  <li *ngFor="let perk of perks | async">
-    {{perk.description | json}}
-
-  </li>
-</ul>
-
-<!--<ul>
-  <li *ngFor="let team of teams | async">
-    {{team | json}}
-  </li>
-</ul>-->
-
-<br>
 <router-outlet></router-outlet>
-
+<app-mobile-menu-component></app-mobile-menu-component>
 
 

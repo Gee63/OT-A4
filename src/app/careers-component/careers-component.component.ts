@@ -1,6 +1,5 @@
 import {Component, OnInit } from '@angular/core';
 import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
-import {stringDistance} from "codelyzer/util/utils";
 
 @Component({
   selector: 'app-careers-component',
@@ -31,7 +30,7 @@ export class CareersComponentComponent implements OnInit  {
 
   openModalContent(description, title, team){
     document.getElementById('modal').classList.add('active');
-    console.log(description + ' ,' + title + ' ,' + team);
+    console.log(description + ', ' + title + ', ' + team);
     this.jobTitle = title;
     this.jobDescription = description;
     this.jobTeam = team;

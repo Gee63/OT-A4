@@ -1,0 +1,23 @@
+<nav id="mobile">
+  <div class="nav-bar">
+    <div class="hamburger" id="hamburgerOpen" (click)="openMenu()">
+      <div class="line line1"></div>
+      <div class="line line2"></div>
+      <div class="line line3"></div>
+    </div>
+    <div class="logo">
+      <img src="../../assets/osiris-logo-small-text.png">
+    </div>
+  </div>
+  <div class="nav-slide" id="nav-slide-menu">
+    <div class="closeHamburger" id="hamburgerClose" (click)="closeMenu()">
+      <div class="line line1"></div>
+      <div class="line line2"></div>
+      <div class="line line3"></div>
+    </div>
+    <a routerLink="/culture">culture</a>
+    <a routerLink="/careers">careers</a>
+    <a routerLink="/whatwedo">what we do</a>
+    <a routerLink="/contact">contact</a>
+  </div>
+</nav>

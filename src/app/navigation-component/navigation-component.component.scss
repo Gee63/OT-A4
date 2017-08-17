@@ -1,0 +1,36 @@
+.navigation-desktop{
+  position: fixed;
+  display: block;
+  height: 122px;
+  width: 100%;
+  top: 0;
+  background-color: #ffffff;
+
+  .logo{
+    width: 108px;
+    height: 108px;
+    background: url("../../assets/osiris-logo-small.png");
+    position: absolute;
+    left: 50px;
+    transform: translateY(-50%);
+    top: 50%;
+    outline: none;
+  }
+
+  .links{
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    right: 50px;
+
+    a{
+      color: blue;
+
+      &.active{
+        color: black;
+      }
+    }
+  }
+
+
+}

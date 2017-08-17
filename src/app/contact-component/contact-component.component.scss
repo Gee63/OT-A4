@@ -1,3 +1,15 @@
 #contact-container{
   display: block;
+  position: relative;
+
+  agm-map {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 122px;
+    left:0;
+  }
+
+
 }
+
