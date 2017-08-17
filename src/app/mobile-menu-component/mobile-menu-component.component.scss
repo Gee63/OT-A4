@@ -26,11 +26,26 @@ nav#mobile{
         background: $hamburger-color;
         display: block;
       }
-      .line1{}
+      .line1{
+        -ms-transform: rotate(0deg);
+        -ms-transform-origin: 20% 40%;
+        -webkit-transform: rotate(0deg);
+        -webkit-transform-origin: 20% 40%;
+        transform: rotate(0deg);
+        transform-origin: 20%;
+      }
       .line2{
         margin: 5px 0;
+        opacity: 1;
       }
-      .line3{}
+      .line3{
+        -ms-transform: rotate(0deg);
+        -ms-transform-origin: 20% 40%;
+        -webkit-transform: rotate(0deg);
+        -webkit-transform-origin: 20% 40%;
+        transform: rotate(0deg);
+        transform-origin: 20%;
+      }
 
     }
     .logo{
@@ -54,9 +69,11 @@ nav#mobile{
     height: 100vh;
     top: 0;
     left: -85%;
+    transition: 0.5s linear;
+
     .closeHamburger{
       position: absolute;
-      top: 10px;
+      top: 25px;
       right: 10px;
       margin-left: 10px;
 
@@ -65,19 +82,22 @@ nav#mobile{
         height: 4px;
         background: $hamburger-color;
         display: block;
+
       }
-      .line1{
+      .line1 {
+        margin: 5px 0;
         -webkit-animation: closeMenuLine1 0.5s linear forwards;
         -o-animation: closeMenuLine1 0.5s linear forwards;
         animation: closeMenuLine1 0.5s linear forwards;
       }
-      .line2{
+      .line2 {
         margin: 5px 0;
         -webkit-animation: closeMenuLine2 0.5s linear forwards;
         -o-animation: closeMenuLine2 0.5s linear forwards;
         animation: closeMenuLine2 0.5s linear forwards;
       }
-      .line3{
+      .line3 {
+        margin: 5px 0;
         -webkit-animation: closeMenuLine3 0.5s linear forwards;
         -o-animation: closeMenuLine3 0.5s linear forwards;
         animation: closeMenuLine3 0.5s linear forwards;
@@ -87,10 +107,32 @@ nav#mobile{
     &.open{
       transition: 0.5s linear;
       left: 0;
+
+      .line1{
+        -webkit-animation: openMenuLine1 0.5s linear forwards;
+        -o-animation: openMenuLine1 0.5s linear forwards;
+        animation: openMenuLine1 0.5s linear forwards;
+        /*animation-delay: 0.3s;*/
+      }
+      .line2{
+        -webkit-animation: openMenuLine2 0.5s linear forwards;
+        -o-animation: openMenuLine2 0.5s linear forwards;
+        animation: openMenuLine2 0.5s linear forwards;
+        /*animation-delay: 0.3s;*/
+      }
+      .line3{
+        -webkit-animation: openMenuLine3 0.5s linear forwards;
+        -o-animation: openMenuLine3 0.5s linear forwards;
+        animation: openMenuLine3 0.5s linear forwards;
+        /*animation-delay: 0.3s;*/
+      }
+
+
     }
     a{
       display: block;
     }
+
 
   }
 
@@ -105,7 +147,7 @@ nav#mobile{
 }
 
 
-@keyframes closeMenuLine1 {
+@keyframes openMenuLine1 {
   0%{
     -ms-transform: rotate(0deg);
     -ms-transform-origin: 20% 40%;
@@ -125,7 +167,7 @@ nav#mobile{
 
 }
 
-@keyframes closeMenuLine2 {
+@keyframes openMenuLine2 {
   0% {
     opacity: 1;
   }
@@ -134,7 +176,7 @@ nav#mobile{
   }
 }
 
-@keyframes closeMenuLine3 {
+@keyframes openMenuLine3 {
   0%{
     -ms-transform: rotate(0deg);
     -ms-transform-origin: 20% 40%;
@@ -154,3 +196,53 @@ nav#mobile{
 
 }
 
+
+
+@keyframes closeMenuLine1 {
+  0%{
+    -ms-transform: rotate(45deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(45deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(45deg);
+    transform-origin: 20%;
+  }
+  100%{
+    -ms-transform: rotate(0deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(0deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(0deg);
+    transform-origin: 20%;
+  }
+
+}
+
+@keyframes closeMenuLine2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes closeMenuLine3 {
+  0%{
+    -ms-transform: rotate(-45deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(-45deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(-45deg);
+    transform-origin: 20%;
+  }
+  100%{
+    -ms-transform: rotate(0deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(0deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(0deg);
+    transform-origin: 20%;
+  }
+
+}
