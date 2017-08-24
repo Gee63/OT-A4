@@ -1,83 +1,175 @@
+$font1 : 'boulevard_saint_denis';
+$font1-color : #ffffff;
+$font2 : 'aileronlight';
+$font3 : 'aileronregular';
+
 #careers-container{
   display: inline-block;
   text-align: center;
   width: 100%;
-
-  .vacancy{
-    height: 200px;
-    position: relative;
-    display: inline-block;
-    margin: 5px;
-    cursor: pointer;
-
-    animation: expand 200ms linear;
-
-    &.mobile{
-
-      .multiple-mobile-wrapper {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-
-        .multiple-comile-content{
-          padding: 5px;
-          p{
-            margin: 0;
-          }
-        }
-      }
-
-      .multiple-mobile {
-        clip: rect(0 auto auto 0);
-        clip: rect(0, auto, auto, 0);
-        -webkit-mask-image: -webkit-linear-gradient(top, #fff 0%, #fff 100%);
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        overflow: hidden;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-
-        &:before {
-          content: '';
-          background-image: -webkit-linear-gradient(#89259b, #244c6f);
-          background-image: linear-gradient(#89259b, #244c6f);
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-          position: fixed;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-        }
-      }
+  height: 100vh;
+  background-color: #383838;
 
 
+  #careers-hero-container{
+    width: 100%;
+    max-height: 293px;
+    padding-bottom: 10px;
+    background: url("../../assets/careers-hero.jpg") center center no-repeat;
+
+    h1{
+      font-family: $font1;
+      color: $font1-color;
+      margin: 0;
+      font-size: 180px;
+      line-height: 0.8;
     }
 
-    &.desktop.multiple-desktop {
-      display: inline-block;
-      background-image: -webkit-linear-gradient(#89259b, #244c6f);
-      background-image: linear-gradient(#89259b, #244c6f);
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-      opacity: 0.9;
+    h3{
+      margin: 0;
+      font-family: $font2;
+      font-size: 40px;
+      color: $font1-color;
+      font-weight: 100;
+      line-height: 1;
+    }
 
-      .content{
-        padding: 5px;
-        p{
-          margin: 0;
-        }
-      }
+    #filter-careers{
+      max-width: 520px;
+      width: 50%;
+      height: 50px;
+      border: none;
+      outline: none;
+      text-align: left;
+      padding: 0 20px;
+      font-family: $font2;
+      font-weight: 100;
+      color: #ababab;
+      font-size: 24px;
+      -webkit-box-shadow: 10px 10px 10px -10px rgba(0,0,0,0.75);
+      -moz-box-shadow: 10px 10px 10px -10px rgba(0,0,0,0.75);
+      box-shadow: 10px 10px 10px -10px rgba(0,0,0,0.75)
     }
 
   }
+
+  #departments-container{
+    width: 100%;
+    max-height: 230px;
+    background-color: #ffffff;
+    position: relative;
+    overflow-y: hidden;
+
+    .inner{
+      width: 100%;
+      min-width: 1024px;
+      overflow-y: scroll;
+      .department{
+        width: 180px;
+        display: inline-block;
+        margin : auto;
+        padding-top: 20px;
+        vertical-align: top;
+        cursor: pointer;
+        transform: scale(0.9);
+
+
+        .icon{
+          width: 130px;
+          height: 130px;
+          border-radius: 50%;
+          margin: auto;
+
+          img{
+            width: 80px;
+            position: relative;
+            transform: translateY(-50%);
+            top: 50%;
+          }
+        }
+        .name{
+          height: 80px;
+          span{
+            font-family: $font1;
+            font-size: 40px;
+            text-transform: capitalize;
+            display: block;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            line-height: 0.7;
+          }
+
+          /*department and job vacancy color schemes*/
+          &.finance{
+            color: #2d85b8;
+          }
+          &.operations{
+            color: #a1d05d;
+          }
+          &.acquisition.marketing{
+            color: #e88b2f;
+          }
+          &.retention.marketing{
+            color: #784572;
+          }
+        }
+        &:hover{
+          transform: scale(1);
+        }
+      }
+    }
+
+
+  }
+
+  #vacancy-container{
+    box-sizing: border-box;
+    padding: 20px 10px;
+    background-color: #383838;
+
+    .vacancy{
+      height: 50px;
+      width: 80%;
+      max-width: 230px;
+      position: relative;
+      display: inline-block;
+      margin: 10px 10px;
+      cursor: pointer;
+      border-radius: 10px;
+      animation: expand 200ms linear;
+
+        p{
+          margin: 0;
+          -webkit-transform: translateY(-50%);;
+          -moz-transform: translateY(-50%);;
+          -ms-transform: translateY(-50%);;
+          -o-transform: translateY(-50%);;
+          transform: translateY(-50%);;
+          top: 50%;
+          position: relative;
+          font-family: $font2;
+          font-weight: bold;
+          color: #fff;
+        }
+
+      /*department and job vacancy color schemes*/
+      &.finance{
+        background-color: #2d85b8;
+      }
+      &.operations{
+        background-color: #a1d05d;
+      }
+      &.acquisition.marketing{
+        background-color: #e88b2f;
+      }
+      &.retention.marketing{
+        background-color: #784572;
+      }
+
+    }
+  }
+
 
 }
 
@@ -91,9 +183,9 @@
   background: rgba(0,0,0,0.8);
 
   .modal-inner{
-    width: 100%;
+    width: 80%;
+    max-width: 360px;
     height: auto;
-    max-width: 600px;
     background-color: #fff;
     margin: auto;
     align-items: center;
@@ -102,13 +194,89 @@
 
     .modal-close{
       position: absolute;
-      right: 0;
-      top: 0;
+      right: 5px;
+      top: 5px;
       cursor: pointer;
+      font-family: $font3;
+      font-size: 18px;
+      color: #6b6b6b;
+
+    }
+
+    .icon{
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      margin: auto;
+
+      img{
+        width: 80px;
+        position: relative;
+        transform: translateY(-50%);
+        top: 50%;
+      }
+    }
+    .name{
+      margin-top: 15px;
+      span{
+        font-family: $font1;
+        font-size: 40px;
+        text-transform: capitalize;
+        display: block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        line-height: 0.7;
+      }
+
+      /*department and job vacancy color schemes*/
+      &.finance{
+        color: #2d85b8;
+      }
+      &.operations{
+        color: #a1d05d;
+      }
+      &.acquisition.marketing{
+        color: #e88b2f;
+      }
+      &.retention.marketing{
+        color: #784572;
+      }
     }
 
     .modal-content{
       padding: 10px;
+      font-family: $font3;
+      font-size: 14px;
+      color: #6b6b6b;
+
+      button{
+        text-transform: uppercase;
+        font-family: $font3;
+        font-size: 30px;
+        color: #fff;
+        width: 230px;
+        height: 50px;
+        border-radius: 10px;
+        margin: 10px auto;
+        border: none;
+        cursor: pointer;
+        outline: none;
+
+        /*department and job vacancy color schemes*/
+        &.finance{
+          background-color: #2d85b8;
+        }
+        &.operations{
+          background-color: #a1d05d;
+        }
+        &.acquisition.marketing{
+          background-color: #e88b2f;
+        }
+        &.retention.marketing{
+          background-color: #784572;
+        }
+      }
     }
   }
 
@@ -130,9 +298,26 @@
   }
 }
 
+
+
 @media screen and (max-width: 600px){
   .vacancy {
     width: 45%;
+  }
+}
+
+@media screen and (max-width: 440px){
+  #careers-container #careers-hero-container {
+    h1{
+      font-size: 130px
+    }
+    #filter-careers{
+      height: 35px;
+      font-size: 16px;
+    }
+    h3{
+      font-size: 25px;
+    }
   }
 }
 

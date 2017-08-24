@@ -8,32 +8,86 @@ import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database
 })
 export class CareersComponentComponent implements OnInit  {
 
-  public isMobile: boolean;
-  vacancies:FirebaseListObservable<any>;
+  //vacancies:FirebaseListObservable<any>;
 
   //modal setup
   jobTitle;
   jobDescription;
-  jobTeam;
-  constructor(db:AngularFireDatabase) {
+  jobDepartment;
+  iconLink;
+
+  /*object data*/
+  departments = [ {
+    "link" : "finance-icon",
+    "name" : "finance"
+  }, {
+    "link" : "operations-icon",
+    "name" : "operations"
+  }, {
+    "link" : "acquisition-marketing-icon",
+    "name" : "acquisition marketing"
+  }, {
+    "link" : "retention-marketing-icon",
+    "name" : "retention marketing"
+  } ];
+
+  vacancies = [ {
+    "description" : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+    unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. `,
+    "positionTitle" : "payments",
+    "department" : "finance",
+    "link" : "finance-icon"
+    },
+    {
+      "description" : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+    unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. `,
+      "positionTitle" : "communication administrator",
+      "department" : "operations",
+      "link" : "operations-icon"
+    },
+    {
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when a unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "positionTitle" : "affiliate manager",
+      "department" : "acquisition marketing",
+      "link" : "acquisition-marketing-icon"
+    },
+    {
+      "description" : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+    unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. `,
+      "positionTitle" : "retention marketer",
+      "department" : "retention marketing",
+      "link" : "retention-marketing-icon"
+    }
+    ];
+
+  constructor(/*db:AngularFireDatabase*/) {
     /*db code*/
-    this.vacancies = db.list('/vacancies');
+    //uncooment thisssss    ---  this.vacancies = db.list('/vacancies');
     /*this.vacancies.subscribe(snapshots => {
         snapshots.forEach(snapshot => {
           console.log(snapshot.key);
           console.log(snapshot.val());
         });
       });*/
-    /*modal setup*/
+  }
+
+  departmentFilter(departmentName){
+    console.log(departmentName);
+  (<HTMLInputElement>document.getElementById('filter-careers')).value = departmentName;
   }
 
 
-  openModalContent(description, title, team){
+
+  openModalContent(description, title, department, link){
     document.getElementById('modal').classList.add('active');
-    console.log(description + ', ' + title + ', ' + team);
+    console.log(description + ', ' + title + ', ' + department + ', ' + link);
     this.jobTitle = title;
     this.jobDescription = description;
-    this.jobTeam = team;
+    this.jobDepartment = department;
+    this.iconLink = link;
   }
 
   closeModal(){
@@ -42,17 +96,5 @@ export class CareersComponentComponent implements OnInit  {
 
 
   ngOnInit() {
-    console.log('do something on init: ' + this.isMobile);
-    /*upgrade this mobile check before deployment*/
-    if(window.innerWidth <= 800 && window.innerHeight <= 600){
-      this.isMobile = true;
-      console.log('true: ' + this.isMobile);
-    }
-    else{
-      this.isMobile = false;
-      console.log('false: ' + this.isMobile);
-    }
-
-    console.log('do something end of init: ' + this.isMobile);
   }
 }

@@ -50,6 +50,10 @@ import { MobileMenuCloseDirective } from './mobile-menu-close.directive';
         component: HomeComponentComponent
       },
       {
+        path: 'home',
+        component: HomeComponentComponent
+      },
+      {
         path: 'careers',
         component: CareersComponentComponent
       },

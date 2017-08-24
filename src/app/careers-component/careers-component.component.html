@@ -1,60 +1,57 @@
 <navigation></navigation>
 <div id="careers-container">
-  careers-component works!
 
-  <br>
-
-  <input type="text" [(ngModel)]="term">
-
-  <br>
-
-  <div [ngSwitch]="this.isMobile">
-    <ng-template [ngSwitchCase]="true">
-
-
-      <pre *ngIf="!(vacancies | async)">loading...</pre>
-
-      <div (click)="openModalContent()" class="vacancy mobile" *ngFor="let vacancy of vacancies | async | filter:term">
-      <div class="multiple-mobile-wrapper">
-        <div class="multiple-mobile"></div>
-        <div class="multiple-comile-content">
-          mobile
-          <p>{{vacancy.description }}</p>
-          <p>{{vacancy.positionTitle }}</p>
-          <p>{{vacancy.team }}</p>
-        </div>
-      </div>
-    </div>
-
-    </ng-template>
-    <ng-template [ngSwitchCase]="false">
-
-      <pre *ngIf="!(vacancies | async )">loading...</pre>
-
-      <div class="vacancy desktop multiple-desktop" *ngFor="let vacancy of vacancies | async | filter:term">
-        <div class="content" (click)="openModalContent(vacancy.description, vacancy.positionTitle, vacancy.team)">
-          desktop
-          <p>{{vacancy.description }}</p>
-          <p>{{vacancy.positionTitle }}</p>
-          <p>{{vacancy.team }}</p>
-        </div>
-      </div>
-
-    </ng-template>
-
+  <div id="careers-hero-container">
+    <h1>Careers</h1>
+    <input id="filter-careers" placeholder="type your title here" type="text" [(ngModel)]="term" value="" >
+    <h3>or</h3>
+    <h3>choose a career path</h3>
   </div>
 
-  <br>
+<div id="departments-container">
+
+
+  <pre *ngIf="!(departments)">loading...</pre>
+
+  <div class="inner">
+    <div class="department" *ngFor="let department of departments" (click)="departmentFilter(department.name)">
+      <div class="icon" [ngStyle]="{background: 'url(' + '../../assets/' + department.link + '.png' + ') center center no-repeat'}">
+        <img src="../../assets/{{department.link}}.svg" />
+      </div>
+      <div class="name {{department.name}}"><span>{{department.name}}</span></div>
+  </div>
+
+
+</div>
+
+</div>
+
+  <div id="vacancy-container">
+
+    <!--change to *ngIf="!(vacancies | async)" for db link-->
+      <pre *ngIf="!(vacancies )">loading...</pre>
+
+
+    <!--change to *ngFor="let vacancy of vacancies | async | filter:term" for database link-->
+      <div class="vacancy {{vacancy.department}}" *ngFor="let vacancy of vacancies | filter:term"
+           (click)="openModalContent(vacancy.description, vacancy.positionTitle, vacancy.department, vacancy.link)">
+          <p>{{vacancy.positionTitle }}</p>
+      </div>
+  </div>
 
   <div id="modal" class="modal-container">
     <div class="modal-inner">
+      <div class="icon" [ngStyle]="{background: 'url(' + '../../assets/' + iconLink + '.png' + ') center center no-repeat'}">
+        <img src="../../assets/{{iconLink}}.svg" />
+      </div>
       <div (click)="closeModal()" class="modal-close">X</div>
       <div class="modal-content">
-        <h2>title: {{jobTitle}}</h2>
-        <p>description: {{jobDescription}}</p>
-        <p>team: {{jobTeam}}</p>
+        <div class="name {{jobDepartment}}"><span>{{jobTitle}}</span></div>
+        <p>{{jobDescription}}</p>
+        <button class="{{jobDepartment}}">apply</button>
       </div>
     </div>
   </div>
 
 </div>
+

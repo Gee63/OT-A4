@@ -1,4 +1,112 @@
+body {
+  height: 100%; }
+
 #culture-container {
-  display: block; }
+  display: block;
+  width: 100%;
+  height: calc( 100vh - 80px);
+  position: absolute;
+  overflow: hidden; }
+  #culture-container .block {
+    width: 25vw;
+    height: calc( 50vh - 40px );
+    min-height: 320px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    float: left;
+    position: relative; }
+    #culture-container .block .header {
+      margin: 30px 0 0;
+      font-family: "boulevard_saint_denis";
+      font-size: 100px;
+      color: #fff;
+      text-align: center; }
+    #culture-container .block .footer {
+      margin: 0;
+      font-family: "aileronregular";
+      font-size: 65px;
+      color: #fff;
+      z-index: 10000;
+      position: absolute;
+      bottom: 0;
+      display: block;
+      text-align: right;
+      line-height: 0.8; }
+    #culture-container .block .text {
+      font-family: "aileronregular";
+      font-size: 16px;
+      width: 80%;
+      margin: 10px auto;
+      color: #fff;
+      text-align: right; }
+    #culture-container .block img {
+      margin: 30px auto;
+      display: block; }
+    #culture-container .block .corner {
+      background: url("../../assets/corner-graphic.png");
+      width: 30px;
+      height: 30px;
+      position: absolute; }
+      #culture-container .block .corner.topLeft {
+        top: 10px;
+        left: 10px; }
+      #culture-container .block .corner.bottomRight {
+        bottom: 10px;
+        right: 10px;
+        background: url("../../assets/corner-graphic-bottom-right.png"); }
+      #culture-container .block .corner.bottomLeft {
+        bottom: 10px;
+        left: 10px;
+        background: url("../../assets/corner-graphic-bottom-left.png"); }
+    #culture-container .block .inner-block {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%; }
+      #culture-container .block .inner-block .inner-blocks {
+        display: block;
+        float: left;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: center  !important; }
+
+@media screen and (max-width: 1500px) {
+  #culture-container .block .footer {
+    font-size: 50px; } }
+@media screen and (max-width: 1200px) {
+  #culture-container .block .footer {
+    font-size: 40px; } }
+@media screen and (max-height: 992px) {
+  #culture-container .block .text {
+    font-size: 14px; } }
+@media screen and (max-height: 730px) {
+  #culture-container {
+    overflow: visible; } }
+@media screen and (max-width: 1300px) {
+  #culture-container .block {
+    /*width: 33.333vw;
+    height: 33.333vw;*/ }
+    #culture-container .block .header {
+      font-size: 80px; } }
+@media screen and (max-width: 1024px) {
+  #culture-container {
+    overflow: visible; }
+    #culture-container .block {
+      width: 50vw;
+      height: 50vw; }
+      #culture-container .block .footer {
+        font-size: 60px; } }
+@media screen and (max-width: 720px) {
+  #culture-container .block .footer {
+    font-size: 40px; } }
+@media screen and (max-width: 550px) {
+  #culture-container .block {
+    width: 100vw;
+    height: 100vw; } }
+@media screen and (max-width: 320px) {
+  #culture-container .block .text {
+    font-size: 12px; } }
 
 /*# sourceMappingURL=culture-component.component.css.map */

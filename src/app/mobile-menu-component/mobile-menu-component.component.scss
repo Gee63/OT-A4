@@ -1,13 +1,15 @@
 $nav-font-color: #58585a;
-$nav-font-size: 32px;
+$nav-font-size: 20px;
 $nav-font-family: aileronregular;
 $hamburger-color: #54a6d7;
 
 nav#mobile{
   display: none;
-  position: fixed;
+  position: relative;
   top:0;
   width: 100%;
+  left: 0;
+  z-index: 10000000000;
 
   .nav-bar{
     height: 70px;
@@ -58,6 +60,7 @@ nav#mobile{
       position: relative;
       img{
         width: 100%;
+        outline: none;
       }
     }
   }
@@ -104,6 +107,7 @@ nav#mobile{
       }
 
     }
+
     &.open{
       transition: 0.5s linear;
       left: 0;
@@ -123,20 +127,60 @@ nav#mobile{
       .line3{
         -webkit-animation: openMenuLine3 0.5s linear forwards;
         -o-animation: openMenuLine3 0.5s linear forwards;
-        animation: openMenuLine3 0.5s linear forwards;
+        animation: openMenuLine3 0.5s ease-out forwards;
         /*animation-delay: 0.3s;*/
       }
 
 
-    }
-    a{
-      display: block;
+      #links{
+
+          span{
+            transform: translateX(-80px);
+            -webkit-animation: menuLinksOpen 0.1s ease-out forwards;
+            -o-animation: menuLinksOpen 0.1s ease-out forwards;
+            animation: menuLinksOpen 0.1s ease-out forwards;
+            animation-delay: 0.5s;
+          }
+        }
+      }
+
     }
 
+    #links{
+      margin-top: 80px;
+
+      a{
+        display: block;
+        padding: 12px 10px;
+        border-top: 1px #58585a solid;
+        text-decoration: none;
+        font-family: $nav-font-family;
+        font-size: $nav-font-size;
+        color: $nav-font-color;
+
+        &:last-child{
+          border-bottom: 1px #000 solid;
+        }
+
+        &.active{
+          span{
+            color: #54a6d7;
+          }
+        }
+
+        span{
+          -webkit-animation: menuLinksClosed 0.5s ease forwards;
+          -o-animation: menuLinksClosed 0.5s ease forwards;
+          animation: menuLinksClosed 0.5s ease forwards;
+          position: relative;
+          display: block;
+        }
+      }
+    }
 
   }
 
-}
+
 
 @media screen and (max-width: 1024px){
 
@@ -245,4 +289,31 @@ nav#mobile{
     transform-origin: 20%;
   }
 
+}
+
+@keyframes menuLinksOpen {
+   100%{
+     -webkit-transform: translateX(0);
+     -moz-transform: translateX(0);
+     -ms-transform: translateX(0);
+     -o-transform: translateX(0);
+     transform: translateX(0);
+   }
+ }
+
+@keyframes menuLinksClosed {
+  0%{
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100%{
+    -webkit-transform: translateX(-80px);
+    -moz-transform: translateX(-80px);
+    -ms-transform: translateX(-80px);
+    -o-transform: translateX(-80px);
+    transform: translateX(-80px);
+  }
 }

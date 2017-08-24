@@ -4,8 +4,6 @@
   #contact-container agm-map {
     height: 100%;
     width: 100%;
-    position: fixed;
-    top: 122px;
-    left: 0; }
+    position: fixed; }
 
 /*# sourceMappingURL=contact-component.component.css.map */

@@ -4,15 +4,29 @@
   src: url("assets/fonts/aileron-regular/aileron-regular-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/aileron-regular/aileron-regular-webfont.woff2") format("woff2"), url("assets/fonts/aileron-regular/aileron-regular-webfont.woff") format("woff"), url("assets/fonts/aileron-regular/aileron-regular-webfont.ttf") format("truetype"), url("assets/fonts/aileron-regular/aileron-regular-webfont.svg#aileronregular") format("svg");
   font-weight: normal;
   font-style: normal; }
+@font-face {
+  font-family: 'aileronlight';
+  src: url("assets/fonts/aileron-light/aileron-light-webfont.eot");
+  src: url("assets/fonts/aileron-light/aileron-light-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/aileron-light/aileron-light-webfont.woff2") format("woff2"), url("assets/fonts/aileron-light/aileron-light-webfont.woff") format("woff"), url("assets/fonts/aileron-light/aileron-light-webfont.ttf") format("truetype"), url("assets/fonts/aileron-light/aileron-light-webfont.svg#aileronlight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'boulevard_saint_denis';
+  src: url("assets/fonts/boulevard-saint-denis/boulevard_saint_denis-webfont.eot");
+  src: url("assets/fonts/boulevard-saint-denis/boulevard_saint_denis-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/boulevard-saint-denis/boulevard_saint_denis-webfont.woff2") format("woff2"), url("assets/fonts/boulevard-saint-denis/boulevard_saint_denis-webfont.woff") format("woff"), url("assets/fonts/boulevard-saint-denis/boulevard_saint_denis-webfont.ttf") format("truetype"), url("assets/fonts/boulevard-saint-denis/boulevard_saint_denis-webfont.svg#boulevard_saint_denisbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 body {
   width: 100%;
-  margin: 122px 0 0 0; }
+  margin: 0; }
 
 nav#mobile {
   display: none;
-  position: fixed;
+  position: relative;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  left: 0;
+  z-index: 10000000000; }
   nav#mobile .nav-bar {
     height: 70px;
     background-color: #fff;
@@ -53,7 +67,8 @@ nav#mobile {
       top: 50%;
       position: relative; }
       nav#mobile .nav-bar .logo img {
-        width: 100%; }
+        width: 100%;
+        outline: none; }
   nav#mobile .nav-slide {
     position: absolute;
     background-color: #fff;
@@ -103,10 +118,34 @@ nav#mobile {
       nav#mobile .nav-slide.open .line3 {
         -webkit-animation: openMenuLine3 0.5s linear forwards;
         -o-animation: openMenuLine3 0.5s linear forwards;
-        animation: openMenuLine3 0.5s linear forwards;
+        animation: openMenuLine3 0.5s ease-out forwards;
         /*animation-delay: 0.3s;*/ }
-    nav#mobile .nav-slide a {
-      display: block; }
+      nav#mobile .nav-slide.open #links span {
+        transform: translateX(-80px);
+        -webkit-animation: menuLinksOpen 0.1s ease-out forwards;
+        -o-animation: menuLinksOpen 0.1s ease-out forwards;
+        animation: menuLinksOpen 0.1s ease-out forwards;
+        animation-delay: 0.5s; }
+  nav#mobile #links {
+    margin-top: 80px; }
+    nav#mobile #links a {
+      display: block;
+      padding: 12px 10px;
+      border-top: 1px #58585a solid;
+      text-decoration: none;
+      font-family: aileronregular;
+      font-size: 20px;
+      color: #58585a; }
+      nav#mobile #links a:last-child {
+        border-bottom: 1px #000 solid; }
+      nav#mobile #links a.active span {
+        color: #54a6d7; }
+      nav#mobile #links a span {
+        -webkit-animation: menuLinksClosed 0.5s ease forwards;
+        -o-animation: menuLinksClosed 0.5s ease forwards;
+        animation: menuLinksClosed 0.5s ease forwards;
+        position: relative;
+        display: block; }
 
 @media screen and (max-width: 1024px) {
   nav#mobile {
@@ -181,5 +220,25 @@ nav#mobile {
     -webkit-transform-origin: 20% 40%;
     transform: rotate(0deg);
     transform-origin: 20%; } }
+@keyframes menuLinksOpen {
+  100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); } }
+@keyframes menuLinksClosed {
+  0% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); }
+  100% {
+    -webkit-transform: translateX(-80px);
+    -moz-transform: translateX(-80px);
+    -ms-transform: translateX(-80px);
+    -o-transform: translateX(-80px);
+    transform: translateX(-80px); } }
 
 /*# sourceMappingURL=styles.css.map */

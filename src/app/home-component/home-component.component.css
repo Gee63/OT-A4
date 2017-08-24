@@ -6,6 +6,18 @@
   left: 0;
   position: fixed;
   background: url("../../assets/home-bg-desktop.jpg") center center; }
+  #home-container #homeLogo {
+    width: 50%;
+    max-width: 320px;
+    background: url("../../assets/home-center-logo.png") center center;
+    height: 100%;
+    max-height: 492px;
+    margin: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateY(-60%);
+    top: 50%;
+    position: relative; }
   #home-container nav#desktop {
     height: 125px;
     width: 100%;

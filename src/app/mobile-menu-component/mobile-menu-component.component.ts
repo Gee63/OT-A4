@@ -10,6 +10,9 @@ export class MobileMenuComponentComponent implements OnInit {
   constructor() {
   }
 
+  //mobile slide menu options animation
+
+
   ngOnInit() {
   }
 

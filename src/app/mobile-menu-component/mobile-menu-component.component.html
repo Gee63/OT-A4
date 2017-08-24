@@ -6,7 +6,7 @@
       <div class="line line3"></div>
     </div>
     <div class="logo">
-      <img src="../../assets/osiris-logo-small-text.png">
+      <img routerLink="/" src="../../assets/osiris-logo-small-text.png">
     </div>
   </div>
   <div class="nav-slide" id="nav-slide-menu">
@@ -15,9 +15,12 @@
       <div class="line line2"></div>
       <div class="line line3"></div>
     </div>
-    <a routerLink="/culture">culture</a>
-    <a routerLink="/careers">careers</a>
-    <a routerLink="/whatwedo">what we do</a>
-    <a routerLink="/contact">contact</a>
+    <div id="links">
+      <a routerLink="/home" routerLinkActive="active" appMobileMenuClose><span>home</span></a>
+      <a routerLink="/culture" routerLinkActive="active" appMobileMenuClose><span>culture</span></a>
+      <a routerLink="/careers" routerLinkActive="active" appMobileMenuClose><span>careers</span></a>
+      <a routerLink="/whatwedo" routerLinkActive="active" appMobileMenuClose><span>what we do</span></a>
+      <a routerLink="/contact" routerLinkActive="active" appMobileMenuClose><span>contact</span></a>
+    </div>
   </div>
 </nav>

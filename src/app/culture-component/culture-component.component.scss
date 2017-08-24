@@ -1,3 +1,182 @@
+$font1 : 'boulevard_saint_denis';
+$font1-color : #ffffff;
+$font2 : 'aileronlight';
+$font3 : 'aileronregular';
+
+body{
+  height: 100%;
+}
+
 #culture-container{
   display: block;
+  width: 100%;
+  height: calc( 100vh - 80px);
+  position: absolute;
+  overflow: hidden;
+
+  .block{
+    width: 25vw;
+    height: calc( 50vh - 40px );
+    min-height: 320px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    float: left;
+    position: relative;
+
+    .header{
+      margin:30px 0 0;
+      font-family: $font1;
+      font-size: 100px;
+      color: #fff;
+      text-align: center;
+    }
+    .footer{
+      margin:0;
+      font-family: $font3;
+      font-size: 65px;
+      color: #fff;
+      z-index: 10000;
+      position: absolute;
+      bottom: 0;
+      display: block;
+      text-align: right;
+      line-height: 0.8;
+    }
+
+    .text{
+      font-family: $font3;
+      font-size: 16px;
+      width: 80%;
+      margin: 10px auto;
+      color: #fff;
+      text-align: right;
+    }
+
+    img{
+      margin: 30px auto;
+      display: block;
+    }
+
+    .corner{
+      background: url("../../assets/corner-graphic.png");
+      width: 30px;
+      height: 30px;
+      position: absolute;
+
+      &.topLeft{
+        top: 10px;
+        left: 10px;
+      }
+
+      &.bottomRight{
+        bottom: 10px;
+        right: 10px;
+        background: url("../../assets/corner-graphic-bottom-right.png");
+      }
+
+      &.bottomLeft{
+        bottom: 10px;
+        left: 10px;
+        background: url("../../assets/corner-graphic-bottom-left.png");
+      }
+    }
+
+    .inner-block{
+      position: absolute;
+      top:0;
+      left:0;
+      height: 100%;
+      width: 100%;
+
+      .inner-blocks{
+        display: block;
+        float: left;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: center  !important;
+      }
+    }
+
+  }
+
 }
+
+@media screen and (max-width: 1500px){
+  #culture-container .block .footer{
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  #culture-container .block .footer{
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-height: 992px){
+  #culture-container .block .text{
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-height: 730px){
+  #culture-container{
+    overflow: visible;
+  }
+}
+
+@media screen and (max-width: 1300px){
+  #culture-container{
+    .block{
+      /*width: 33.333vw;
+      height: 33.333vw;*/
+
+      .header{
+        font-size: 80px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px){
+  #culture-container{
+    overflow: visible;
+    .block{
+      width: 50vw;
+      height: 50vw;
+
+      .footer{
+        font-size: 60px;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 720px){
+  #culture-container{
+    .block{
+      .footer{
+        font-size: 40px;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 550px){
+  #culture-container{
+    .block{
+      width: 100vw;
+      height: 100vw
+    }
+  }
+}
+
+@media screen and (max-width: 320px){
+  #culture-container .block .text{
+    font-size: 12px;
+  }
+}
+

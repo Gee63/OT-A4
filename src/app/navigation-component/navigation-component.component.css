@@ -1,16 +1,18 @@
 .navigation-desktop {
-  position: fixed;
+  position: relative;
   display: block;
-  height: 122px;
+  height: 80px;
   width: 100%;
   top: 0;
   background-color: #ffffff; }
   .navigation-desktop .logo {
-    width: 108px;
-    height: 108px;
-    background: url("../../assets/osiris-logo-small.png");
+    width: 75px;
+    height: 75px;
+    background: url("../../assets/osiris-logo-small.png") center center;
+    background-size: contain;
+    background-repeat: no-repeat;
     position: absolute;
-    left: 50px;
+    left: 20px;
     transform: translateY(-50%);
     top: 50%;
     outline: none; }
@@ -18,10 +20,18 @@
     top: 50%;
     transform: translateY(-50%);
     position: absolute;
-    right: 50px; }
+    right: 0; }
     .navigation-desktop .links a {
-      color: blue; }
+      color: #29b0e2;
+      font-family: aileronregular;
+      font-size: 24px;
+      text-decoration: none;
+      margin-right: 50px; }
       .navigation-desktop .links a.active {
-        color: black; }
+        color: #383838; }
+
+@media screen and (max-width: 1024px) {
+  .navigation-desktop {
+    display: none; } }
 
 /*# sourceMappingURL=navigation-component.component.css.map */

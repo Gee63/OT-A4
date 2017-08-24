@@ -1,4 +1,15 @@
 <navigation></navigation>
 <div id="culture-container">
-  culture-component works!
+  <div class="block" [ngStyle]="{'background-color': block.background }" *ngFor="let block of blocks">
+  <div class="corner {{block.corner}}" *ngIf="(block.corner)"></div>
+    <div class="inner-block" *ngIf="(block.innerblocks)">
+      <div class="inner-blocks" *ngFor="let innerblock of block.innerblocks" [ngStyle]="{'width' : innerblock.width, 'height' : innerblock.height, 'background' : 'url(' + innerblock.backgroundImage + ')'}"></div>
+    </div>
+    <h1 class="header" *ngIf="(block.header)">{{block.header}}</h1>
+    <h1 class="footer" *ngIf="(block.footer)">{{block.footer}}</h1>
+    <img class="icon" *ngIf="(block.icon)" src="{{block.icon}}">
+    <p class="text" *ngIf="(block.text1)">{{block.text1}}</p>
+    <p class="text" *ngIf="(block.text2)">{{block.text2}}</p>
+  </div>
+
 </div>

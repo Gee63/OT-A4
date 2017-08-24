@@ -1,17 +1,24 @@
+$nav-font-color: #29b0e2;
+$nav-font-active-color: #383838;
+$nav-font-size: 24px;
+$nav-font-family: aileronregular;
+
 .navigation-desktop{
-  position: fixed;
+  position: relative;
   display: block;
-  height: 122px;
+  height: 80px;
   width: 100%;
   top: 0;
   background-color: #ffffff;
 
   .logo{
-    width: 108px;
-    height: 108px;
-    background: url("../../assets/osiris-logo-small.png");
+    width: 75px;
+    height: 75px;
+    background: url("../../assets/osiris-logo-small.png") center center;
+    background-size: contain;
+    background-repeat: no-repeat;
     position: absolute;
-    left: 50px;
+    left: 20px;
     transform: translateY(-50%);
     top: 50%;
     outline: none;
@@ -21,16 +28,29 @@
     top: 50%;
     transform: translateY(-50%);
     position: absolute;
-    right: 50px;
+    right: 0;
 
     a{
-      color: blue;
+      color: $nav-font-color;
+      font-family: $nav-font-family;
+      font-size: $nav-font-size;
+      text-decoration: none;
+      margin-right: 50px;
 
       &.active{
-        color: black;
+        color: $nav-font-active-color;
       }
     }
   }
 
+
+}
+
+
+@media screen and (max-width: 1024px){
+
+  .navigation-desktop{
+    display: none;
+  }
 
 }

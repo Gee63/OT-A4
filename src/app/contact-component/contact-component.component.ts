@@ -29,8 +29,8 @@ export class ContactComponentComponent implements OnInit {
        draggable: true
      },
     {
-      lat: -26.133299,
-      lng: 28.068769,
+      lat: -26.1315628,
+      lng: 28.06863,
       label: 'Churchills',
       iconUrl: 'assets/MapMarker.png',
       draggable: true
