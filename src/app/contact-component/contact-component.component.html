@@ -1,7 +1,31 @@
 <navigation></navigation>
 <div id="contact-container">
 
-  <agm-map [latitude]="lat"
+  <div id="contact-overlay">
+    <div class="inner">
+
+      <h1>+27 11 771 9000</h1>
+      <h2>
+      <span>3rd Floor, 34 Melrose Boulevard</span>
+      <span>Melrose Arch, Melrose North</span>
+      <span>Johannesburg</span>
+      <span>South Africa</span>
+    </h2>
+      <h3>
+        <span>P.O. Box 150</span>
+        <span>Melrose Arch</span>
+        <span>2076</span>
+        <span>Johannesburg</span>
+        <span>South Africa</span>
+      </h3>
+
+    </div>
+    <div class="filler">
+
+
+    </div>
+  </div>
+  <agm-map class="blur" [latitude]="lat"
            [longitude]="lng"
            [zoom]="zoom"
            [disableDefaultUI]="true"

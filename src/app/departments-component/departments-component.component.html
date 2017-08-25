@@ -1,0 +1,15 @@
+<div id="departments-container">
+
+  <div class="inner">
+    <div class="department" *ngFor="let department of departments" appDepartmentsDirective [departmentName]="department.name">
+      <div class="icon" [ngStyle]="{background: 'url(' + '../../assets/' + department.link + '.png' + ') center center no-repeat'}">
+        <img src="../../assets/{{department.link}}.svg" />
+      </div>
+
+      <!--only show the names if the url matches careers-->
+      <div class="name {{department.name}}" *ngIf="router.url === '/careers'"><span>{{department.name}}</span></div>
+    </div>
+
+  </div>
+
+</div>

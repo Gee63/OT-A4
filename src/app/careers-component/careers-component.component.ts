@@ -17,20 +17,6 @@ export class CareersComponentComponent implements OnInit  {
   iconLink;
 
   /*object data*/
-  departments = [ {
-    "link" : "finance-icon",
-    "name" : "finance"
-  }, {
-    "link" : "operations-icon",
-    "name" : "operations"
-  }, {
-    "link" : "acquisition-marketing-icon",
-    "name" : "acquisition marketing"
-  }, {
-    "link" : "retention-marketing-icon",
-    "name" : "retention marketing"
-  } ];
-
   vacancies = [ {
     "description" : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
     unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -74,16 +60,9 @@ export class CareersComponentComponent implements OnInit  {
       });*/
   }
 
-  departmentFilter(departmentName){
-    console.log(departmentName);
-  (<HTMLInputElement>document.getElementById('filter-careers')).value = departmentName;
-  }
-
-
-
   openModalContent(description, title, department, link){
     document.getElementById('modal').classList.add('active');
-    console.log(description + ', ' + title + ', ' + department + ', ' + link);
+    //console.log(description + ', ' + title + ', ' + department + ', ' + link);
     this.jobTitle = title;
     this.jobDescription = description;
     this.jobDepartment = department;
@@ -93,7 +72,6 @@ export class CareersComponentComponent implements OnInit  {
   closeModal(){
     document.getElementById('modal').classList.remove('active');
   }
-
 
   ngOnInit() {
   }

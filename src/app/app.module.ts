@@ -19,8 +19,9 @@ import { AdminComponentComponent } from './admin-component/admin-component.compo
 import { NavigationComponentComponent } from './navigation-component/navigation-component.component';
 import { WhatWeDoComponentComponent } from './what-we-do-component/what-we-do-component.component';
 import { MobileMenuComponentComponent } from './mobile-menu-component/mobile-menu-component.component';
-import { MobileMenuOpenDirective } from './mobile-menu-open.directive';
-import { MobileMenuCloseDirective } from './mobile-menu-close.directive';
+import { MobileMenuDirective } from './mobile-menu.directive';
+import { DepartmentsComponentComponent } from './departments-component/departments-component.component';
+import { DepartmentsDirectiveDirective } from './departments-directive.directive';
 
 
 @NgModule({
@@ -34,8 +35,9 @@ import { MobileMenuCloseDirective } from './mobile-menu-close.directive';
     NavigationComponentComponent,
     WhatWeDoComponentComponent,
     MobileMenuComponentComponent,
-    MobileMenuOpenDirective,
-    MobileMenuCloseDirective
+    MobileMenuDirective,
+    DepartmentsComponentComponent,
+    DepartmentsDirectiveDirective
   ],
   imports: [
     BrowserModule,

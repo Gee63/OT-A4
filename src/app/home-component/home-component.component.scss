@@ -10,7 +10,7 @@ $hamburger-color: #54a6d7;
   top:0;
   left:0;
   position: fixed;
-  background: url("../../assets/home-bg-desktop.jpg") center center;
+  background: url("../../assets/home-bg-desktop.jpg") center center no-repeat / cover;
 
   #homeLogo{
     width: 50%;
@@ -21,7 +21,7 @@ $hamburger-color: #54a6d7;
     margin: auto;
     background-size: contain;
     background-repeat: no-repeat;
-    transform: translateY(-60%);
+    transform: translateY(-50%);
     top: 50%;
     position: relative;
   }

@@ -1,3 +1,6 @@
-
+#what-we-do-container #departments-container {
+  display: none; }
+  #what-we-do-container #departments-container .inner .department .name {
+    display: none; }
 
 /*# sourceMappingURL=what-we-do-component.component.css.map */

@@ -90,6 +90,7 @@ body{
       width: 100%;
 
       .inner-blocks{
+        transition: opacity 0.5s ;
         display: block;
         float: left;
         background-size: cover !important;

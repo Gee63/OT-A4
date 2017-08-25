@@ -1,0 +1,15 @@
+#what-we-do-container{
+
+  #departments-container {
+    display: none;
+    .inner {
+      .department {
+        .name {
+          display: none;
+          span {
+          }
+        }
+      }
+    }
+  }
+}

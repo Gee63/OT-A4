@@ -1,5 +1,6 @@
 <navigation></navigation>
 <div id="culture-container">
+
   <div class="block" [ngStyle]="{'background-color': block.background }" *ngFor="let block of blocks">
   <div class="corner {{block.corner}}" *ngIf="(block.corner)"></div>
     <div class="inner-block" *ngIf="(block.innerblocks)">

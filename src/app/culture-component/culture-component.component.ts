@@ -7,6 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class CultureComponentComponent implements OnInit {
 
+
   /*object data*/
   blocks = [
     {
@@ -122,10 +123,12 @@ export class CultureComponentComponent implements OnInit {
   ];
 
 
+
   constructor() {
+    console.log('constructor');
   }
 
   ngOnInit() {
+    console.log('ngOnInit');
   }
-
 }

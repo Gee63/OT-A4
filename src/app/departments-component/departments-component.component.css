@@ -1,0 +1,52 @@
+#departments-container {
+  width: 100%;
+  max-height: 230px;
+  background-color: #ffffff;
+  position: relative;
+  overflow-y: hidden;
+  text-align: center; }
+  #departments-container .inner {
+    width: 100%;
+    min-width: 1024px;
+    overflow-y: scroll; }
+    #departments-container .inner .department {
+      width: 180px;
+      display: inline-block;
+      margin: auto;
+      padding-top: 20px;
+      vertical-align: top;
+      cursor: pointer;
+      transform: scale(0.9); }
+      #departments-container .inner .department .icon {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        margin: auto; }
+        #departments-container .inner .department .icon img {
+          width: 80px;
+          position: relative;
+          transform: translateY(-50%);
+          top: 50%; }
+      #departments-container .inner .department .name {
+        height: 80px; }
+        #departments-container .inner .department .name span {
+          font-family: "boulevard_saint_denis";
+          font-size: 40px;
+          text-transform: capitalize;
+          display: block;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          line-height: 0.7; }
+        #departments-container .inner .department .name.finance {
+          color: #2d85b8; }
+        #departments-container .inner .department .name.operations {
+          color: #a1d05d; }
+        #departments-container .inner .department .name.acquisition.marketing {
+          color: #e88b2f; }
+        #departments-container .inner .department .name.retention.marketing {
+          color: #784572; }
+      #departments-container .inner .department:hover {
+        transform: scale(1); }
+
+/*# sourceMappingURL=departments-component.component.css.map */

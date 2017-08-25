@@ -1,13 +1,183 @@
+$font1 : 'aileronlight';
+
 #contact-container{
   display: block;
   position: relative;
+
+  #contact-overlay{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(231,231,231,0.8);
+    z-index: 100;
+
+    .inner{
+      width: 60%;
+      height: 100%;
+      padding-top: 90px;
+      color: #656565;
+      font-weight: 100;
+      text-align: right;
+      font-family: $font1;
+      display: inline-block;
+      float: left;
+
+      h1{
+      font-size: 70px;
+      margin: 0;
+        font-weight: 100;
+
+        &:after{
+          background-image: url('../../assets/icon-phone.png');
+          margin-left: 25px;
+          content: '';
+          height: 55px;
+          width: 51px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          position: relative;
+          display: inline-block;
+        }
+    }
+
+      h2{
+        font-size: 40px;
+        font-weight: 100;
+
+        span{
+          display: block;
+          line-height: 1;
+
+          &:first-child:after{
+            background-image: url('../../assets/icon-location.png');
+            margin-left: 25px;
+            content: '';
+            height: 55px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            bottom: -20px;
+            position: relative;
+          }
+          &:after{
+            content: ' ';
+            width: 51px;
+            height: 1px;
+            margin-left: 25px;
+            display: inline-block;
+          }
+        }
+      }
+
+      h3{
+        font-size: 30px;
+        font-weight: 100;
+
+        span{
+          display: block;
+          line-height: 1;
+
+          &:first-child:after{
+            background-image: url('../../assets/icon-mail.png');
+            margin-left: 25px;
+            content: '';
+            height: 42px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            bottom: -20px;
+            position: relative;
+          }
+          &:after{
+            content: ' ';
+            width: 51px;
+            height: 1px;
+            margin-left: 25px;
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    .filler{
+      width: 40%;
+      height: 100%;
+      display: inline-block;
+      float: left;
+
+    }
+
+  }
 
   agm-map {
     height: 100%;
     width: 100%;
     position: fixed;
+
+    &.blur{
+      filter: blur(2px);
+    }
   }
 
 
 }
+
+@media screen and (max-width: 1024px){
+  #contact-container{
+    #contact-overlay{
+      .inner{
+        padding-top: 20px;
+        width: 70%;
+
+        h1{
+          font-size: 60px;
+
+          &:after{
+            height: 45px;
+            width: 46px;
+          }
+
+          h2{
+            font-size: 35px;
+            margin: 0;
+
+            span{
+              &:first-child:after{
+                height: 45px;
+              }
+
+              &:after{
+                height: 45px;
+              }
+            }
+
+          }
+
+          h3{
+            font-size: 25px;
+            margin: 0;
+
+            span{
+              &:first-child:after{
+                height: 32px;
+                bottom: -13px;
+              }
+
+              &:after{
+                height: 32px;
+              }
+            }
+
+          }
+        }
+      }
+      .filler{
+          width: 30%;
+      }
+    }
+  }
+}
+
+
+
+
+
 

@@ -25,7 +25,7 @@ export class ContactComponentComponent implements OnInit {
        lat: -26.133414,
        lng: 28.068387,
        label: 'Osiris Trading',
-       iconUrl: 'assets/MapMarker.png',
+       iconUrl: 'assets/MapMarkerOsiris.png',
        draggable: true
      },
     {
@@ -35,7 +35,7 @@ export class ContactComponentComponent implements OnInit {
       iconUrl: 'assets/MapMarker.png',
       draggable: true
     }
-  ]
+  ];
 
 
   constructor() {

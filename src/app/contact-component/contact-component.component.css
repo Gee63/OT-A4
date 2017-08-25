@@ -1,9 +1,115 @@
 #contact-container {
   display: block;
   position: relative; }
+  #contact-container #contact-overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(231, 231, 231, 0.8);
+    z-index: 100; }
+    #contact-container #contact-overlay .inner {
+      width: 60%;
+      height: 100%;
+      padding-top: 90px;
+      color: #656565;
+      font-weight: 100;
+      text-align: right;
+      font-family: "aileronlight";
+      display: inline-block;
+      float: left; }
+      #contact-container #contact-overlay .inner h1 {
+        font-size: 70px;
+        margin: 0;
+        font-weight: 100; }
+        #contact-container #contact-overlay .inner h1:after {
+          background-image: url("../../assets/icon-phone.png");
+          margin-left: 25px;
+          content: '';
+          height: 55px;
+          width: 51px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          position: relative;
+          display: inline-block; }
+      #contact-container #contact-overlay .inner h2 {
+        font-size: 40px;
+        font-weight: 100; }
+        #contact-container #contact-overlay .inner h2 span {
+          display: block;
+          line-height: 1; }
+          #contact-container #contact-overlay .inner h2 span:first-child:after {
+            background-image: url("../../assets/icon-location.png");
+            margin-left: 25px;
+            content: '';
+            height: 55px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            bottom: -20px;
+            position: relative; }
+          #contact-container #contact-overlay .inner h2 span:after {
+            content: ' ';
+            width: 51px;
+            height: 1px;
+            margin-left: 25px;
+            display: inline-block; }
+      #contact-container #contact-overlay .inner h3 {
+        font-size: 30px;
+        font-weight: 100; }
+        #contact-container #contact-overlay .inner h3 span {
+          display: block;
+          line-height: 1; }
+          #contact-container #contact-overlay .inner h3 span:first-child:after {
+            background-image: url("../../assets/icon-mail.png");
+            margin-left: 25px;
+            content: '';
+            height: 42px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            bottom: -20px;
+            position: relative; }
+          #contact-container #contact-overlay .inner h3 span:after {
+            content: ' ';
+            width: 51px;
+            height: 1px;
+            margin-left: 25px;
+            display: inline-block; }
+    #contact-container #contact-overlay .filler {
+      width: 40%;
+      height: 100%;
+      display: inline-block;
+      float: left; }
   #contact-container agm-map {
     height: 100%;
     width: 100%;
     position: fixed; }
+    #contact-container agm-map.blur {
+      filter: blur(2px); }
+
+@media screen and (max-width: 1024px) {
+  #contact-container #contact-overlay .inner {
+    padding-top: 20px;
+    width: 70%; }
+    #contact-container #contact-overlay .inner h1 {
+      font-size: 60px; }
+      #contact-container #contact-overlay .inner h1:after {
+        height: 45px;
+        width: 46px; }
+      #contact-container #contact-overlay .inner h1 h2 {
+        font-size: 35px;
+        margin: 0; }
+        #contact-container #contact-overlay .inner h1 h2 span:first-child:after {
+          height: 45px; }
+        #contact-container #contact-overlay .inner h1 h2 span:after {
+          height: 45px; }
+      #contact-container #contact-overlay .inner h1 h3 {
+        font-size: 25px;
+        margin: 0; }
+        #contact-container #contact-overlay .inner h1 h3 span:first-child:after {
+          height: 32px;
+          bottom: -13px; }
+        #contact-container #contact-overlay .inner h1 h3 span:after {
+          height: 32px; }
+  #contact-container #contact-overlay .filler {
+    width: 30%; } }
 
 /*# sourceMappingURL=contact-component.component.css.map */

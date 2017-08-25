@@ -8,29 +8,13 @@
     <h3>choose a career path</h3>
   </div>
 
-<div id="departments-container">
 
-
-  <pre *ngIf="!(departments)">loading...</pre>
-
-  <div class="inner">
-    <div class="department" *ngFor="let department of departments" (click)="departmentFilter(department.name)">
-      <div class="icon" [ngStyle]="{background: 'url(' + '../../assets/' + department.link + '.png' + ') center center no-repeat'}">
-        <img src="../../assets/{{department.link}}.svg" />
-      </div>
-      <div class="name {{department.name}}"><span>{{department.name}}</span></div>
-  </div>
-
-
-</div>
-
-</div>
+  <app-departments-component></app-departments-component>
 
   <div id="vacancy-container">
 
     <!--change to *ngIf="!(vacancies | async)" for db link-->
-      <pre *ngIf="!(vacancies )">loading...</pre>
-
+      <pre *ngIf="!(vacancies)">loading...</pre>
 
     <!--change to *ngFor="let vacancy of vacancies | async | filter:term" for database link-->
       <div class="vacancy {{vacancy.department}}" *ngFor="let vacancy of vacancies | filter:term"

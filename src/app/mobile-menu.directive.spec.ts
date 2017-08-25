@@ -1,4 +1,4 @@
-import { MobileMenuOpenDirective } from './mobile-menu-open.directive';
+import { MobileMenuOpenDirective } from './mobile-menu.directive';
 
 describe('MobileMenuOpenDirective', () => {
   it('should create an instance', () => {
