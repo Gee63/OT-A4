@@ -24,7 +24,7 @@ nav#mobile {
   display: none;
   position: relative;
   top: 0;
-  width: 100%;
+  width: 100vw;
   left: 0;
   z-index: 10000000000; }
   nav#mobile .nav-bar {
@@ -35,7 +35,8 @@ nav#mobile {
       position: absolute;
       transform: translateY(-50%);
       top: 50%;
-      margin-left: 10px; }
+      margin-right: 10px;
+      right: 0; }
       nav#mobile .nav-bar .hamburger .line {
         width: 40px;
         height: 4px;
@@ -47,17 +48,26 @@ nav#mobile {
         -webkit-transform: rotate(0deg);
         -webkit-transform-origin: 20% 40%;
         transform: rotate(0deg);
-        transform-origin: 20%; }
+        transform-origin: 20%;
+        -webkit-animation: closeMenuLine1 0.5s linear forwards;
+        -o-animation: closeMenuLine1 0.5s linear forwards;
+        animation: closeMenuLine1 0.5s linear forwards; }
       nav#mobile .nav-bar .hamburger .line2 {
         margin: 5px 0;
-        opacity: 1; }
+        opacity: 1;
+        -webkit-animation: closeMenuLine2 0.5s linear forwards;
+        -o-animation: closeMenuLine2 0.5s linear forwards;
+        animation: closeMenuLine2 0.5s linear forwards; }
       nav#mobile .nav-bar .hamburger .line3 {
         -ms-transform: rotate(0deg);
         -ms-transform-origin: 20% 40%;
         -webkit-transform: rotate(0deg);
         -webkit-transform-origin: 20% 40%;
         transform: rotate(0deg);
-        transform-origin: 20%; }
+        transform-origin: 20%;
+        -webkit-animation: closeMenuLine3 0.5s linear forwards;
+        -o-animation: closeMenuLine3 0.5s linear forwards;
+        animation: closeMenuLine3 0.5s linear forwards; }
     nav#mobile .nav-bar .logo {
       display: block;
       margin: auto;
@@ -69,83 +79,51 @@ nav#mobile {
       nav#mobile .nav-bar .logo img {
         width: 100%;
         outline: none; }
+    nav#mobile .nav-bar.open {
+      transition: 0.5s linear;
+      left: 0; }
+      nav#mobile .nav-bar.open .line1 {
+        -webkit-animation: openMenuLine1 0.5s linear forwards;
+        -o-animation: openMenuLine1 0.5s linear forwards;
+        animation: openMenuLine1 0.5s linear forwards; }
+      nav#mobile .nav-bar.open .line2 {
+        -webkit-animation: openMenuLine2 0.5s linear forwards;
+        -o-animation: openMenuLine2 0.5s linear forwards;
+        animation: openMenuLine2 0.5s linear forwards; }
+      nav#mobile .nav-bar.open .line3 {
+        -webkit-animation: openMenuLine3 0.5s linear forwards;
+        -o-animation: openMenuLine3 0.5s linear forwards;
+        animation: openMenuLine3 0.5s ease-out forwards; }
+      nav#mobile .nav-bar.open #links span {
+        transform: translateX(-80px); }
   nav#mobile .nav-slide {
     position: absolute;
     background-color: #fff;
-    width: 85%;
-    height: 100vh;
-    top: 0;
-    left: -85%;
+    width: 100%;
+    height: calc( 100vh - 70px );
+    top: 70px;
+    left: -100%;
     transition: 0.5s linear; }
-    nav#mobile .nav-slide .closeHamburger {
-      position: absolute;
-      top: 25px;
-      right: 10px;
-      margin-left: 10px; }
-      nav#mobile .nav-slide .closeHamburger .line {
-        width: 40px;
-        height: 4px;
-        background: #54a6d7;
-        display: block; }
-      nav#mobile .nav-slide .closeHamburger .line1 {
-        margin: 5px 0;
-        -webkit-animation: closeMenuLine1 0.5s linear forwards;
-        -o-animation: closeMenuLine1 0.5s linear forwards;
-        animation: closeMenuLine1 0.5s linear forwards; }
-      nav#mobile .nav-slide .closeHamburger .line2 {
-        margin: 5px 0;
-        -webkit-animation: closeMenuLine2 0.5s linear forwards;
-        -o-animation: closeMenuLine2 0.5s linear forwards;
-        animation: closeMenuLine2 0.5s linear forwards; }
-      nav#mobile .nav-slide .closeHamburger .line3 {
-        margin: 5px 0;
-        -webkit-animation: closeMenuLine3 0.5s linear forwards;
-        -o-animation: closeMenuLine3 0.5s linear forwards;
-        animation: closeMenuLine3 0.5s linear forwards; }
     nav#mobile .nav-slide.open {
       transition: 0.5s linear;
       left: 0; }
-      nav#mobile .nav-slide.open .line1 {
-        -webkit-animation: openMenuLine1 0.5s linear forwards;
-        -o-animation: openMenuLine1 0.5s linear forwards;
-        animation: openMenuLine1 0.5s linear forwards;
-        /*animation-delay: 0.3s;*/ }
-      nav#mobile .nav-slide.open .line2 {
-        -webkit-animation: openMenuLine2 0.5s linear forwards;
-        -o-animation: openMenuLine2 0.5s linear forwards;
-        animation: openMenuLine2 0.5s linear forwards;
-        /*animation-delay: 0.3s;*/ }
-      nav#mobile .nav-slide.open .line3 {
-        -webkit-animation: openMenuLine3 0.5s linear forwards;
-        -o-animation: openMenuLine3 0.5s linear forwards;
-        animation: openMenuLine3 0.5s ease-out forwards;
-        /*animation-delay: 0.3s;*/ }
-      nav#mobile .nav-slide.open #links span {
-        transform: translateX(-80px);
-        -webkit-animation: menuLinksOpen 0.1s ease-out forwards;
-        -o-animation: menuLinksOpen 0.1s ease-out forwards;
-        animation: menuLinksOpen 0.1s ease-out forwards;
-        animation-delay: 0.5s; }
-  nav#mobile #links {
-    margin-top: 80px; }
-    nav#mobile #links a {
-      display: block;
-      padding: 12px 10px;
-      border-top: 1px #58585a solid;
-      text-decoration: none;
-      font-family: aileronregular;
-      font-size: 20px;
-      color: #58585a; }
-      nav#mobile #links a:last-child {
-        border-bottom: 1px #000 solid; }
-      nav#mobile #links a.active span {
-        color: #54a6d7; }
-      nav#mobile #links a span {
-        -webkit-animation: menuLinksClosed 0.5s ease forwards;
-        -o-animation: menuLinksClosed 0.5s ease forwards;
-        animation: menuLinksClosed 0.5s ease forwards;
-        position: relative;
-        display: block; }
+  nav#mobile #links a {
+    display: block;
+    padding: 12px 10px;
+    border-top: 1px #58585a solid;
+    text-decoration: none;
+    font-family: aileronregular;
+    font-size: 20px;
+    color: #58585a;
+    text-align: center; }
+    nav#mobile #links a:last-child {
+      border-bottom: 1px #000 solid; }
+    nav#mobile #links a.active span {
+      color: #54a6d7; }
+    nav#mobile #links a span {
+      animation: menuLinksClosed 0.5s ease forwards;
+      position: relative;
+      display: block; }
 
 .no-scroll {
   overflow: hidden; }
@@ -223,25 +201,5 @@ nav#mobile {
     -webkit-transform-origin: 20% 40%;
     transform: rotate(0deg);
     transform-origin: 20%; } }
-@keyframes menuLinksOpen {
-  100% {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0); } }
-@keyframes menuLinksClosed {
-  0% {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0); }
-  100% {
-    -webkit-transform: translateX(-80px);
-    -moz-transform: translateX(-80px);
-    -ms-transform: translateX(-80px);
-    -o-transform: translateX(-80px);
-    transform: translateX(-80px); } }
 
 /*# sourceMappingURL=styles.css.map */

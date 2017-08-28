@@ -7,7 +7,8 @@ nav#mobile{
   display: none;
   position: relative;
   top:0;
-  width: 100%;
+  width: 100vw;
+
   left: 0;
   z-index: 10000000000;
 
@@ -20,7 +21,8 @@ nav#mobile{
       position: absolute;
       transform: translateY(-50%);
       top: 50%;
-      margin-left: 10px;
+      margin-right: 10px;
+      right: 0;
 
       .line{
         width: 40px;
@@ -35,10 +37,19 @@ nav#mobile{
         -webkit-transform-origin: 20% 40%;
         transform: rotate(0deg);
         transform-origin: 20%;
+
+       -webkit-animation: closeMenuLine1 0.5s linear forwards;
+        -o-animation: closeMenuLine1 0.5s linear forwards;
+        animation: closeMenuLine1 0.5s linear forwards;
       }
+
       .line2{
         margin: 5px 0;
         opacity: 1;
+
+        -webkit-animation: closeMenuLine2 0.5s linear forwards;
+        -o-animation: closeMenuLine2 0.5s linear forwards;
+        animation: closeMenuLine2 0.5s linear forwards;
       }
       .line3{
         -ms-transform: rotate(0deg);
@@ -47,6 +58,10 @@ nav#mobile{
         -webkit-transform-origin: 20% 40%;
         transform: rotate(0deg);
         transform-origin: 20%;
+
+        -webkit-animation: closeMenuLine3 0.5s linear forwards;
+        -o-animation: closeMenuLine3 0.5s linear forwards;
+        animation: closeMenuLine3 0.5s linear forwards;
       }
 
     }
@@ -63,50 +78,7 @@ nav#mobile{
         outline: none;
       }
     }
-  }
 
-  .nav-slide{
-    position: absolute;
-    background-color: #fff;
-    width: 85%;
-    height: 100vh;
-    top: 0;
-    left: -85%;
-    transition: 0.5s linear;
-
-    .closeHamburger{
-      position: absolute;
-      top: 25px;
-      right: 10px;
-      margin-left: 10px;
-
-      .line{
-        width: 40px;
-        height: 4px;
-        background: $hamburger-color;
-        display: block;
-
-      }
-      .line1 {
-        margin: 5px 0;
-        -webkit-animation: closeMenuLine1 0.5s linear forwards;
-        -o-animation: closeMenuLine1 0.5s linear forwards;
-        animation: closeMenuLine1 0.5s linear forwards;
-      }
-      .line2 {
-        margin: 5px 0;
-        -webkit-animation: closeMenuLine2 0.5s linear forwards;
-        -o-animation: closeMenuLine2 0.5s linear forwards;
-        animation: closeMenuLine2 0.5s linear forwards;
-      }
-      .line3 {
-        margin: 5px 0;
-        -webkit-animation: closeMenuLine3 0.5s linear forwards;
-        -o-animation: closeMenuLine3 0.5s linear forwards;
-        animation: closeMenuLine3 0.5s linear forwards;
-      }
-
-    }
 
     &.open{
       transition: 0.5s linear;
@@ -116,38 +88,47 @@ nav#mobile{
         -webkit-animation: openMenuLine1 0.5s linear forwards;
         -o-animation: openMenuLine1 0.5s linear forwards;
         animation: openMenuLine1 0.5s linear forwards;
-        /*animation-delay: 0.3s;*/
       }
       .line2{
         -webkit-animation: openMenuLine2 0.5s linear forwards;
         -o-animation: openMenuLine2 0.5s linear forwards;
         animation: openMenuLine2 0.5s linear forwards;
-        /*animation-delay: 0.3s;*/
       }
       .line3{
         -webkit-animation: openMenuLine3 0.5s linear forwards;
         -o-animation: openMenuLine3 0.5s linear forwards;
         animation: openMenuLine3 0.5s ease-out forwards;
-        /*animation-delay: 0.3s;*/
       }
 
 
       #links{
 
-          span{
-            transform: translateX(-80px);
-            -webkit-animation: menuLinksOpen 0.1s ease-out forwards;
-            -o-animation: menuLinksOpen 0.1s ease-out forwards;
-            animation: menuLinksOpen 0.1s ease-out forwards;
-            animation-delay: 0.5s;
-          }
+        span{
+          transform: translateX(-80px);
         }
+      }
+    }
+
+
+  }
+
+  .nav-slide{
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: calc( 100vh - 70px );
+    top: 70px;
+    left: -100%;
+    transition: 0.5s linear;
+
+    &.open{
+      transition: 0.5s linear;
+      left: 0;
       }
 
     }
 
     #links{
-      margin-top: 80px;
 
       a{
         display: block;
@@ -157,6 +138,7 @@ nav#mobile{
         font-family: $nav-font-family;
         font-size: $nav-font-size;
         color: $nav-font-color;
+        text-align: center;
 
         &:last-child{
           border-bottom: 1px #000 solid;
@@ -169,8 +151,6 @@ nav#mobile{
         }
 
         span{
-          -webkit-animation: menuLinksClosed 0.5s ease forwards;
-          -o-animation: menuLinksClosed 0.5s ease forwards;
           animation: menuLinksClosed 0.5s ease forwards;
           position: relative;
           display: block;
@@ -293,29 +273,3 @@ nav#mobile{
 
 }
 
-@keyframes menuLinksOpen {
-   100%{
-     -webkit-transform: translateX(0);
-     -moz-transform: translateX(0);
-     -ms-transform: translateX(0);
-     -o-transform: translateX(0);
-     transform: translateX(0);
-   }
- }
-
-@keyframes menuLinksClosed {
-  0%{
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100%{
-    -webkit-transform: translateX(-80px);
-    -moz-transform: translateX(-80px);
-    -ms-transform: translateX(-80px);
-    -o-transform: translateX(-80px);
-    transform: translateX(-80px);
-  }
-}

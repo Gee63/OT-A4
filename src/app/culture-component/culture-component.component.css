@@ -16,12 +16,27 @@ body {
     padding: 0;
     float: left;
     position: relative; }
+    #culture-container .block.textAnimate:hover .iconHeader {
+      top: 0;
+      opacity: 0;
+      height: 0; }
+    #culture-container .block.textAnimate:hover .textAnimate {
+      opacity: 1;
+      transition: 0.2s ease-in-out;
+      transition-delay: 0.2s; }
+    #culture-container .block.textAnimate:hover .icon {
+      top: 0; }
     #culture-container .block .header {
       margin: 30px 0 0;
       font-family: "boulevard_saint_denis";
       font-size: 100px;
       color: #fff;
-      text-align: center; }
+      text-align: center;
+      line-height: 0.5; }
+      #culture-container .block .header.iconHeader {
+        top: 15%;
+        position: relative;
+        transition: 0.2s linear; }
     #culture-container .block .footer {
       margin: 0;
       font-family: "aileronregular";
@@ -40,9 +55,16 @@ body {
       margin: 10px auto;
       color: #fff;
       text-align: right; }
-    #culture-container .block img {
-      margin: 30px auto;
-      display: block; }
+      #culture-container .block .text.textAnimate {
+        opacity: 0;
+        transition: 0s ease-in-out; }
+    #culture-container .block .icon {
+      margin: 20px auto;
+      display: block;
+      width: 105px;
+      top: 15%;
+      position: relative;
+      transition: 0.2s linear; }
     #culture-container .block .corner {
       background: url("../../assets/corner-graphic.png");
       width: 30px;

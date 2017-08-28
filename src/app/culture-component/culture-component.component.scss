@@ -24,12 +24,37 @@ body{
     float: left;
     position: relative;
 
+    &.textAnimate{
+      &:hover{
+        .iconHeader{
+          top: 0;
+          opacity:0;
+          height: 0;
+        }
+        .textAnimate{
+          opacity: 1;
+          transition: 0.2s ease-in-out;
+          transition-delay: 0.2s;
+        }
+        .icon{
+          top: 0;
+        }
+      }
+    }
+
     .header{
       margin:30px 0 0;
       font-family: $font1;
       font-size: 100px;
       color: #fff;
       text-align: center;
+      line-height: 0.5;
+
+      &.iconHeader{
+        top: 15%;
+        position: relative;
+        transition: 0.2s linear;
+      }
     }
     .footer{
       margin:0;
@@ -51,11 +76,20 @@ body{
       margin: 10px auto;
       color: #fff;
       text-align: right;
+
+      &.textAnimate{
+        opacity: 0;
+        transition: 0s ease-in-out;
+      }
     }
 
-    img{
-      margin: 30px auto;
+    .icon{
+      margin: 20px auto;
       display: block;
+      width: 105px;
+      top: 15%;
+      position: relative;
+      transition: 0.2s linear;
     }
 
     .corner{
