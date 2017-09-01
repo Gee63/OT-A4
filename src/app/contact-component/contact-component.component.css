@@ -6,7 +6,7 @@
     width: 100%;
     position: fixed;
     background-color: rgba(231, 231, 231, 0.8);
-    z-index: 100; }
+    z-index: 99; }
     #contact-container #contact-overlay .inner {
       width: 60%;
       height: 100%;

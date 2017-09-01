@@ -1,7 +1,7 @@
 <div id="departments-container">
 
   <div class="inner">
-    <div class="department" *ngFor="let department of departments" appDepartmentsDirective [departmentName]="department.name">
+    <div class="department" *ngFor="let department of departments" appDepartmentsDirective [departmentName]="department.name" (click)="onClick(department.name)">
       <div class="icon" [ngStyle]="{background: 'url(' + '../../assets/' + department.link + '.png' + ') center center no-repeat'}">
         <img src="../../assets/{{department.link}}.svg" />
       </div>
@@ -13,3 +13,4 @@
   </div>
 
 </div>
+

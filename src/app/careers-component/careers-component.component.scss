@@ -110,6 +110,7 @@ $font3 : 'aileronregular';
   height: 100%;
   display: none;
   background: rgba(0,0,0,0.8);
+  z-index: 101;
 
   .modal-inner{
     width: 80%;
@@ -264,5 +265,3 @@ $font3 : 'aileronregular';
    transform: scale(1);
 }
 }
-
-

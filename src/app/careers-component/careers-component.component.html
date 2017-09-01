@@ -3,13 +3,14 @@
 
   <div id="careers-hero-container">
     <h1>Careers</h1>
-    <input id="filter-careers" placeholder="type your title here" type="text" [(ngModel)]="term" value="" >
+    <input id="filter-careers" placeholder="type your title here" type="text" [(ngModel)]="term">
     <h3>or</h3>
     <h3>choose a career path</h3>
+
   </div>
 
-
-  <app-departments-component></app-departments-component>
+  <!--capture output event emitter from departments component and set term. this filters the positions without keystrokes-->
+  <app-departments-component (filterTermUpdate)="term = $event"></app-departments-component>
 
   <div id="vacancy-container">
 
@@ -37,5 +38,9 @@
     </div>
   </div>
 
+  <app-apply-form-component></app-apply-form-component>
+
 </div>
+
+
 

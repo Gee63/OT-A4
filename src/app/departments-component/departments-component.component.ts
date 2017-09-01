@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -27,10 +27,15 @@ export class DepartmentsComponentComponent implements OnInit {
     console.log(this.router.url);
   }
 
+/*output the dpt name so parent element can*/
+  @Output() filterTermUpdate: EventEmitter<string> = new EventEmitter<string>();
+
+  onClick(departmentName) {
+    console.log('filterTerm: ' + departmentName);
+    this.filterTermUpdate.emit(departmentName);
+  }
 
   ngOnInit() {
   }
 
 }
-
-

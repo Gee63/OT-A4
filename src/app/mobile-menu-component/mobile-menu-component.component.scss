@@ -10,7 +10,7 @@ nav#mobile{
   width: 100vw;
 
   left: 0;
-  z-index: 10000000000;
+  z-index: 100;
 
   .nav-bar{
     height: 70px;
@@ -116,14 +116,15 @@ nav#mobile{
     position: absolute;
     background-color: #fff;
     width: 100%;
-    height: calc( 100vh - 70px );
+    height: 0;
     top: 70px;
-    left: -100%;
+    left: 0;
     transition: 0.5s linear;
+    overflow: hidden;
 
     &.open{
       transition: 0.5s linear;
-      left: 0;
+      height: 240px;
       }
 
     }

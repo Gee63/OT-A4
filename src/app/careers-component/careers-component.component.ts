@@ -1,4 +1,4 @@
-import {Component, OnInit } from '@angular/core';
+import {Component, OnInit  } from '@angular/core';
 import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 
 @Component({
@@ -9,6 +9,7 @@ import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database
 export class CareersComponentComponent implements OnInit  {
 
   //vacancies:FirebaseListObservable<any>;
+
 
   //modal setup
   jobTitle;
@@ -43,13 +44,56 @@ export class CareersComponentComponent implements OnInit  {
       "description" : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
     unknown printer took a galley of type and scrambled it to make a type specimen book.
     It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. `,
+      "positionTitle" : "payments",
+      "department" : "finance",
+      "link" : "finance-icon"
+    },
+    {
+      "description" : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+    unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. `,
+      "positionTitle" : "communication administrator",
+      "department" : "operations",
+      "link" : "operations-icon"
+    },
+    {
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when a unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "positionTitle" : "affiliate manager",
+      "department" : "acquisition marketing",
+      "link" : "acquisition-marketing-icon"
+    },
+    {
+      "description" : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+    unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. `,
+      "positionTitle" : "payments",
+      "department" : "finance",
+      "link" : "finance-icon"
+    },
+    {
+      "description" : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+    unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. `,
+      "positionTitle" : "communication administrator",
+      "department" : "operations",
+      "link" : "operations-icon"
+    },
+    {
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when a unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "positionTitle" : "affiliate manager",
+      "department" : "acquisition marketing",
+      "link" : "acquisition-marketing-icon"
+    },
+    {
+      "description" : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+    unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. `,
       "positionTitle" : "retention marketer",
       "department" : "retention marketing",
       "link" : "retention-marketing-icon"
     }
     ];
-
-  constructor(/*db:AngularFireDatabase*/) {
+  constructor(db:AngularFireDatabase) {
     /*db code*/
     //uncooment thisssss    ---  this.vacancies = db.list('/vacancies');
     /*this.vacancies.subscribe(snapshots => {
@@ -58,6 +102,8 @@ export class CareersComponentComponent implements OnInit  {
           console.log(snapshot.val());
         });
       });*/
+
+
   }
 
   openModalContent(description, title, department, link){

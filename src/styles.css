@@ -1,3 +1,4 @@
+@import url(~@angular/material/prebuilt-themes/deeppurple-amber.css);
 @font-face {
   font-family: 'aileronregular';
   src: url("assets/fonts/aileron-regular/aileron-regular-webfont.eot");
@@ -26,7 +27,7 @@ nav#mobile {
   top: 0;
   width: 100vw;
   left: 0;
-  z-index: 10000000000; }
+  z-index: 100; }
   nav#mobile .nav-bar {
     height: 70px;
     background-color: #fff;
@@ -100,13 +101,14 @@ nav#mobile {
     position: absolute;
     background-color: #fff;
     width: 100%;
-    height: calc( 100vh - 70px );
+    height: 0;
     top: 70px;
-    left: -100%;
-    transition: 0.5s linear; }
+    left: 0;
+    transition: 0.5s linear;
+    overflow: hidden; }
     nav#mobile .nav-slide.open {
       transition: 0.5s linear;
-      left: 0; }
+      height: 240px; }
   nav#mobile #links a {
     display: block;
     padding: 12px 10px;

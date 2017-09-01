@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {RouterModule} from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
@@ -8,6 +8,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AgmCoreModule } from '@agm/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 /*component additions*/
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { MobileMenuComponentComponent } from './mobile-menu-component/mobile-men
 import { MobileMenuDirective } from './mobile-menu.directive';
 import { DepartmentsComponentComponent } from './departments-component/departments-component.component';
 import { DepartmentsDirectiveDirective } from './departments-directive.directive';
+import { ApplyFormComponentComponent } from './apply-form-component/apply-form-component.component';
 
 
 @NgModule({
@@ -37,13 +39,16 @@ import { DepartmentsDirectiveDirective } from './departments-directive.directive
     MobileMenuComponentComponent,
     MobileMenuDirective,
     DepartmentsComponentComponent,
-    DepartmentsDirectiveDirective
+    DepartmentsDirectiveDirective,
+    ApplyFormComponentComponent
   ],
   imports: [
     BrowserModule,
     Ng2SearchPipeModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
+    BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),// imports firebase/app needed for everything
     AngularFireDatabaseModule, // imports firebase/database, only needed for database features. database config its in environments
     RouterModule.forRoot([
