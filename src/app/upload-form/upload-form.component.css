@@ -1,0 +1,35 @@
+#apply-form-container {
+  width: 100%;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px 0; }
+  #apply-form-container form {
+    width: 90%;
+    max-width: 450px;
+    margin: auto; }
+    #apply-form-container form input {
+      width: 100%;
+      margin-bottom: 20px; }
+    #apply-form-container form .progress {
+      position: relative;
+      height: 4px;
+      display: block;
+      width: 100%;
+      background-color: #ec7474;
+      border-radius: 2px;
+      margin: 0.5rem 0 1rem 0;
+      overflow: visible; }
+      #apply-form-container form .progress .progress-bar {
+        background-color: #17ff6a;
+        position: relative;
+        height: 4px;
+        display: block;
+        width: 70%;
+        border-radius: 2px;
+        margin: 0.5rem 0 1rem 0;
+        overflow: hidden;
+        z-index: 2; }
+    #apply-form-container form .input-field.inline {
+      width: 100%; }
+
+/*# sourceMappingURL=upload-form.component.css.map */

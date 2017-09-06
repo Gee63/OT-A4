@@ -1,14 +1,13 @@
 #departments-container {
   width: 100%;
   max-height: 230px;
-  background-color: #ffffff;
   position: relative;
   overflow-y: hidden;
   text-align: center; }
   #departments-container .inner {
     width: 100%;
     min-width: 1024px;
-    overflow-y: scroll; }
+    /*overflow-y: scroll;*/ }
     #departments-container .inner .department {
       width: 180px;
       display: inline-block;
@@ -48,5 +47,23 @@
           color: #784572; }
       #departments-container .inner .department:hover {
         transform: scale(1); }
+  #departments-container.white {
+    background-color: #ffffff; }
+  #departments-container.OsirisBlue {
+    background-color: #6cb4df; }
+
+@media screen and (max-width: 992px) {
+  #departments-container.OsirisBlue {
+    background-color: #6cb4df; }
+    #departments-container.OsirisBlue .inner .department {
+      webkit-transform: scale(1);
+      transform: scale(1);
+      float: left; } }
+@media screen and (max-width: 500px) {
+  #departments-container.OsirisBlue {
+    background-color: #6cb4df; }
+    #departments-container.OsirisBlue .inner .department .icon {
+      width: 160px;
+      height: 160px; } }
 
 /*# sourceMappingURL=departments-component.component.css.map */

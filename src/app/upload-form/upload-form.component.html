@@ -1,0 +1,51 @@
+<div id="apply-form-container">
+  <h1>Application Form</h1>
+  <form materialize [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="input-field inline">
+      <input id="first_name" type="text" formControlName="name" class="validate">
+      <label for="first_name">First Name</label>
+    </div>
+    <div class="input-field inline">
+      <input id="surname" type="text" formControlName="surname" class="validate">
+      <label for="surname">Surname</label>
+    </div>
+    <div class="input-field inline">
+      <input id="email" class="validate" type="email" formControlName="email">
+      <label for="email" data-error="wrong" data-success="right">Email</label>
+    </div>
+
+
+    <div class="input-field inline">
+      <div *ngIf="currentUpload">
+        <div class="progress">
+          <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': currentUpload?.progress + '%' }"></div>
+        </div>
+        Progress: {{currentUpload?.name}} | {{currentUpload?.progress}}% Complete
+      </div>
+
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>File</span>
+          <input type="file" (change)="detectFiles($event)">
+        </div>
+        <div class="file-path-wrapper">
+          <input id="file" class="file-path validate" type="text">
+          <label for="file" data-error="wrong" data-success="right"></label>
+        </div>
+      </div>
+    </div>
+
+
+    <button class="btn"
+            [disabled]="!selectedFiles || form.invalid"
+             >
+      Upload Single
+    </button>
+
+    <!--<button class="btn" type="submit" [disabled]="form.invalid">Submit</button>-->
+  </form>
+
+
+</div>
+
+

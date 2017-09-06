@@ -1,6 +1,106 @@
-#what-we-do-container #departments-container {
-  display: none; }
-  #what-we-do-container #departments-container .inner .department .name {
-    display: none; }
+#what-we-do-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #6cb4df; }
+  #what-we-do-container h1 {
+    font-family: "boulevard_saint_denis";
+    font-size: 100px;
+    margin: 30px 0 0;
+    position: relative;
+    color: #fff;
+    line-height: 0.7;
+    z-index: 1;
+    display: none;
+    text-align: center; }
+  #what-we-do-container #what-we-do-data {
+    max-width: 1360px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    left: 0;
+    right: 0;
+    margin: auto; }
+    #what-we-do-container #what-we-do-data h1 {
+      font-family: "boulevard_saint_denis";
+      font-size: 160px;
+      margin: 0;
+      position: relative;
+      color: #fff;
+      padding-left: 10%;
+      line-height: 0.7;
+      display: inline-block;
+      z-index: 1;
+      top: -60px; }
+    #what-we-do-container #what-we-do-data #text {
+      display: inline-block;
+      max-width: 460px;
+      width: 30%;
+      margin: 0 0 0 5%;
+      padding: 10px 20px;
+      position: absolute;
+      top: -50px;
+      height: auto;
+      min-height: 200px;
+      z-index: 1;
+      font-family: "aileronregular";
+      color: #fff;
+      font-size: 14px; }
+      #what-we-do-container #what-we-do-data #text:before {
+        content: url("../../assets/corner-graphic.png");
+        position: absolute;
+        top: 0;
+        left: 0; }
+      #what-we-do-container #what-we-do-data #text:after {
+        content: url("../../assets/corner-graphic-bottom-right.png");
+        position: absolute;
+        bottom: 0;
+        right: 0; }
+    #what-we-do-container #what-we-do-data img {
+      max-width: 1360px;
+      width: 100%;
+      bottom: 76px;
+      position: relative;
+      max-height: 440px;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0%);
+      transform: translate(-50%, 0%); }
+
+@media screen and (max-width: 1439px) {
+  #what-we-do-container #what-we-do-data h1 {
+    font-size: 115px; } }
+@media screen and (max-width: 1024px) {
+  #what-we-do-container #what-we-do-data img {
+    bottom: 65px; } }
+/*click into mobile*/
+@media screen and (max-width: 992px) {
+  #what-we-do-container {
+    position: relative; }
+    #what-we-do-container h1 {
+      display: block;
+      margin: 0;
+      top: 15px; }
+    #what-we-do-container #what-we-do-data {
+      position: relative;
+      display: block;
+      height: auto; }
+      #what-we-do-container #what-we-do-data h1 {
+        display: none; }
+      #what-we-do-container #what-we-do-data #text {
+        margin: auto;
+        width: 80%;
+        max-width: 800px;
+        left: 0;
+        right: 0;
+        position: relative;
+        top: 40px;
+        display: block; }
+      #what-we-do-container #what-we-do-data img {
+        display: block;
+        bottom: -50px; } }
+@media screen and (max-width: 320px) {
+  #what-we-do-container h1 {
+    font-size: 90px; } }
 
 /*# sourceMappingURL=what-we-do-component.component.css.map */

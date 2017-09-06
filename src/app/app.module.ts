@@ -9,6 +9,7 @@ import { environment } from '../environments/environment';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AgmCoreModule } from '@agm/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MaterializeModule } from 'angular2-materialize';
 
 /*component additions*/
 import { AppComponent } from './app.component';
@@ -23,7 +24,7 @@ import { MobileMenuComponentComponent } from './mobile-menu-component/mobile-men
 import { MobileMenuDirective } from './mobile-menu.directive';
 import { DepartmentsComponentComponent } from './departments-component/departments-component.component';
 import { DepartmentsDirectiveDirective } from './departments-directive.directive';
-import { ApplyFormComponentComponent } from './apply-form-component/apply-form-component.component';
+import { UploadFormComponent } from './upload-form/upload-form.component';
 
 
 @NgModule({
@@ -40,7 +41,7 @@ import { ApplyFormComponentComponent } from './apply-form-component/apply-form-c
     MobileMenuDirective,
     DepartmentsComponentComponent,
     DepartmentsDirectiveDirective,
-    ApplyFormComponentComponent
+    UploadFormComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +50,7 @@ import { ApplyFormComponentComponent } from './apply-form-component/apply-form-c
     ReactiveFormsModule,
     HttpModule,
     BrowserAnimationsModule,
+    MaterializeModule,
     AngularFireModule.initializeApp(environment.firebase),// imports firebase/app needed for everything
     AngularFireDatabaseModule, // imports firebase/database, only needed for database features. database config its in environments
     RouterModule.forRoot([
@@ -90,5 +92,4 @@ import { ApplyFormComponentComponent } from './apply-form-component/apply-form-c
 })
 export class AppModule {
 }
-
 
