@@ -18,7 +18,7 @@
       <pre *ngIf="!(vacancies)">loading...</pre>
 
     <!--change to *ngFor="let vacancy of vacancies | async | filter:term" for database link-->
-      <div class="vacancy {{vacancy.department}}" *ngFor="let vacancy of vacancies | filter:term"
+      <div class="vacancy {{vacancy.department}}" *ngFor="let vacancy of vacancies | async | filter:term"
            (click)="openModalContent(vacancy.description, vacancy.positionTitle, vacancy.department, vacancy.link)">
           <p>{{vacancy.positionTitle }}</p>
       </div>
