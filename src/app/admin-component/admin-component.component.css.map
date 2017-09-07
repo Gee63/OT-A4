@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAEE,kBAAK;EACH,MAAM,EAAE,cAAc;EAEpB,wBAAE;IACA,MAAM,EAAE,cAAc;IACtB,UAAU,EAAE,MAAM;IAClB,+BAAM;MACJ,KAAK,EAAE,KAAK",
+"sources": ["admin-component.component.scss"],
 "names": [],
 "file": "admin-component.component.css"
 }

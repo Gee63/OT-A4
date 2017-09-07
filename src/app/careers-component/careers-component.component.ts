@@ -16,6 +16,7 @@ export class CareersComponentComponent implements OnInit  {
   jobDescription;
   jobDepartment;
   iconLink;
+  term;
 
   /*object data*/
   vacancies = [ {

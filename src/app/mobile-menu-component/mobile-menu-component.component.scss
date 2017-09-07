@@ -105,6 +105,7 @@ nav#mobile{
 
         span{
           transform: translateX(-80px);
+          line-height: 1;
         }
       }
     }
@@ -155,6 +156,7 @@ nav#mobile{
           animation: menuLinksClosed 0.5s ease forwards;
           position: relative;
           display: block;
+          line-height: 1;
         }
       }
     }

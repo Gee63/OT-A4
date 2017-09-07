@@ -1,3 +1,9 @@
-
+#admin-panel table {
+  border: 1px #000 solid; }
+  #admin-panel table tr td {
+    border: 1px #000 solid;
+    text-align: center; }
+    #admin-panel table tr td button {
+      float: right; }
 
 /*# sourceMappingURL=admin-component.component.css.map */

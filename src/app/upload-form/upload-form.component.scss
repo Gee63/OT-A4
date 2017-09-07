@@ -1,10 +1,18 @@
+$font1 : 'aileronlight';
+
+
 #apply-form-container{
   width: 100%;
   margin: 20px auto;
   background-color: #fff;
   padding: 20px 0;
 
-  form{
+  h1{
+    font-family: $font1;
+    font-size: 50px;
+  }
+
+  #applicantForm{
     width: 90%;
     max-width: 450px;
     margin: auto;
@@ -38,6 +46,23 @@
     .input-field.inline{
       width: 100%;
     }
+
+  }
+
+  #formError{
+    display: none;
+  }
+
+  #formThanks{
+    display: none;
+  }
+
+  .hide{
+    display: none !important;
+  }
+
+  .show{
+    display: block !important;
   }
 
 }

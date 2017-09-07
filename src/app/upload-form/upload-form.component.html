@@ -1,6 +1,6 @@
 <div id="apply-form-container">
   <h1>Application Form</h1>
-  <form materialize [formGroup]="form" (ngSubmit)="onSubmit()">
+  <form id="applicantForm" materialize [formGroup]="form">
     <div class="input-field inline">
       <input id="first_name" type="text" formControlName="name" class="validate">
       <label for="first_name">First Name</label>
@@ -13,9 +13,13 @@
       <input id="email" class="validate" type="email" formControlName="email">
       <label for="email" data-error="wrong" data-success="right">Email</label>
     </div>
-
+    <div class="input-field inline">
+      <input id="position" class="file-path validate" type="text">
+      <label for="position" data-error="wrong" data-success="right">Position</label>
+    </div>
 
     <div class="input-field inline">
+
       <div *ngIf="currentUpload">
         <div class="progress">
           <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': currentUpload?.progress + '%' }"></div>
@@ -32,19 +36,25 @@
           <input id="file" class="file-path validate" type="text">
           <label for="file" data-error="wrong" data-success="right"></label>
         </div>
+
       </div>
     </div>
 
 
-    <button class="btn"
-            [disabled]="!selectedFiles || form.invalid"
-             >
-      Upload Single
+    <button class="btn" [disabled]="!selectedFiles || form.invalid" (click)="uploadSingle()">
+      Apply
     </button>
 
     <!--<button class="btn" type="submit" [disabled]="form.invalid">Submit</button>-->
   </form>
 
+  <div id="formError">
+    Oops!! Something went wrong. Please refresh the page and try again or email us directly at "email address".
+  </div>
+
+  <div id="formThanks">
+    thanks!!
+  </div>
 
 </div>
 
