@@ -1,3 +1,4 @@
+<navigation></navigation>
 <div id="admin-panel">
 
   <div class="row">
@@ -24,11 +25,11 @@
         </thead>
 
         <tbody>
-        <tr>
-          <td>Guy</td>
-          <td>Weller</td>
-          <td>Frontend</td>
-          <td><span>CV Name</span><button class="btn waves-effect">view cv</button></td>
+        <tr *ngFor="let applicant of applicants | async">
+          <td>{{applicant.applicantName}}</td>
+          <td>{{applicant.applicantSurname}}</td>
+          <td>{{applicant.position}}</td>
+          <td><a href="{{applicant.downloadUrl}}" class="btn waves-effect">Download CV</a><span>{{applicant.fileName}}</span></td>
         </tr>
         </tbody>
       </table>
