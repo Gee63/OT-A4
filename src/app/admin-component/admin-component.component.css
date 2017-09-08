@@ -4,5 +4,21 @@
     border: 1px #000 solid; }
     #admin-panel table tr td a {
       margin-right: 10px; }
+#admin-panel #delete-vacancies {
+  margin-top: 20px;
+  text-align: center; }
+  #admin-panel #delete-vacancies .vacancy {
+    border: 1px #000 solid;
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    height: 160px;
+    width: 250px;
+    text-transform: capitalize; }
+    #admin-panel #delete-vacancies .vacancy p {
+      margin: 10px 0; }
+    #admin-panel #delete-vacancies .vacancy .position {
+      font-weight: bold; }
 
 /*# sourceMappingURL=admin-component.component.css.map */

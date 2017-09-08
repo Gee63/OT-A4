@@ -85,6 +85,10 @@ $font3 : 'aileronregular';
           color: #fff;
         }
 
+      .department-hide{
+        display: none;
+      }
+
       /*department and job vacancy color schemes*/
       &.finance{
         background-color: #2d85b8;
@@ -92,10 +96,10 @@ $font3 : 'aileronregular';
       &.operations{
         background-color: #a1d05d;
       }
-      &.acquisition-marketing{
+      &.acquisition{
         background-color: #e88b2f;
       }
-      &.retention-marketing{
+      &.retention{
         background-color: #784572;
       }
 
@@ -168,10 +172,10 @@ $font3 : 'aileronregular';
       &.operations{
         color: #a1d05d;
       }
-      &.acquisition-marketing{
+      &.acquisition{
         color: #e88b2f;
       }
-      &.retention-marketing{
+      &.retention{
         color: #784572;
       }
     }
@@ -202,10 +206,10 @@ $font3 : 'aileronregular';
         &.operations{
           background-color: #a1d05d;
         }
-        &.acquisition-marketing{
+        &.acquisition{
           background-color: #e88b2f;
         }
-        &.retention-marketing{
+        &.retention{
           background-color: #784572;
         }
       }

@@ -1,13 +1,14 @@
 <navigation></navigation>
+
 <div id="admin-panel">
 
   <div class="row">
     <div class="col s12">
       <ul class="tabs" materialize="tabs">
-        <li class="tab col s3"><a href="#test1" class="active">Applicants</a></li>
-        <li class="tab col s3"><a class="" href="#test2">Add Vacancies</a></li>
-        <li class="tab col s3 "><a href="#test3">Delete Vacancies</a></li>
-        <li class="tab col s3"><a href="#test4" class="">Test 4</a></li>
+        <li class="tab col s4"><a href="#test1" class="active">Applicants</a></li>
+        <li class="tab col s4"><a class="" href="#test2">Add Vacancies</a></li>
+        <li class="tab col s4 "><a href="#test3">Delete Vacancies</a></li>
+        <li class="tab col s4"><a href="#test4" class="">Test 4</a></li>
         <li class="indicator" style="right: 711px; left: 0px;"></li></ul>
     </div>
     <div class="col s12 active" id="test1" style="display: block;">
@@ -57,8 +58,8 @@
               <option value="software">software</option>
               <option value="operations">operations</option>
               <option value="fraud">fraud</option>
-              <option value="acquisition-marketing">acquisition marketing</option>
-              <option value="retention-marketing">retention marketing</option>
+              <option value="acquisition">acquisition marketing</option>
+              <option value="retention">retention marketing</option>
             </select>
           </div>
           <div class="input-field col s12">
@@ -74,8 +75,17 @@
 
 
     </div>
-    <div class="col s12" id="test3" style="display: none;">Test 3</div>
-    <div class="col s12" id="test4" style="display: none;">Test 4</div>
+    <div class="col s12" id="test3" style="display: none;">
+
+      <div id="delete-vacancies">
+        <div class="vacancy" *ngFor="let vacancy of vacancies | async">
+          <p class="position">{{vacancy.positionTitle }}</p>
+          <p class="department">{{vacancy.department}}</p>
+          <a class="btn" (click)="deleteVacancy(vacancy.$key)">Delete</a>
+        </div>
+      </div>
+
+    </div>
   </div>
 
 </div>

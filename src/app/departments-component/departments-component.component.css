@@ -41,9 +41,9 @@
           color: #2d85b8; }
         #departments-container .inner .department .name.operations {
           color: #a1d05d; }
-        #departments-container .inner .department .name.acquisition.marketing {
+        #departments-container .inner .department .name.acquisition {
           color: #e88b2f; }
-        #departments-container .inner .department .name.retention.marketing {
+        #departments-container .inner .department .name.retention {
           color: #784572; }
       #departments-container .inner .department:hover {
         transform: scale(1); }

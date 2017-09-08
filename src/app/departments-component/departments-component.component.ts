@@ -12,18 +12,22 @@ export class DepartmentsComponentComponent implements OnInit {
   departments = [{
     "link": "finance-icon",
     "name": "finance",
+    "nameShort": "finance",
     "description": "bla bla bla",
   }, {
     "link": "operations-icon",
     "name": "operations",
+    "nameShort": "operations",
     "description": "bloo bloo bloo",
   }, {
     "link": "acquisition-marketing-icon",
     "name": "acquisition marketing",
+    "nameShort": "acquisition",
     "description": "ble ble ble",
   }, {
     "link": "retention-marketing-icon",
     "name": "retention marketing",
+    "nameShort": "retention",
     "description": "bly bly bly",
   }];
 

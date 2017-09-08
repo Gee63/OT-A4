@@ -6,7 +6,7 @@ import { Directive, HostListener, Input  } from '@angular/core';
 
 export class DepartmentsDirectiveDirective {
 
-  @Input() departmentName:string;
+  @Input() departmentNameShort:string;
   @Input() departmentDesc:string;
 
 
@@ -15,10 +15,8 @@ export class DepartmentsDirectiveDirective {
 
 
   @HostListener('click') click() {
-    console.log('department name: ' + this.departmentName);
-    console.log('department desc: ' + this.departmentDesc);
     if((<HTMLInputElement>document.getElementById('filter-careers'))){
-      (<HTMLInputElement>document.getElementById('filter-careers')).value = this.departmentName;
+      (<HTMLInputElement>document.getElementById('filter-careers')).value = this.departmentNameShort;
     }
     else{
       console.log('do something else');

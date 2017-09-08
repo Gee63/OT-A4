@@ -66,13 +66,15 @@
         font-family: "aileronlight";
         font-weight: bold;
         color: #fff; }
+      #careers-container #vacancy-container .vacancy .department-hide {
+        display: none; }
       #careers-container #vacancy-container .vacancy.finance {
         background-color: #2d85b8; }
       #careers-container #vacancy-container .vacancy.operations {
         background-color: #a1d05d; }
-      #careers-container #vacancy-container .vacancy.acquisition-marketing {
+      #careers-container #vacancy-container .vacancy.acquisition {
         background-color: #e88b2f; }
-      #careers-container #vacancy-container .vacancy.retention-marketing {
+      #careers-container #vacancy-container .vacancy.retention {
         background-color: #784572; }
 
 .modal-container {
@@ -127,9 +129,9 @@
         color: #2d85b8; }
       .modal-container .modal-inner .name.operations {
         color: #a1d05d; }
-      .modal-container .modal-inner .name.acquisition-marketing {
+      .modal-container .modal-inner .name.acquisition {
         color: #e88b2f; }
-      .modal-container .modal-inner .name.retention-marketing {
+      .modal-container .modal-inner .name.retention {
         color: #784572; }
     .modal-container .modal-inner .modal-content {
       padding: 10px;
@@ -153,9 +155,9 @@
           background-color: #2d85b8; }
         .modal-container .modal-inner .modal-content button.operations {
           background-color: #a1d05d; }
-        .modal-container .modal-inner .modal-content button.acquisition-marketing {
+        .modal-container .modal-inner .modal-content button.acquisition {
           background-color: #e88b2f; }
-        .modal-container .modal-inner .modal-content button.retention-marketing {
+        .modal-container .modal-inner .modal-content button.retention {
           background-color: #784572; }
   .modal-container.active {
     display: flex; }
