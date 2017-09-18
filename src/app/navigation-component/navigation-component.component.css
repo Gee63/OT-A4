@@ -1,5 +1,5 @@
 .navigation-desktop {
-  position: relative;
+  position: fixed;
   display: block;
   height: 80px;
   width: 100%;

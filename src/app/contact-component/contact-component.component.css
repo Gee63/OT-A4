@@ -1,12 +1,18 @@
 #contact-container {
   display: block;
   position: relative; }
+  #contact-container #mapToggle {
+    position: absolute;
+    right: 0;
+    z-index: 1000; }
   #contact-container #contact-overlay {
     height: 100%;
     width: 100%;
     position: fixed;
     background-color: rgba(231, 231, 231, 0.8);
-    z-index: 99; }
+    z-index: 99;
+    top: 80px;
+    transition: 0.5s; }
     #contact-container #contact-overlay .inner {
       width: 60%;
       height: 100%;
@@ -73,43 +79,163 @@
             height: 1px;
             margin-left: 25px;
             display: inline-block; }
+      #contact-container #contact-overlay .inner #social {
+        height: auto;
+        width: auto;
+        margin-top: 43px; }
+        #contact-container #contact-overlay .inner #social img {
+          cursor: pointer; }
+          #contact-container #contact-overlay .inner #social img:first-child {
+            margin-right: 10px; }
+        #contact-container #contact-overlay .inner #social:after {
+          background-image: url("../../assets/icon-share.png");
+          margin-left: 25px;
+          content: '';
+          height: 50px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          bottom: 5px;
+          position: relative;
+          display: inline-block;
+          width: 52px; }
     #contact-container #contact-overlay .filler {
       width: 40%;
       height: 100%;
       display: inline-block;
       float: left; }
+    #contact-container #contact-overlay.showMap {
+      transform: translateX(-100vw); }
   #contact-container agm-map {
     height: 100%;
     width: 100%;
-    position: fixed; }
+    position: fixed;
+    transition: 0.5s; }
     #contact-container agm-map.blur {
       filter: blur(2px); }
 
 @media screen and (max-width: 1024px) {
+  #contact-container #contact-overlay {
+    top: 70px; }
+    #contact-container #contact-overlay .inner {
+      padding-top: 20px;
+      width: 70%; }
+      #contact-container #contact-overlay .inner h1 {
+        font-size: 60px; }
+        #contact-container #contact-overlay .inner h1:after {
+          height: 45px;
+          width: 46px; }
+        #contact-container #contact-overlay .inner h1 h2 {
+          font-size: 35px;
+          margin: 0; }
+          #contact-container #contact-overlay .inner h1 h2 span:first-child:after {
+            height: 45px; }
+          #contact-container #contact-overlay .inner h1 h2 span:after {
+            height: 45px; }
+        #contact-container #contact-overlay .inner h1 h3 {
+          font-size: 25px;
+          margin: 0; }
+          #contact-container #contact-overlay .inner h1 h3 span:first-child:after {
+            height: 32px;
+            bottom: -13px; }
+          #contact-container #contact-overlay .inner h1 h3 span:after {
+            height: 32px; }
+    #contact-container #contact-overlay .filler {
+      width: 30%; } }
+@media screen and (max-width: 900px) {
   #contact-container #contact-overlay .inner {
-    padding-top: 20px;
-    width: 70%; }
-    #contact-container #contact-overlay .inner h1 {
-      font-size: 60px; }
-      #contact-container #contact-overlay .inner h1:after {
-        height: 45px;
-        width: 46px; }
-      #contact-container #contact-overlay .inner h1 h2 {
-        font-size: 35px;
-        margin: 0; }
-        #contact-container #contact-overlay .inner h1 h2 span:first-child:after {
-          height: 45px; }
-        #contact-container #contact-overlay .inner h1 h2 span:after {
-          height: 45px; }
-      #contact-container #contact-overlay .inner h1 h3 {
-        font-size: 25px;
-        margin: 0; }
-        #contact-container #contact-overlay .inner h1 h3 span:first-child:after {
-          height: 32px;
-          bottom: -13px; }
-        #contact-container #contact-overlay .inner h1 h3 span:after {
-          height: 32px; }
+    width: 100%;
+    padding-right: 20px; }
   #contact-container #contact-overlay .filler {
-    width: 30%; } }
+    display: none; } }
+@media screen and (max-width: 675px) {
+  #contact-container #contact-overlay .inner h1 {
+    font-size: 45px; }
+    #contact-container #contact-overlay .inner h1:first-child:after {
+      height: 35px;
+      width: 35px; }
+    #contact-container #contact-overlay .inner h1:after {
+      width: 35px; }
+  #contact-container #contact-overlay .inner h2 {
+    font-size: 25px; }
+    #contact-container #contact-overlay .inner h2 span:first-child:after {
+      height: 35px;
+      width: 35px;
+      bottom: -16px; }
+    #contact-container #contact-overlay .inner h2 span:after {
+      width: 35px; }
+  #contact-container #contact-overlay .inner h3 {
+    font-size: 20px; }
+    #contact-container #contact-overlay .inner h3 span:first-child:after {
+      height: 35px;
+      width: 35px; }
+    #contact-container #contact-overlay .inner h3 span:after {
+      width: 35px; }
+  #contact-container #contact-overlay .inner #social img {
+    width: 40px; }
+  #contact-container #contact-overlay .inner #social:after {
+    height: 35px;
+    width: 35px;
+    margin-left: 12px; } }
+@media screen and (max-width: 500px) {
+  #contact-container #contact-overlay .inner h1 {
+    font-size: 35px; }
+    #contact-container #contact-overlay .inner h1:first-child:after {
+      height: 25px;
+      width: 25px; }
+    #contact-container #contact-overlay .inner h1:after {
+      width: 25px; }
+  #contact-container #contact-overlay .inner h2 {
+    font-size: 20px;
+    margin: 5px 0; }
+    #contact-container #contact-overlay .inner h2 span:first-child:after {
+      height: 25px;
+      width: 25px;
+      bottom: -10px; }
+    #contact-container #contact-overlay .inner h2 span:after {
+      width: 25px; }
+  #contact-container #contact-overlay .inner h3 {
+    font-size: 16px;
+    margin: 5px 0; }
+    #contact-container #contact-overlay .inner h3 span:first-child:after {
+      height: 25px;
+      width: 25px;
+      bottom: -14px; }
+    #contact-container #contact-overlay .inner h3 span:after {
+      width: 25px; }
+  #contact-container #contact-overlay .inner #social {
+    margin-top: 18px; }
+    #contact-container #contact-overlay .inner #social img {
+      width: 30px; }
+    #contact-container #contact-overlay .inner #social:after {
+      height: 25px;
+      width: 25px;
+      margin-left: 10px; } }
+@media screen and (max-width: 374px) {
+  #contact-container #contact-overlay .inner {
+    padding-right: 5px; }
+    #contact-container #contact-overlay .inner h1 {
+      font-size: 32px; }
+      #contact-container #contact-overlay .inner h1:first-child:after {
+        margin-left: 10px; }
+      #contact-container #contact-overlay .inner h1:after {
+        margin-left: 10px; }
+    #contact-container #contact-overlay .inner h2 {
+      font-size: 20px;
+      margin: 5px 0; }
+      #contact-container #contact-overlay .inner h2 span:first-child:after {
+        margin-left: 10px; }
+      #contact-container #contact-overlay .inner h2 span:after {
+        margin-left: 10px; }
+    #contact-container #contact-overlay .inner h3 span:first-child:after {
+      margin-left: 10px; }
+    #contact-container #contact-overlay .inner h3 span:after {
+      margin-left: 10px; }
+    #contact-container #contact-overlay .inner #social {
+      margin-top: 18px; }
+      #contact-container #contact-overlay .inner #social img {
+        width: 30px;
+        margin-right: 5px; }
+      #contact-container #contact-overlay .inner #social:after {
+        margin-left: 0; } }
 
 /*# sourceMappingURL=contact-component.component.css.map */

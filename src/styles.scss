@@ -38,6 +38,13 @@
 body{
   width: 100%;
   margin: 0;
+  padding-top: 80px;
+}
+
+@media screen and (max-width: 1024px){
+  body{
+    padding-top: 70px;
+  }
 }
 
 @import 'app/mobile-menu-component/mobile-menu-component.component';

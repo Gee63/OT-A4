@@ -37,7 +37,6 @@ export class ContactComponentComponent implements OnInit {
     }
   ];
 
-
   constructor() {
   }
 
@@ -46,3 +45,7 @@ export class ContactComponentComponent implements OnInit {
   }
 
 }
+
+
+
+

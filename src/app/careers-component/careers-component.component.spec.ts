@@ -19,7 +19,7 @@ describe('CareersComponentComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should be created', () => {
+  it('Connect to DB', () => {
     expect(component).toBeTruthy();
   });
 });

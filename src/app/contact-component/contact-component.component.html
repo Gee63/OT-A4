@@ -1,16 +1,16 @@
 <navigation></navigation>
 <div id="contact-container">
-
+  <span id="mapToggle" appContactShowMapDirective >see map</span>
   <div id="contact-overlay">
     <div class="inner">
 
       <h1>+27 11 771 9000</h1>
       <h2>
-      <span>3rd Floor, 34 Melrose Boulevard</span>
-      <span>Melrose Arch, Melrose North</span>
-      <span>Johannesburg</span>
-      <span>South Africa</span>
-    </h2>
+        <span>3rd Floor, 34 Melrose Boulevard</span>
+        <span>Melrose Arch, Melrose North</span>
+        <span>Johannesburg</span>
+        <span>South Africa</span>
+      </h2>
       <h3>
         <span>P.O. Box 150</span>
         <span>Melrose Arch</span>
@@ -18,28 +18,33 @@
         <span>Johannesburg</span>
         <span>South Africa</span>
       </h3>
+<div id="social">
+  <a href="#">
+    <img  src="../../assets/fb-icon.png">
+  </a>
+  <a href="#">
+    <img src="../../assets/linkedin-icon.png">
+  </a>
+</div>
 
     </div>
-    <div class="filler">
-
-
-    </div>
+    <div class="filler"></div>
   </div>
-  <agm-map class="blur" [latitude]="lat"
+  <agm-map id="googleMap" class="blur" [latitude]="lat"
            [longitude]="lng"
            [zoom]="zoom"
            [disableDefaultUI]="true"
            [zoomControl]="false">
 
-   <agm-marker *ngFor="let m of marker; let i = index"
-               (markerClick)="clickedMarker(m.label, i)"
-               [latitude]="m.lat"
-               [longitude]="m.lng"
-               [iconUrl] = "m.iconUrl">
+    <agm-marker *ngFor="let m of marker; let i = index"
+                (markerClick)="clickedMarker(m.label, i)"
+                [latitude]="m.lat"
+                [longitude]="m.lng"
+                [iconUrl]="m.iconUrl">
 
-     <agm-info-window>
-       <strong>{{m.label}}</strong>
-     </agm-info-window>
+      <agm-info-window>
+        <strong>{{m.label}}</strong>
+      </agm-info-window>
 
     </agm-marker>
 

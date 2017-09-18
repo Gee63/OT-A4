@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import {RouterModule} from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AgmCoreModule } from '@agm/core';
@@ -25,6 +26,8 @@ import { MobileMenuDirective } from './mobile-menu.directive';
 import { DepartmentsComponentComponent } from './departments-component/departments-component.component';
 import { DepartmentsDirectiveDirective } from './departments-directive.directive';
 import { UploadFormComponent } from './upload-form/upload-form.component';
+import { ContactShowMapDirectiveDirective } from './contact-show-map-directive.directive';
+import { AuthComponentComponent } from './auth-component/auth-component.component';
 
 
 @NgModule({
@@ -41,7 +44,9 @@ import { UploadFormComponent } from './upload-form/upload-form.component';
     MobileMenuDirective,
     DepartmentsComponentComponent,
     DepartmentsDirectiveDirective,
-    UploadFormComponent
+    UploadFormComponent,
+    ContactShowMapDirectiveDirective,
+    AuthComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +58,7 @@ import { UploadFormComponent } from './upload-form/upload-form.component';
     MaterializeModule,
     AngularFireModule.initializeApp(environment.firebase),// imports firebase/app needed for everything
     AngularFireDatabaseModule, // imports firebase/database, only needed for database features. database config its in environments
+    AngularFireAuthModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -81,6 +87,10 @@ import { UploadFormComponent } from './upload-form/upload-form.component';
       {
         path: 'admin',
         component: AdminComponentComponent
+      },
+      {
+        path: 'signin',
+        component: AuthComponentComponent
       }
     ]),
     AgmCoreModule.forRoot({
@@ -92,4 +102,3 @@ import { UploadFormComponent } from './upload-form/upload-form.component';
 })
 export class AppModule {
 }
-

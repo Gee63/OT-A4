@@ -28,7 +28,6 @@ export class CareersComponentComponent implements OnInit  {
         });
       });*/
 
-
   }
 
   openModalContent(description, title, department, link){
@@ -46,4 +45,6 @@ export class CareersComponentComponent implements OnInit  {
 
   ngOnInit() {
   }
+
+
 }

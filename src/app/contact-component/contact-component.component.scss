@@ -4,12 +4,20 @@ $font1 : 'aileronlight';
   display: block;
   position: relative;
 
+  #mapToggle{
+    position: absolute;
+     right: 0;
+    z-index: 1000;
+  }
+
   #contact-overlay{
     height: 100%;
     width: 100%;
     position: fixed;
     background-color: rgba(231,231,231,0.8);
     z-index: 99;
+    top: 80px;
+    transition: 0.5s;
 
     .inner{
       width: 60%;
@@ -95,6 +103,30 @@ $font1 : 'aileronlight';
           }
         }
       }
+
+      #social{
+        height: auto;
+        width: auto;
+        margin-top: 43px;
+        img{
+          cursor: pointer;
+          &:first-child{
+            margin-right: 10px;
+          }
+        }
+        &:after{
+          background-image: url('../../assets/icon-share.png');
+          margin-left: 25px;
+          content: '';
+          height: 50px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          bottom: 5px;
+          position: relative;
+          display: inline-block;
+          width: 52px;
+        }
+      }
     }
 
     .filler{
@@ -105,12 +137,17 @@ $font1 : 'aileronlight';
 
     }
 
+    &.showMap{
+      transform: translateX(-100vw);
+    }
+
   }
 
   agm-map {
     height: 100%;
     width: 100%;
     position: fixed;
+    transition: 0.5s;
 
     &.blur{
       filter: blur(2px);
@@ -123,6 +160,7 @@ $font1 : 'aileronlight';
 @media screen and (max-width: 1024px){
   #contact-container{
     #contact-overlay{
+      top: 70px;
       .inner{
         padding-top: 20px;
         width: 70%;
@@ -176,8 +214,192 @@ $font1 : 'aileronlight';
   }
 }
 
+@media screen and (max-width: 900px){
 
+  #contact-container {
+    #contact-overlay {
+      .inner{
+        width: 100%;
+        padding-right: 20px;
+      }
+      .filler{
+        display: none;
+      }
+    }
+  }
+}
 
+@media screen and (max-width: 675px){
+  #contact-container {
+    #contact-overlay {
+      .inner {
+        h1 {
+          font-size: 45px;
 
+          &:first-child:after{
+            height: 35px;
+            width: 35px;
+          }
+          &:after{
+            width: 35px;
+          }
+        }
+        h2{
+          font-size: 25px;
 
+          span{
+            &:first-child:after{
+              height: 35px;
+              width: 35px;
+              bottom: -16px;
+            }
+            &:after{
+              width: 35px;
+            }
+          }
 
+        }
+        h3{
+          font-size: 20px;
+          span{
+            &:first-child:after{
+              height: 35px;
+              width: 35px;
+            }
+            &:after{
+              width: 35px;
+            }
+          }
+        }
+
+        #social{
+          img{
+            width: 40px;
+          }
+          &:after{
+            height: 35px;
+            width: 35px;
+            margin-left: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px){
+  #contact-container {
+    #contact-overlay {
+      .inner {
+        h1 {
+          font-size: 35px;
+
+          &:first-child:after{
+            height: 25px;
+            width: 25px;
+          }
+          &:after{
+            width: 25px;
+          }
+        }
+        h2{
+          font-size: 20px;
+          margin: 5px 0;
+
+          span{
+            &:first-child:after{
+              height: 25px;
+              width: 25px;
+              bottom: -10px;
+            }
+            &:after{
+              width: 25px;
+            }
+          }
+
+        }
+        h3{
+          font-size: 16px;
+          margin: 5px 0;
+          span{
+            &:first-child:after{
+              height: 25px;
+              width: 25px;
+              bottom: -14px;
+            }
+            &:after{
+              width: 25px;
+            }
+          }
+        }
+
+        #social{
+          margin-top: 18px;
+          img{
+            width: 30px;
+          }
+          &:after{
+            height: 25px;
+            width: 25px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 374px){
+  #contact-container {
+    #contact-overlay {
+      .inner {
+        padding-right: 5px;
+        h1 {
+          font-size: 32px;
+
+          &:first-child:after{
+            margin-left: 10px;
+          }
+          &:after{
+            margin-left: 10px;
+          }
+        }
+        h2{
+          font-size: 20px;
+          margin: 5px 0;
+
+          span{
+            &:first-child:after{
+              margin-left: 10px;
+            }
+            &:after{
+              margin-left: 10px;
+            }
+          }
+
+        }
+        h3{
+          span{
+            &:first-child:after{
+              margin-left: 10px;
+            }
+            &:after{
+              margin-left: 10px;
+            }
+          }
+        }
+
+        #social{
+          margin-top: 18px;
+          img{
+            width: 30px;
+            margin-right: 5px;
+          }
+          &:after{
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}

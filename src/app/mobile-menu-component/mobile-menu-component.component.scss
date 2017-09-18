@@ -3,12 +3,11 @@ $nav-font-size: 20px;
 $nav-font-family: aileronregular;
 $hamburger-color: #54a6d7;
 
-nav#mobile{
+#mobile{
   display: none;
-  position: relative;
+  position: fixed;
   top:0;
   width: 100vw;
-
   left: 0;
   z-index: 100;
 
@@ -125,7 +124,7 @@ nav#mobile{
 
     &.open{
       transition: 0.5s linear;
-      height: 240px;
+      height: 226px;
       }
 
     }
@@ -169,7 +168,7 @@ nav#mobile{
 
 @media screen and (max-width: 1024px){
 
-    nav#mobile{
+    #mobile{
       display: block;
     }
 
