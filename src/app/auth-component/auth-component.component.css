@@ -1,3 +1,11 @@
-
+#login-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto; }
+  #login-container h1 {
+    text-align: center; }
+  #login-container button {
+    margin: auto;
+    display: block; }
 
 /*# sourceMappingURL=auth-component.component.css.map */

@@ -1,13 +1,10 @@
-<div *ngIf="(user | async)">Hello User</div>
-
-<div *ngIf="!(user | async)">
+<navigation></navigation>
+<div id="login-container" *ngIf="!(user | async)">
+  <h1>Login</h1>
   <input type="text" [(ngModel)]="email" placeholder="email">
-  <input type="password" [(ngModel)]="password" placeholder="email">
-  <button (click)="login()" [disabled]="!email || !password">
+  <input type="password" [(ngModel)]="password" placeholder="password">
+  <button class="btn" (click)="login()" [disabled]="!email || !password">
     Login
   </button>
 </div>
 
-<button *ngIf="(user | async)" (click)="logout()">
-  Logout
-</button>

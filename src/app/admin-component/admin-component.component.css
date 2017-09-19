@@ -3,7 +3,9 @@
   #admin-panel table tr td {
     border: 1px #000 solid; }
     #admin-panel table tr td a {
-      margin-right: 10px; }
+      display: block;
+      margin: auto;
+      max-width: 150px; }
 #admin-panel #delete-vacancies {
   margin-top: 20px;
   text-align: center; }

@@ -28,6 +28,7 @@ import { DepartmentsDirectiveDirective } from './departments-directive.directive
 import { UploadFormComponent } from './upload-form/upload-form.component';
 import { ContactShowMapDirectiveDirective } from './contact-show-map-directive.directive';
 import { AuthComponentComponent } from './auth-component/auth-component.component';
+import { AuthServiceService } from './auth-service.service';
 
 
 @NgModule({
@@ -97,7 +98,7 @@ import { AuthComponentComponent } from './auth-component/auth-component.componen
       apiKey: 'AIzaSyC3gnMnMA7wLIBe8g7oBr3AqaUFMkhHcHI'
     })
   ],
-  providers: [],
+  providers: [AuthServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

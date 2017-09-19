@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
-import { Observable } from 'rxjs/Observable';
-import { AngularFireAuth } from 'angularfire2/auth';
-import * as firebase from 'firebase';
-import { Router } from '@angular/router';
+import { AuthServiceService } from '../auth-service.service';
+import * as firebase from 'firebase/app';
 
 
 @Component({
   selector: 'app-admin-component',
   templateUrl: './admin-component.component.html',
-  styleUrls: ['./admin-component.component.css']
+  styleUrls: ['./admin-component.component.css'],
+  providers: [AuthServiceService]
 })
 export class AdminComponentComponent implements OnInit {
 
@@ -21,16 +20,10 @@ export class AdminComponentComponent implements OnInit {
   department;
   link;
 
-  user: Observable<firebase.User>;
 
-
-  constructor(db:AngularFireDatabase, private firebaseAuth: AngularFireAuth, public router: Router) {
+  constructor(db:AngularFireDatabase, private authService: AuthServiceService) {
     this.applicants = db.list('/applicants');
     this.vacancies = db.list('/vacancies');
-
-    this.user = firebaseAuth.authState;
-    this.router = router;
-
   }
 
 
@@ -66,29 +59,14 @@ console.log('key: ' + key);
     });
   }
 
-
-  goLogin(){
-    //for some reason 'this' instance is lost... so declare it before doing things
-    var _router = this.router;
-    firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
-        console.log('User is signed in.');
-
-      } else {
-        console.log('No user is signed in.');
-        _router.navigate(['/signin']);
-      }
-    });
+  logout(){
+    console.log('made it here');
+    this.authService.logout();
   }
 
   ngOnInit() {
-  this.goLogin();
-
+  this.authService.checkLogin();
     }
-
-
-
-
 
 }
 

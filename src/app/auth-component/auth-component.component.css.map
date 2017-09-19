@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,gBAAgB;EACd,KAAK,EAAE,GAAG;EACV,SAAS,EAAE,KAAK;EAChB,MAAM,EAAE,SAAS;EAEjB,mBAAE;IACA,UAAU,EAAE,MAAM;EAGpB,uBAAM;IACJ,MAAM,EAAE,IAAI;IACZ,OAAO,EAAE,KAAK",
+"sources": ["auth-component.component.scss"],
 "names": [],
 "file": "auth-component.component.css"
 }
