@@ -56,6 +56,7 @@ $font2 : 'aileronregular';
       font-family: $font2;
       color: #fff;
       font-size: 14px;
+      right: 15%;
 
       &:before{
         content: url("../../assets/corner-graphic.png");

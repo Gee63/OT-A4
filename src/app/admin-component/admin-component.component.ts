@@ -60,7 +60,6 @@ console.log('key: ' + key);
   }
 
   logout(){
-    console.log('made it here');
     this.authService.logout();
   }
 

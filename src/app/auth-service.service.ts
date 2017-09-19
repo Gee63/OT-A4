@@ -20,7 +20,6 @@ export class AuthServiceService {
       .auth
       .signInWithEmailAndPassword(email, password)
       .then(value => {
-        console.log('Nice, it worked!');
         this.router.navigate(['/admin']);
 
       })
@@ -34,11 +33,9 @@ export class AuthServiceService {
     var _router = this.router;
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
-        console.log('User is signed in.');
         _router.navigate(['/admin']);
 
       } else {
-        console.log('No user is signed in.');
         _router.navigate(['/signin']);
       }
     });
