@@ -25,6 +25,7 @@ export class AuthServiceService {
       })
       .catch(err => {
         console.log('Something went wrong:',err.message);
+        (<HTMLElement>document.getElementById('signin_error')).classList.add('show')
       });
   }
 

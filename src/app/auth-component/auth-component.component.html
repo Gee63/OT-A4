@@ -1,8 +1,9 @@
 <navigation></navigation>
 <div id="login-container" *ngIf="!(user | async)">
   <h1>Login</h1>
-  <input type="text" [(ngModel)]="email" placeholder="email">
-  <input type="password" [(ngModel)]="password" placeholder="password">
+  <input type="text" id="email" [(ngModel)]="email" placeholder="email">
+  <input type="password" id="password" [(ngModel)]="password" placeholder="password">
+  <div id="signin_error">Error!!</div>
   <button class="btn" (click)="login()" [disabled]="!email || !password">
     Login
   </button>

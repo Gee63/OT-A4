@@ -7,5 +7,10 @@
   #login-container button {
     margin: auto;
     display: block; }
+  #login-container #signin_error {
+    display: none;
+    color: red; }
+    #login-container #signin_error.show {
+      display: block; }
 
 /*# sourceMappingURL=auth-component.component.css.map */

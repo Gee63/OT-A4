@@ -11,4 +11,12 @@
     margin: auto;
     display: block;
   }
+
+  #signin_error{
+    display: none;
+    color: red;
+    &.show{
+      display: block;
+    }
+  }
 }

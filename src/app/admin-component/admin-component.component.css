@@ -6,6 +6,11 @@
       display: block;
       margin: auto;
       max-width: 150px; }
+#admin-panel #addVacancyError {
+  display: none;
+  color: red; }
+  #admin-panel #addVacancyError.show {
+    display: block; }
 #admin-panel #delete-vacancies {
   margin-top: 20px;
   text-align: center; }

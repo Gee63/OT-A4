@@ -14,6 +14,14 @@
     }
   }
 
+  #addVacancyError{
+    display: none;
+    color: red;
+    &.show{
+      display: block;
+    }
+  }
+
   #delete-vacancies{
     margin-top: 20px;
     text-align: center;
