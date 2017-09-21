@@ -1,7 +1,8 @@
 #admin-panel table {
   border: 1px #000 solid; }
   #admin-panel table tr td {
-    border: 1px #000 solid; }
+    border: 1px #000 solid;
+    width: 20%; }
     #admin-panel table tr td a {
       display: block;
       margin: auto;

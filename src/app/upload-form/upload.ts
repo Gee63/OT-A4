@@ -4,6 +4,7 @@ export class Upload {
   applicantSurname:string;
   position:string;
   file:File;
+  applicantEmail: string;
   fileName:string;
   progress:number;
   downloadUrl:string;

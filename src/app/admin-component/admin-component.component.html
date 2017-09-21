@@ -23,6 +23,7 @@
         <tr>
           <td>Name</td>
           <td>Surname</td>
+          <td>Email Address</td>
           <td>Position</td>
           <td>Applicant CV</td>
         </tr>
@@ -32,6 +33,7 @@
         <tr *ngFor="let applicant of applicants | async">
           <td>{{applicant.applicantName}}</td>
           <td>{{applicant.applicantSurname}}</td>
+          <td>{{applicant.applicantEmail}}</td>
           <td>{{applicant.position}}</td>
           <td><a href="{{applicant.downloadUrl}}" class="btn waves-effect">Download CV</a>
             <!--<span>{{applicant.fileName}}</span>-->

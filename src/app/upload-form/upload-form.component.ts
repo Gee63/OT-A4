@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MaterializeModule } from 'angular2-materialize';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { Upload } from './upload';
@@ -68,6 +67,7 @@ export class UploadFormComponent implements OnInit {
         upload.applicantName = (<HTMLInputElement>document.getElementById('first_name')).value;
         upload.applicantSurname = (<HTMLInputElement>document.getElementById('surname')).value;
         upload.position = (<HTMLInputElement>document.getElementById('position')).value;
+        upload.applicantEmail = (<HTMLInputElement>document.getElementById('email')).value;
         upload.downloadUrl = uploadTask.snapshot.downloadURL;
 
         this.saveFileData(upload);
