@@ -4,7 +4,8 @@
   height: 80px;
   width: 100%;
   top: 0;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  z-index: 100; }
   .navigation-desktop .logo {
     width: 75px;
     height: 75px;

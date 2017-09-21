@@ -43,6 +43,13 @@ export class CareersComponentComponent implements OnInit  {
     document.getElementById('modal').classList.remove('active');
   }
 
+  applyModal(job){
+    document.getElementById('modal').classList.remove('active');
+    document.getElementById('apply-form-container').scrollIntoView();
+    (<HTMLInputElement>document.getElementById('position')).value = job;
+    (<HTMLInputElement>document.getElementById('position')).focus();
+  }
+
   ngOnInit() {
   }
 

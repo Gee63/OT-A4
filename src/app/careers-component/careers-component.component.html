@@ -35,7 +35,7 @@
       <div class="modal-content">
         <div class="name {{jobDepartment}}"><span>{{jobTitle}}</span></div>
         <p>{{jobDescription}}</p>
-        <button class="{{jobDepartment}}">apply</button>
+        <button class="{{jobDepartment}}" (click)="applyModal(jobTitle)">apply</button>
       </div>
     </div>
   </div>
