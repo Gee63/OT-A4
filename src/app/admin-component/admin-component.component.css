@@ -1,3 +1,11 @@
+#admin-panel #user {
+  position: absolute;
+  right: 10px;
+  top: 10px; }
+  #admin-panel #user .username {
+    display: inline-block; }
+  #admin-panel #user .logout {
+    display: inline-block; }
 #admin-panel table {
   border: 1px #000 solid; }
   #admin-panel table tr td {
@@ -16,17 +24,25 @@
   margin-top: 20px;
   text-align: center; }
   #admin-panel #delete-vacancies .vacancy {
-    border: 1px #000 solid;
     display: inline-block;
     margin: 10px;
     padding: 5px;
     text-align: center;
     height: 160px;
     width: 250px;
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    color: #fff; }
     #admin-panel #delete-vacancies .vacancy p {
       margin: 10px 0; }
     #admin-panel #delete-vacancies .vacancy .position {
       font-weight: bold; }
+    #admin-panel #delete-vacancies .vacancy.finance {
+      background-color: #2d85b8; }
+    #admin-panel #delete-vacancies .vacancy.operations {
+      background-color: #a1d05d; }
+    #admin-panel #delete-vacancies .vacancy.acquisition {
+      background-color: #e88b2f; }
+    #admin-panel #delete-vacancies .vacancy.retention {
+      background-color: #784572; }
 
 /*# sourceMappingURL=admin-component.component.css.map */

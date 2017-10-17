@@ -1,13 +1,15 @@
-<navigation></navigation>
-<div *ngIf="!(user | async)">Hello User</div>
-<button *ngIf="!(user | async)" (click)="logout()">
-  Logout
-</button>
+
 
 <div id="admin-panel">
+  <div id="user">
+    <div class="username" *ngIf="!(user | async)">Hello User</div>
+    <button class="logout btn waves-effect" *ngIf="!(user | async)" (click)="logout()">
+      Logout
+    </button>
+  </div>
 
   <div class="row">
-    <div class="col s12">
+    <div class="col s10">
       <ul class="tabs" materialize="tabs">
         <li class="tab col s4"><a href="#test1" class="active">Applicants</a></li>
         <li class="tab col s4"><a class="" href="#test2">Add Vacancies</a></li>
@@ -45,7 +47,7 @@
 
 
     </div>
-    <div class="col s12" id="test2" style="display: none;">
+    <div class="col s12 m8 l6" id="test2" style="display: none;">
 
 
       <form materialize>
@@ -85,10 +87,10 @@
     <div class="col s12" id="test3" style="display: none;">
 
       <div id="delete-vacancies">
-        <div class="vacancy" *ngFor="let vacancy of vacancies | async">
+        <div *ngFor="let vacancy of vacancies | async" class="vacancy {{vacancy.department}}" >
           <p class="position">{{vacancy.positionTitle }}</p>
           <p class="department">{{vacancy.department}}</p>
-          <a class="btn" (click)="deleteVacancy(vacancy.$key)">Delete</a>
+          <a class="btn " (click)="deleteVacancy(vacancy.$key)">Delete</a>
         </div>
       </div>
 
