@@ -12,8 +12,7 @@ export class CultureComponentComponent implements OnInit {
   blocks = [
     {
       "header": "Who we are",
-      "text1": "We started rocking the digital space way back in 1999. We started small, with a team of nine brilliant and smart individuals, each of whom possessed an unyielding drive to take Osiris Trading to the forefront of all things digital. ",
-      "text2": "With big dreams in hand and an appetite for success, this power team kept working hard, kept creating, and recruiting the best talent in the industry. Now we can proudly say that the humble team of nine has grown to a staggering 300+ team of really awesome humans, each with something unique to contribute.",
+      "text1": "We started rocking the digital space way back in 1999. We started small, with a team of 9 brilliant and smart individuals, each of who possessed an unyielding drive to take Osiris Trading to the forefront of all things digital.<br><br> With big dreams in hand and an appetite for success, this power team kept working hard, creating, and recruiting the best talent in the industry. Now we can proudly say that the humble team of 9 has grown to a staggering team of 300+ really awesome humans, each with something unique and special to contribute.",
       "background": "#6cb4df",
       "corner" : "topLeft",
     },
@@ -42,8 +41,7 @@ export class CultureComponentComponent implements OnInit {
     {
       "iconHeader": "Culture",
       "icon": "../../assets/icon1.png",
-      "text1": "We’re definitely outta-the-box people, from all around the world, with a common passion for all things digital.",
-      "text2": "At Osiris, we’re willing to go the extra mile, put in an extra hour and look for unconventional and creative working solutions, because we genuinely love what we do.",
+      "text1": "We’re definitely outta-the-box people, from all around the world, with a common passion for all things digital. At Osiris, we’re willing to go the extra mile, put in an extra hour and look for unconventional and creative working solutions, because we genuinely love what we do.",
       "background": "#a1d05d",
       "textAnimate" :"textAnimate",
       "corner" : "bottomRight"
@@ -77,8 +75,7 @@ export class CultureComponentComponent implements OnInit {
     {
       "iconHeader": "Perks",
       "icon": "../../assets/icon2.png",
-      "text1": "An Osiris day usually starts with freshly brewed coffee made by our in-house barista or a helping of fruit from the O’ Canteen.",
-      "text2": "Cold chilly days are made better at Osiris with warm hot chocolate and ready-made popcorn. We also get rewarded with rejuvenating massages from our very own masseuse.",
+      "text1": "An Osiris day usually starts with freshly brewed coffee made by our in-house barista or a helping of fruit from the O’ Canteen. Cold chilly days are made better at Osiris with warm hot chocolate and ready-made popcorn. We also get rewarded with rejuvenating massages from our very own masseuse.",
       "background": "#d95555",
       "textAnimate" :"textAnimate",
       "corner" : "bottomLeft"

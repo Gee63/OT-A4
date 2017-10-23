@@ -19,6 +19,19 @@ $font1 : 'aileronlight';
     input{
       width: 100%;
       margin-bottom: 20px;
+      color: #54a6d7;
+      border-bottom-color: #54a6d7;
+      box-shadow: none;
+    }
+
+    label{
+      color: #54a6d7;
+
+    }
+
+
+    .btn{
+      background-color: #54a6d7;
     }
 
     .progress{

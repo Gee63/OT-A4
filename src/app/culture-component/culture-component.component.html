@@ -10,8 +10,7 @@
     <h1 class="footer" *ngIf="(block.footer)">{{block.footer}}</h1>
     <h1 class="header iconHeader" *ngIf="(block.iconHeader)">{{block.iconHeader}}</h1>
     <img class="icon" *ngIf="(block.icon)" src="{{block.icon}}">
-    <p class="text {{block.textAnimate}}" *ngIf="(block.text1)">{{block.text1}}</p>
-    <p class="text {{block.textAnimate}}" *ngIf="(block.text2)">{{block.text2}}</p>
+    <p class="text {{block.textAnimate}}" [innerHTML]="block.text1"></p>
   </div>
 
 </div>

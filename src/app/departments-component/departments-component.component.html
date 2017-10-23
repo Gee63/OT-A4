@@ -1,4 +1,4 @@
-<div id="departments-container" class="{{backgroundColor}}" >
+<div id="departments-container" class="{{page}}" >
 
   <div class="inner">
     <div class="department" *ngFor="let department of departments" appDepartmentsDirective [departmentNameShort]="department.nameShort" [departmentDesc]="department.description" (click)="onClick(department.nameShort)">

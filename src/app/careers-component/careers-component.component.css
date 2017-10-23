@@ -88,8 +88,8 @@
   z-index: 101; }
   .modal-container .modal-inner {
     width: 80%;
-    max-width: 360px;
-    height: auto;
+    max-width: 800px;
+    height: 90vh;
     background-color: #fff;
     margin: auto;
     align-items: center;
@@ -114,7 +114,7 @@
         transform: translateY(-50%);
         top: 50%; }
     .modal-container .modal-inner .name {
-      margin-top: 15px;
+      /* margin-top: 15px;*/
       /*department and job vacancy color schemes*/ }
       .modal-container .modal-inner .name span {
         font-family: "boulevard_saint_denis";
@@ -122,8 +122,8 @@
         text-transform: capitalize;
         display: block;
         position: relative;
-        top: 50%;
-        transform: translateY(-50%);
+        /*top: 50%;
+        transform: translateY(-50%);*/
         line-height: 0.7; }
       .modal-container .modal-inner .name.finance {
         color: #2d85b8; }
@@ -138,12 +138,16 @@
       font-family: "aileronregular";
       font-size: 14px;
       color: #6b6b6b; }
+      .modal-container .modal-inner .modal-content .jobDescription {
+        max-height: 33vh;
+        overflow-x: scroll;
+        margin: 10px 0; }
       .modal-container .modal-inner .modal-content button {
         text-transform: uppercase;
         font-family: "aileronregular";
         font-size: 30px;
         color: #fff;
-        width: 230px;
+        width: 200px;
         height: 50px;
         border-radius: 10px;
         margin: 10px auto;

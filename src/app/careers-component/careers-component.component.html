@@ -3,7 +3,7 @@
 
   <div id="careers-hero-container">
     <h1>Careers</h1>
-    <input id="filter-careers" placeholder="type your title here" type="text" [(ngModel)]="term">
+    <input id="filter-careers" placeholder="type your title" type="text" [(ngModel)]="term">
     <h3>or</h3>
     <h3>choose a career path</h3>
 
@@ -34,7 +34,7 @@
       <div (click)="closeModal()" class="modal-close">X</div>
       <div class="modal-content">
         <div class="name {{jobDepartment}}"><span>{{jobTitle}}</span></div>
-        <div [innerHTML]="jobDescription"></div>
+        <div class="jobDescription" [innerHTML]="jobDescription"></div>
         <button class="{{jobDepartment}}" (click)="applyModal(jobTitle)">apply</button>
       </div>
     </div>

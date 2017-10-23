@@ -120,8 +120,8 @@ $font3 : 'aileronregular';
 
   .modal-inner{
     width: 80%;
-    max-width: 360px;
-    height: auto;
+    max-width: 800px;
+    height: 90vh;
     background-color: #fff;
     margin: auto;
     align-items: center;
@@ -153,15 +153,15 @@ $font3 : 'aileronregular';
       }
     }
     .name{
-      margin-top: 15px;
+     /* margin-top: 15px;*/
       span{
         font-family: $font1;
         font-size: 40px;
         text-transform: capitalize;
         display: block;
         position: relative;
-        top: 50%;
-        transform: translateY(-50%);
+        /*top: 50%;
+        transform: translateY(-50%);*/
         line-height: 0.7;
       }
 
@@ -186,12 +186,18 @@ $font3 : 'aileronregular';
       font-size: 14px;
       color: #6b6b6b;
 
+      .jobDescription{
+        max-height: 33vh;
+        overflow-x: scroll;
+        margin: 10px 0;
+      }
+
       button{
         text-transform: uppercase;
         font-family: $font3;
         font-size: 30px;
         color: #fff;
-        width: 230px;
+        width: 200px;
         height: 50px;
         border-radius: 10px;
         margin: 10px auto;

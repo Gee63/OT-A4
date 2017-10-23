@@ -12,11 +12,9 @@ $font3: 'aileronregular';
 
   .inner {
     width: 100%;
-    min-width: 1024px;
-    /*overflow-y: scroll;*/
+
 
     .department {
-      width: 180px;
       display: inline-block;
       margin: auto;
       padding-top: 20px;
@@ -69,19 +67,32 @@ $font3: 'aileronregular';
     }
   }
 
-  &.white {
+  &.careers {
     background-color: #ffffff;
+    .inner {
+      min-width: 1050px;
+      .department {
+        width: 150px;
+      }
+    }
   }
 
-  &.OsirisBlue {
-    background-color: #6cb4df;
-  }
+    &.whatwedo {
+      background-color: #6cb4df;
+      .inner{
+        min-width: 1270px;
+        .department{
+          width: 180px;
+        }
+      }
+    }
+
 
 }
 
 @media screen and (max-width: 992px) {
   #departments-container {
-    &.OsirisBlue {
+    &.whatwedo {
       background-color: #6cb4df;
 
       .inner {
@@ -101,7 +112,7 @@ $font3: 'aileronregular';
 
 @media screen and (max-width: 500px) {
   #departments-container {
-    &.OsirisBlue {
+    &.whatwedo {
       background-color: #6cb4df;
 
       .inner {

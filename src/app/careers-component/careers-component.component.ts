@@ -34,7 +34,7 @@ export class CareersComponentComponent implements OnInit  {
     document.getElementById('modal').classList.add('active');
     //console.log(description + ', ' + title + ', ' + department + ', ' + link);
     this.jobTitle = title;
-    this.jobDescription =
+    this.jobDescription = description;
     this.jobDepartment = department;
     this.iconLink = link;
   }

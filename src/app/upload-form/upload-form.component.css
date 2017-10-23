@@ -12,7 +12,14 @@
     margin: auto; }
     #apply-form-container #applicantForm input {
       width: 100%;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      color: #54a6d7;
+      border-bottom-color: #54a6d7;
+      box-shadow: none; }
+    #apply-form-container #applicantForm label {
+      color: #54a6d7; }
+    #apply-form-container #applicantForm .btn {
+      background-color: #54a6d7; }
     #apply-form-container #applicantForm .progress {
       position: relative;
       height: 4px;

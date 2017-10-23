@@ -15,35 +15,51 @@ export class DepartmentsComponentComponent implements OnInit {
     "nameShort": "finance",
     "description": "bla bla bla",
   }, {
+    "link": "information-technology-icon",
+    "name": "information technology",
+    "nameShort": "tech",
+    "description": "bla bla bla",
+  },{
+    "link": "human-resources-icon",
+    "name": "human resources",
+    "nameShort": "hr",
+    "description": "bla bla bla",
+  },{
+    "link": "sports-icon",
+    "name": "sports",
+    "nameShort": "sports",
+    "description": "bla bla bla",
+  },{
     "link": "operations-icon",
     "name": "operations",
     "nameShort": "operations",
     "description": "bloo bloo bloo",
   }, {
-    "link": "acquisition-marketing-icon",
+    "link": "acquisition-icon",
     "name": "acquisition marketing",
     "nameShort": "acquisition",
     "description": "ble ble ble",
   }, {
-    "link": "retention-marketing-icon",
+    "link": "retention-icon",
     "name": "retention marketing",
     "nameShort": "retention",
     "description": "bly bly bly",
   }];
 
 
-  backgroundColor:string;
+  page:string;
 
   constructor(private router:Router) {
     console.log(this.router.url);
 
     if (this.router.url === "/whatwedo") {
-      console.log('blue');
-      this.backgroundColor = "OsirisBlue";
+      console.log('whatwedo');
+      this.page = "whatwedo";
+
     }
     else if (this.router.url === "/careers") {
-      console.log('white');
-      this.backgroundColor = "white";
+      console.log('careers');
+      this.page = "careers";
     }
   }
 

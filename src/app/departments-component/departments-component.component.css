@@ -5,11 +5,8 @@
   overflow-y: hidden;
   text-align: center; }
   #departments-container .inner {
-    width: 100%;
-    min-width: 1024px;
-    /*overflow-y: scroll;*/ }
+    width: 100%; }
     #departments-container .inner .department {
-      width: 180px;
       display: inline-block;
       margin: auto;
       padding-top: 20px;
@@ -47,22 +44,30 @@
           color: #784572; }
       #departments-container .inner .department:hover {
         transform: scale(1); }
-  #departments-container.white {
+  #departments-container.careers {
     background-color: #ffffff; }
-  #departments-container.OsirisBlue {
+    #departments-container.careers .inner {
+      min-width: 1050px; }
+      #departments-container.careers .inner .department {
+        width: 150px; }
+  #departments-container.whatwedo {
     background-color: #6cb4df; }
+    #departments-container.whatwedo .inner {
+      min-width: 1270px; }
+      #departments-container.whatwedo .inner .department {
+        width: 180px; }
 
 @media screen and (max-width: 992px) {
-  #departments-container.OsirisBlue {
+  #departments-container.whatwedo {
     background-color: #6cb4df; }
-    #departments-container.OsirisBlue .inner .department {
+    #departments-container.whatwedo .inner .department {
       webkit-transform: scale(1);
       transform: scale(1);
       float: left; } }
 @media screen and (max-width: 500px) {
-  #departments-container.OsirisBlue {
+  #departments-container.whatwedo {
     background-color: #6cb4df; }
-    #departments-container.OsirisBlue .inner .department .icon {
+    #departments-container.whatwedo .inner .department .icon {
       width: 160px;
       height: 160px; } }
 
