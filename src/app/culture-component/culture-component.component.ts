@@ -1,4 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Renderer2 } from '@angular/core';
+import { InViewportModule } from 'ng-in-viewport';
+
+// Remember to import `intersection-observer` polyfill to support all major browsers
+import 'intersection-observer';
 
 @Component({
   selector: 'app-culture-component',
@@ -123,10 +127,20 @@ export class CultureComponentComponent implements OnInit {
     },
   ];
 
+  /*check the width of the screen to we dont trigger scroll animation on desktop*/
+  innerWidth;
 
+  constructor(private renderer: Renderer2) {
+   this.innerWidth = (window.screen.width);
+  }
 
-  constructor() {
-    console.log('constructor');
+  /*scroll action - remove and add classes when target is in view*/
+  action(event) {
+    if (event.value && innerWidth <= 1024) {
+      this.renderer.addClass(event.target, 'scrolledAnimate');
+    } else {
+      this.renderer.removeClass(event.target, 'scrolledAnimate');
+    }
   }
 
   ngOnInit() {

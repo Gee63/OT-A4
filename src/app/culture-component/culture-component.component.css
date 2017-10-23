@@ -16,6 +16,16 @@ body {
     padding: 0;
     float: left;
     position: relative; }
+    #culture-container .block.scrolledAnimate .iconHeader {
+      top: 0;
+      opacity: 0;
+      height: 0; }
+    #culture-container .block.scrolledAnimate .text.textAnimate {
+      opacity: 1;
+      transition: 0.2s ease-in-out;
+      transition-delay: 0.2s; }
+    #culture-container .block.scrolledAnimate .icon {
+      top: -20px; }
     #culture-container .block.textAnimate:hover .iconHeader {
       top: 0;
       opacity: 0;
@@ -113,7 +123,7 @@ body {
     overflow: visible; }
     #culture-container .block {
       width: 50vw;
-      height: 50vw; }
+      height: 50vh; }
       #culture-container .block .footer {
         font-size: 60px; } }
 @media screen and (max-width: 720px) {

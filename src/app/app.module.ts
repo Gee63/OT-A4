@@ -11,6 +11,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AgmCoreModule } from '@agm/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterializeModule } from 'angular2-materialize';
+import { InViewportModule } from 'ng-in-viewport';
+
 
 /*component additions*/
 import { AppComponent } from './app.component';
@@ -57,6 +59,7 @@ import { AuthServiceService } from './auth-service.service';
     HttpModule,
     BrowserAnimationsModule,
     MaterializeModule,
+    InViewportModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),// imports firebase/app needed for everything
     AngularFireDatabaseModule, // imports firebase/database, only needed for database features. database config its in environments
     AngularFireAuthModule,

@@ -24,6 +24,22 @@ body{
     float: left;
     position: relative;
 
+    &.scrolledAnimate{
+      .iconHeader{
+        top: 0;
+        opacity:0;
+        height: 0;
+      }
+      .text.textAnimate{
+        opacity: 1;
+        transition: 0.2s ease-in-out;
+        transition-delay: 0.2s;
+      }
+      .icon{
+        top: -20px;
+      }
+    }
+
     &.textAnimate{
       &:hover{
         .iconHeader{
@@ -40,6 +56,7 @@ body{
           top: -20px;
         }
       }
+
     }
 
     .header{
@@ -172,7 +189,7 @@ body{
     overflow: visible;
     .block{
       width: 50vw;
-      height: 50vw;
+      height: 50vh;
 
       .footer{
         font-size: 60px;

@@ -1,7 +1,11 @@
 <navigation></navigation>
 <div id="culture-container">
 
-  <div class="block {{block.textAnimate}}" [ngStyle]="{'background-color': block.background }" *ngFor="let block of blocks">
+  <!--viewport directives checking if element is in and out of view-->
+  <div class="block {{block.textAnimate}}" [ngStyle]="{'background-color': block.background }" *ngFor="let block of blocks"
+       in-viewport
+       [inViewportOptions]="{ partial: false }"
+       (inViewportAction)="action($event)">
   <div class="corner {{block.corner}}" *ngIf="(block.corner)"></div>
     <div class="inner-block" *ngIf="(block.innerblocks)">
       <div class="inner-blocks" *ngFor="let innerblock of block.innerblocks" [ngStyle]="{'width' : innerblock.width, 'height' : innerblock.height, 'background' : 'url(' + innerblock.backgroundImage + ')'}"></div>
