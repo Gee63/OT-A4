@@ -52,14 +52,16 @@ export class DepartmentsComponentComponent implements OnInit {
   constructor(private router:Router) {
     console.log(this.router.url);
 
-    if (this.router.url === "/whatwedo") {
+    if (this.router.url.includes("whatwedo")) {
       console.log('whatwedo');
       this.page = "whatwedo";
+
     }
-    else if (this.router.url === "/careers") {
+    else if (this.router.url.includes("careers")) {
       console.log('careers');
       this.page = "careers";
     }
+
   }
 
 
@@ -71,7 +73,7 @@ export class DepartmentsComponentComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    console.log('')
   }
 
 }

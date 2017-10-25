@@ -6,7 +6,7 @@
         <img src="../../assets/{{department.link}}.svg" />
       </div>
       <!--only show the names if the url matches careers-->
-      <div class="name {{department.name}}" *ngIf="router.url === '/careers'"><span>{{department.name}}</span></div>
+      <div class="name {{department.name}}" *ngIf="page == 'careers'"><span>{{department.name}}</span></div>
     </div>
   </div>
 </div>

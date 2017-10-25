@@ -1,5 +1,5 @@
 import {Directive, HostListener} from '@angular/core';
-import {Router} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Directive({
   selector: '[appMobileMenuDirective]'
@@ -7,27 +7,30 @@ import {Router} from '@angular/router';
 export class MobileMenuDirective {
 
   containerToMoveDown;
+  urlStringStrip;
 
-  constructor(private router:Router) {
-
+  constructor( private activatedRoute: ActivatedRoute) {
   }
 
   @HostListener('click') click() {
 
+    /*get the url without query strings*/
+    this.urlStringStrip = this.activatedRoute.snapshot.firstChild.url[0].path;
+
     // set container based on the url - not a great way to accomplish the move down of content but works for now.
-    if (this.router.url === "/home" || this.router.url === "/") {
+    if (this.urlStringStrip === "home") {
       this.containerToMoveDown = "home-container";
     }
-    else if (this.router.url === "/careers") {
+    else if (this.urlStringStrip === "careers") {
       this.containerToMoveDown = "careers-container";
     }
-    else if (this.router.url === "/culture") {
+    else if (this.urlStringStrip === "culture") {
       this.containerToMoveDown = "culture-container";
     }
-    else if (this.router.url === "/whatwedo") {
+    else if (this.urlStringStrip === "whatwedo") {
       this.containerToMoveDown = "what-we-do-container";
     }
-    else if (this.router.url === "/contact") {
+    else if (this.urlStringStrip === "contact") {
       this.containerToMoveDown = "contact-container";
     }
 
@@ -48,11 +51,5 @@ export class MobileMenuDirective {
 
 
   }
-
-
-
 }
-
-
-
 

@@ -66,7 +66,8 @@ import { AuthServiceService } from './auth-service.service';
     RouterModule.forRoot([
       {
         path: '',
-        component: HomeComponentComponent
+        redirectTo: 'home',
+        pathMatch: 'full'
       },
       {
         path: 'home',
