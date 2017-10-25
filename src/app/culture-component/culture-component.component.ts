@@ -11,6 +11,7 @@ import 'intersection-observer';
 })
 export class CultureComponentComponent implements OnInit {
 
+  angularReady;
 
   /*object data*/
   blocks = [
@@ -144,6 +145,9 @@ export class CultureComponentComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('ngOnInit');
+    this.angularReady = true;
+    console.log('angularReady: ', this.angularReady);
   }
 }
+
+

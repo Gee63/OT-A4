@@ -3,20 +3,38 @@ $font1 : 'aileronlight';
 #contact-container{
   display: block;
   position: relative;
+  overflow: hidden;
+  height: calc(100vh - 80px);
+  background-color: #fff;
 
   #mapToggle{
-    position: absolute;
      right: 0;
     z-index: 1000;
+    color: blue;
+  }
+
+  #mapToggleClose{
+    position: absolute;
+    right: 0;
+    z-index: 1000;
+    color: blue;
+
+    &.hide{
+      display: none;
+    }
+    &.show{
+      display: block;
+    }
   }
 
   #contact-overlay{
     height: 100%;
     width: 100%;
     position: fixed;
-    background-color: rgba(231,231,231,0.8);
+    //background-color: rgba(231,231,231,0.8);
+    background-color: transparent;
     z-index: 99;
-    top: 80px;
+    //top: 80px;
     transition: 0.5s;
 
     .inner{
@@ -144,13 +162,16 @@ $font1 : 'aileronlight';
   }
 
   agm-map {
-    height: 100%;
-    width: 100%;
-    position: fixed;
+    height: 100vh;
+    width: 120%;
+    left: -10%;
+    top: -30px;
+    position: absolute;
     transition: 0.5s;
 
+
     &.blur{
-      filter: blur(2px);
+      filter: blur(20px);
     }
   }
 
@@ -158,9 +179,10 @@ $font1 : 'aileronlight';
 }
 
 @media screen and (max-width: 1024px){
-  #contact-container{
+#contact-container{
+  height: calc(100vh - 70px);
     #contact-overlay{
-      top: 70px;
+      //top: 70px;
       .inner{
         padding-top: 20px;
         width: 70%;
@@ -215,8 +237,7 @@ $font1 : 'aileronlight';
 }
 
 @media screen and (max-width: 900px){
-
-  #contact-container {
+#contact-container {
     #contact-overlay {
       .inner{
         width: 100%;
@@ -230,7 +251,7 @@ $font1 : 'aileronlight';
 }
 
 @media screen and (max-width: 675px){
-  #contact-container {
+#contact-container {
     #contact-overlay {
       .inner {
         h1 {
@@ -288,7 +309,7 @@ $font1 : 'aileronlight';
 }
 
 @media screen and (max-width: 500px){
-  #contact-container {
+#contact-container {
     #contact-overlay {
       .inner {
         h1 {
@@ -350,7 +371,7 @@ $font1 : 'aileronlight';
 }
 
 @media screen and (max-width: 374px){
-  #contact-container {
+#contact-container {
     #contact-overlay {
       .inner {
         padding-right: 5px;

@@ -35,14 +35,28 @@
   font-style: normal;
 }
 
-body{
+body {
   width: 100%;
   margin: 0;
   padding-top: 80px;
+
+  .container-element {
+    z-index: 2;
+  }
+
+  .SlideUp {
+    transform: translateY(0);
+    transition: 0.3s ease-out;
+  }
+
+  .SlideDown {
+    transform: translateY(226px);
+    transition: 0.3s ease-out;
+  }
 }
 
-@media screen and (max-width: 1024px){
-  body{
+@media screen and (max-width: 1024px) {
+  body {
     padding-top: 70px;
   }
 }

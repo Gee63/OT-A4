@@ -16,23 +16,26 @@ $font1 : 'aileronlight';
     width: 90%;
     max-width: 450px;
     margin: auto;
+
+    /*material overrides*/
     input{
       width: 100%;
       margin-bottom: 20px;
       color: #54a6d7;
       border-bottom-color: #54a6d7;
       box-shadow: none;
+
     }
 
     label{
       color: #54a6d7;
-
     }
-
 
     .btn{
       background-color: #54a6d7;
     }
+
+
 
     .progress{
       position: relative;
@@ -78,4 +81,16 @@ $font1 : 'aileronlight';
     display: block !important;
   }
 
+}
+
+@-webkit-keyframes autofill {
+  to {
+    color: #666;
+    background: #e2e2e2 ;
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
 }

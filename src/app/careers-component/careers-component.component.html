@@ -1,49 +1,51 @@
 <navigation></navigation>
-<div id="careers-container">
+<div id="careers-container" class="container-element">
 
-  <div id="careers-hero-container">
-    <h1>Careers</h1>
-    <input id="filter-careers" placeholder="type your title" type="text" [(ngModel)]="term">
-    <h3>or</h3>
-    <h3>choose a career path</h3>
+    <div id="careers-hero-container">
+      <h1>Careers</h1>
+      <input id="filter-careers" placeholder="type your title" type="text" [(ngModel)]="term">
+      <h3>or</h3>
+      <h3>choose a career path</h3>
 
-  </div>
+    </div>
 
-  <!--capture output event emitter from departments component and set term. this filters the positions without keystrokes-->
-  <app-departments-component (filterTermUpdate)="term = $event"></app-departments-component>
+    <!--capture output event emitter from departments component and set term. this filters the positions without keystrokes-->
+    <app-departments-component (filterTermUpdate)="term = $event"></app-departments-component>
 
-  <div id="vacancy-container">
+    <div id="vacancy-container">
 
-    <!--change to *ngIf="!(vacancies | async)" for db link-->
-      <pre *ngIf="!(vacancies)">loading...</pre>
+      <!--change to *ngIf="!(vacancies | async)" for db link-->
+      <pre *ngIf="!(vacancies | async)">loading...</pre>
 
-    <!--change to *ngFor="let vacancy of vacancies | async | filter:term" for database link-->
+      <!--change to *ngFor="let vacancy of vacancies | async | filter:term" for database link-->
       <div class="vacancy {{vacancy.department}}" *ngFor="let vacancy of vacancies | async | filter:term"
            (click)="openModalContent(vacancy.description, vacancy.positionTitle, vacancy.department, vacancy.link)">
-          <p>{{vacancy.positionTitle }}</p>
+        <p>{{vacancy.positionTitle }}</p>
         <p class="department-hide">{{vacancy.department}}</p>
       </div>
-  </div>
+    </div>
 
 
-  <div id="modal" class="modal-container">
-    <div class="modal-inner">
-      <div class="icon" [ngStyle]="{background: 'url(' + '../../assets/' + iconLink + '.png' + ') center center no-repeat'}">
-        <img src="../../assets/{{iconLink}}.svg" />
-      </div>
-      <div (click)="closeModal()" class="modal-close">X</div>
-      <div class="modal-content">
-        <div class="name {{jobDepartment}}"><span>{{jobTitle}}</span></div>
-        <div class="jobDescription" [innerHTML]="jobDescription"></div>
-        <button class="{{jobDepartment}}" (click)="applyModal(jobTitle)">apply</button>
+    <div id="modal" class="modal-container">
+      <div class="modal-inner">
+        <div class="icon" [ngStyle]="{background: 'url(' + '../../assets/' + iconLink + '.png' + ') center center no-repeat'}">
+          <img src="../../assets/{{iconLink}}.svg" />
+        </div>
+        <div (click)="closeModal()" class="modal-close">X</div>
+        <div class="modal-content">
+          <div class="name {{jobDepartment}}"><span>{{jobTitle}}</span></div>
+          <div class="jobDescription" [innerHTML]="jobDescription"></div>
+          <button class="{{jobDepartment}}" (click)="applyModal(jobTitle)">apply</button>
+        </div>
       </div>
     </div>
-  </div>
-<!--
-  <app-apply-form-component></app-apply-form-component>-->
-  <upload-form></upload-form>
+    <!--
+      <app-apply-form-component></app-apply-form-component>-->
+    <upload-form></upload-form>
 
-</div>
+  </div>
+
+
 
 
 

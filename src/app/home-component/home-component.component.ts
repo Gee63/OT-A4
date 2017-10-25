@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ElementRef} from '@angular/core';
 
 @Component({
   selector: 'app-home-component',
@@ -7,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponentComponent implements OnInit {
 
-  constructor() { }
+  MyContainerID;
 
+  constructor(private el: ElementRef) {
+    //console.log(this.el.nativeElement);
+    this.MyContainerID = "home-container";
+  }
 
   ngOnInit() {
-    console.log('ok');
+   // console.log(this.el.nativeElement.children[0].id);
   }
 }

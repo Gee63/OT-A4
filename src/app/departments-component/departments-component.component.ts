@@ -55,7 +55,6 @@ export class DepartmentsComponentComponent implements OnInit {
     if (this.router.url === "/whatwedo") {
       console.log('whatwedo');
       this.page = "whatwedo";
-
     }
     else if (this.router.url === "/careers") {
       console.log('careers');
@@ -63,7 +62,8 @@ export class DepartmentsComponentComponent implements OnInit {
     }
   }
 
-  /*output the dpt name*/
+
+  /*output the dpt name for filtering*/
   @Output() filterTermUpdate:EventEmitter<string> = new EventEmitter<string>();
 
   onClick(departmentName) {

@@ -32,6 +32,7 @@ export class CareersComponentComponent implements OnInit  {
 
   openModalContent(description, title, department, link){
     document.getElementById('modal').classList.add('active');
+    (<HTMLElement>document.getElementById('body')).classList.add('no-scroll');
     //console.log(description + ', ' + title + ', ' + department + ', ' + link);
     this.jobTitle = title;
     this.jobDescription = description;
@@ -41,6 +42,7 @@ export class CareersComponentComponent implements OnInit  {
 
   closeModal(){
     document.getElementById('modal').classList.remove('active');
+    (<HTMLElement>document.getElementById('body')).classList.remove('no-scroll');
   }
 
   applyModal(job){
@@ -48,6 +50,7 @@ export class CareersComponentComponent implements OnInit  {
     document.getElementById('apply-form-container').scrollIntoView();
     (<HTMLInputElement>document.getElementById('position')).value = job;
     (<HTMLInputElement>document.getElementById('position')).focus();
+    (<HTMLElement>document.getElementById('body')).classList.remove('no-scroll');
   }
 
   ngOnInit() {

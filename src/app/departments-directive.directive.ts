@@ -11,15 +11,14 @@ export class DepartmentsDirectiveDirective {
 
 
   constructor() {
-  }
 
+  }
 
   @HostListener('click') click() {
     if((<HTMLInputElement>document.getElementById('filter-careers'))){
       (<HTMLInputElement>document.getElementById('filter-careers')).value = this.departmentNameShort;
     }
     else{
-      console.log('do something else');
       (<HTMLInputElement>document.getElementById('text')).innerText = this.departmentDesc;
     }
 

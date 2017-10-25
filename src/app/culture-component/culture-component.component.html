@@ -1,5 +1,8 @@
 <navigation></navigation>
-<div id="culture-container">
+
+<div *ngIf="!angularReady">loaderrrr</div>
+
+<div id="culture-container" class="container-element" *ngIf="angularReady">
 
   <!--viewport directives checking if element is in and out of view-->
   <div class="block {{block.textAnimate}}" [ngStyle]="{'background-color': block.background }" *ngFor="let block of blocks"

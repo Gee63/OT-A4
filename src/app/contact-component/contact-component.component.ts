@@ -11,6 +11,8 @@ import {AgmMarker} from '@agm/core/directives/marker';
 
 export class ContactComponentComponent implements OnInit {
 
+  angularReady;
+
   // google maps zoom level
   zoom: number = 18;
   lat: number = -26.1331097;
@@ -41,10 +43,15 @@ export class ContactComponentComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.angularReady = true;
+    console.log('angularReady: ', this.angularReady);
   }
 
 }
+
+
+
+
 
 
 

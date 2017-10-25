@@ -1,6 +1,9 @@
 <navigation></navigation>
-<div id="contact-container">
-  <span id="mapToggle" appContactShowMapDirective >see map</span>
+
+<div *ngIf="!angularReady">loaderrrr</div>
+
+<div id="contact-container" class="container-element" *ngIf="angularReady">
+  <span id="mapToggleClose" class="hide" appContactShowMapDirective >Close Map</span>
   <div id="contact-overlay">
     <div class="inner">
 
@@ -10,6 +13,7 @@
         <span>Melrose Arch, Melrose North</span>
         <span>Johannesburg</span>
         <span>South Africa</span>
+        <span id="mapToggle" appContactShowMapDirective >Check out our Pozzi</span>
       </h2>
       <h3>
         <span>P.O. Box 150</span>
@@ -46,9 +50,6 @@
         <strong>{{m.label}}</strong>
       </agm-info-window>
 
-    </agm-marker>
-
-  </agm-map>
+    </agm-marker></agm-map>
 
 </div>
-

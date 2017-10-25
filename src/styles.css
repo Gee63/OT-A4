@@ -21,6 +21,14 @@ body {
   width: 100%;
   margin: 0;
   padding-top: 80px; }
+  body .container-element {
+    z-index: 2; }
+  body .SlideUp {
+    transform: translateY(0);
+    transition: 0.3s ease-out; }
+  body .SlideDown {
+    transform: translateY(226px);
+    transition: 0.3s ease-out; }
 
 @media screen and (max-width: 1024px) {
   body {
@@ -31,7 +39,7 @@ body {
   top: 0;
   width: 100vw;
   left: 0;
-  z-index: 100000; }
+  z-index: 1; }
   #mobile .nav-bar {
     height: 70px;
     background-color: #fff;
@@ -54,15 +62,15 @@ body {
         -webkit-transform-origin: 20% 40%;
         transform: rotate(0deg);
         transform-origin: 20%;
-        -webkit-animation: closeMenuLine1 0.5s linear forwards;
-        -o-animation: closeMenuLine1 0.5s linear forwards;
-        animation: closeMenuLine1 0.5s linear forwards; }
+        -webkit-animation: closeMenuLine1 0.3s ease-out forwards;
+        -o-animation: closeMenuLine1 0.3s ease-out forwards;
+        animation: closeMenuLine1 0.3s ease-out forwards; }
       #mobile .nav-bar .hamburger .line2 {
         margin: 5px 0;
         opacity: 1;
-        -webkit-animation: closeMenuLine2 0.5s linear forwards;
-        -o-animation: closeMenuLine2 0.5s linear forwards;
-        animation: closeMenuLine2 0.5s linear forwards; }
+        -webkit-animation: closeMenuLine2 0.3s ease-out forwards;
+        -o-animation: closeMenuLine2 0.3s ease-out forwards;
+        animation: closeMenuLine2 0.3s ease-out forwards; }
       #mobile .nav-bar .hamburger .line3 {
         -ms-transform: rotate(0deg);
         -ms-transform-origin: 20% 40%;
@@ -70,9 +78,9 @@ body {
         -webkit-transform-origin: 20% 40%;
         transform: rotate(0deg);
         transform-origin: 20%;
-        -webkit-animation: closeMenuLine3 0.5s linear forwards;
-        -o-animation: closeMenuLine3 0.5s linear forwards;
-        animation: closeMenuLine3 0.5s linear forwards; }
+        -webkit-animation: closeMenuLine3 0.3s ease-out forwards;
+        -o-animation: closeMenuLine3 0.3s ease-out forwards;
+        animation: closeMenuLine3 0.3s ease-out forwards; }
     #mobile .nav-bar .logo {
       display: block;
       margin: auto;
@@ -85,20 +93,20 @@ body {
         width: 100%;
         outline: none; }
     #mobile .nav-bar.open {
-      transition: 0.5s linear;
+      transition: 0 0.3s ease-out;
       left: 0; }
       #mobile .nav-bar.open .line1 {
-        -webkit-animation: openMenuLine1 0.5s linear forwards;
-        -o-animation: openMenuLine1 0.5s linear forwards;
-        animation: openMenuLine1 0.5s linear forwards; }
+        -webkit-animation: openMenuLine1 0.3s ease-out forwards;
+        -o-animation: openMenuLine1 0.3s ease-out forwards;
+        animation: openMenuLine1 0.3s ease-out forwards; }
       #mobile .nav-bar.open .line2 {
-        -webkit-animation: openMenuLine2 0.5s linear forwards;
-        -o-animation: openMenuLine2 0.5s linear forwards;
-        animation: openMenuLine2 0.5s linear forwards; }
+        -webkit-animation: openMenuLine2 0.3s ease-out forwards;
+        -o-animation: openMenuLine2 0.3s ease-out forwards;
+        animation: openMenuLine2 0.3s ease-out forwards; }
       #mobile .nav-bar.open .line3 {
-        -webkit-animation: openMenuLine3 0.5s linear forwards;
-        -o-animation: openMenuLine3 0.5s linear forwards;
-        animation: openMenuLine3 0.5s ease-out forwards; }
+        -webkit-animation: openMenuLine3 0.3s ease-out forwards;
+        -o-animation: openMenuLine3 0.3s ease-out forwards;
+        animation: openMenuLine3 0.3s ease-out forwards; }
       #mobile .nav-bar.open #links span {
         transform: translateX(-80px);
         line-height: 1; }
@@ -106,14 +114,15 @@ body {
     position: absolute;
     background-color: #fff;
     width: 100%;
-    height: 0;
+    height: 226px;
     top: 70px;
     left: 0;
-    transition: 0.5s linear;
-    overflow: hidden; }
-    #mobile .nav-slide.open {
-      transition: 0.5s linear;
-      height: 226px; }
+    transition: 0.3s ease-out;
+    overflow: hidden;
+    /*&.open{
+      transition: 0.3s ease-out;
+      height: 226px;
+      }*/ }
   #mobile #links a {
     display: block;
     padding: 12px 10px;
@@ -128,7 +137,7 @@ body {
     #mobile #links a.active span {
       color: #54a6d7; }
     #mobile #links a span {
-      animation: menuLinksClosed 0.5s ease forwards;
+      animation: menuLinksClosed 0.3s ease-out forwards;
       position: relative;
       display: block;
       line-height: 1; }

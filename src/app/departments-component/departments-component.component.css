@@ -64,11 +64,29 @@
       webkit-transform: scale(1);
       transform: scale(1);
       float: left; } }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   #departments-container.whatwedo {
     background-color: #6cb4df; }
-    #departments-container.whatwedo .inner .department .icon {
-      width: 160px;
-      height: 160px; } }
+    #departments-container.whatwedo .inner .department {
+      width: 150px; }
+      #departments-container.whatwedo .inner .department .icon {
+        /*width: 160px;
+        height: 160px;*/ }
+  #departments-container.careers .inner {
+    min-width: 930px; }
+    #departments-container.careers .inner .department {
+      padding-top: 10px;
+      width: 130px; }
+      #departments-container.careers .inner .department .name {
+        height: 60px; }
+        #departments-container.careers .inner .department .name span {
+          font-family: "aileronlight";
+          font-size: 20px;
+          line-height: 1; }
+      #departments-container.careers .inner .department .icon {
+        width: 110px;
+        height: 110px; }
+        #departments-container.careers .inner .department .icon img {
+          width: 65px; } }
 
 /*# sourceMappingURL=departments-component.component.css.map */
