@@ -22,7 +22,8 @@ body {
   margin: 0;
   padding-top: 80px; }
   body .container-element {
-    z-index: 2; }
+    z-index: 2;
+    animation: animateOpacity 0.3s ease-out; }
   body .SlideUp {
     transform: translateY(0);
     transition: 0.3s ease-out; }
@@ -33,6 +34,11 @@ body {
 @media screen and (max-width: 1024px) {
   body {
     padding-top: 70px; } }
+@keyframes animateOpacity {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 #mobile {
   display: none;
   position: fixed;

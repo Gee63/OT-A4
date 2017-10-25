@@ -42,6 +42,7 @@ body {
 
   .container-element {
     z-index: 2;
+    animation: animateOpacity 0.3s ease-out;
   }
 
   .SlideUp {
@@ -58,6 +59,15 @@ body {
 @media screen and (max-width: 1024px) {
   body {
     padding-top: 70px;
+  }
+}
+
+@keyframes animateOpacity {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
   }
 }
 
