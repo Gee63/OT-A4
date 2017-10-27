@@ -53,8 +53,14 @@ export class CareersComponentComponent implements OnInit  {
     (<HTMLElement>document.getElementById('body')).classList.remove('no-scroll');
   }
 
+  /*transition of the container elements for mobile menu reveal was causing modal popup to behave badly. remove the slideup class after transition ends for quick fix*/
+  transitionEnd(e: Event){
+    (<HTMLInputElement>document.getElementById('careers-container')).classList.remove('SlideUp');
+  }
+
   ngOnInit() {
   }
 
 
 }
+

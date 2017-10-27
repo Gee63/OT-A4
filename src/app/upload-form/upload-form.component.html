@@ -1,5 +1,6 @@
 <div id="apply-form-container">
   <h1>Application Form</h1>
+  <p>Join the winning team today. Send us your details and upload your CV.</p>
   <form id="applicantForm" materialize [formGroup]="form">
     <div class="input-field inline">
       <input id="first_name" type="text" formControlName="name" class="validate">
@@ -11,11 +12,11 @@
     </div>
     <div class="input-field inline">
       <input id="email" class="validate" type="email" formControlName="email">
-      <label for="email" data-error="wrong" data-success="right">Email</label>
+      <label for="email" data-error="Invalid" data-success="Valid">Email</label>
     </div>
     <div class="input-field inline">
       <input id="position" class="file-path validate" type="text">
-      <label for="position" data-error="wrong" data-success="right">Position</label>
+      <label for="position" data-error="Invalid" data-success="Valid">Position</label>
     </div>
 
     <div class="input-field inline">
@@ -34,7 +35,7 @@
         </div>
         <div class="file-path-wrapper">
           <input id="file" class="file-path validate" type="text">
-          <label for="file" data-error="wrong" data-success="right"></label>
+          <label for="file" data-error="Invalid" data-success="Valid"></label>
         </div>
 
       </div>
@@ -53,7 +54,7 @@
   </div>
 
   <div id="formThanks">
-    thanks!!
+    Smart move! You’ve uploaded your CV. We’ll be in touch if your application was successful.
   </div>
 
 </div>

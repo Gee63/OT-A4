@@ -38,6 +38,8 @@
         font-size: 70px;
         margin: 0;
         font-weight: 100; }
+        #contact-container #contact-overlay .inner h1 a {
+          color: #656565; }
         #contact-container #contact-overlay .inner h1:after {
           background-image: url("../../assets/icon-phone.png");
           margin-left: 25px;

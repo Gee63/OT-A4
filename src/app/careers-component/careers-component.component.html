@@ -1,5 +1,6 @@
 <navigation></navigation>
-<div id="careers-container" class="container-element">
+
+<div id="careers-container" class="container-element" (transitionend)="transitionEnd($event)">
 
     <div id="careers-hero-container">
       <h1>Careers</h1>
@@ -39,8 +40,7 @@
         </div>
       </div>
     </div>
-    <!--
-      <app-apply-form-component></app-apply-form-component>-->
+
     <upload-form></upload-form>
 
   </div>

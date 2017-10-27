@@ -49,9 +49,13 @@ $font1 : 'aileronlight';
       float: left;
 
       h1{
-      font-size: 70px;
-      margin: 0;
+        font-size: 70px;
+        margin: 0;
         font-weight: 100;
+
+        a{
+          color: #656565;
+        }
 
         &:after{
           background-image: url('../../assets/icon-phone.png');

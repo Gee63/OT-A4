@@ -2,7 +2,7 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: #6cb4df; }
+  background-color: #6cb4df !important; }
   #what-we-do-container h1 {
     font-family: "boulevard_saint_denis";
     font-size: 100px;

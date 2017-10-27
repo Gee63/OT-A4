@@ -1,5 +1,6 @@
 import {Directive, HostListener} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Renderer2 } from '@angular/render';
 
 @Directive({
   selector: '[appMobileMenuDirective]'
@@ -9,7 +10,7 @@ export class MobileMenuDirective {
   containerToMoveDown;
   urlStringStrip;
 
-  constructor( private activatedRoute: ActivatedRoute) {
+  constructor( private activatedRoute: ActivatedRoute, private render: Renderer2) {
   }
 
   @HostListener('click') click() {
@@ -40,6 +41,10 @@ export class MobileMenuDirective {
       document.body.classList.remove("no-scroll");
       document.getElementById(this.containerToMoveDown).classList.add('SlideUp');
       document.getElementById(this.containerToMoveDown).classList.remove('SlideDown');
+
+      /*remove slideup class after animation completed ( transform was causeing model popups to display funny )*/
+
+
     }
     else {
       document.getElementById('nav-slide-menu').classList.add('open');
@@ -51,5 +56,7 @@ export class MobileMenuDirective {
 
 
   }
+
 }
+
 
