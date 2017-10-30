@@ -5,7 +5,7 @@ import { Directive, HostListener, Output, EventEmitter} from '@angular/core';
 })
 export class MouseMoveBackgroundDirectiveDirective {
 
-  /*output the mouse movements - attach them to the element you want the background to move for*/
+  /*output the mouse movements - attach this directive to the element you want the background to move for*/
   @Output() mouseMoveX:EventEmitter<any> = new EventEmitter<any>();
   @Output() mouseMoveY:EventEmitter<any> = new EventEmitter<any>();
 
@@ -14,9 +14,8 @@ export class MouseMoveBackgroundDirectiveDirective {
 @HostListener('mousemove', ['$event'])
 
 onMousemove(e: MouseEvent){
-  const bg = (<HTMLElement>document.getElementById('background-image'));
-  const windowWidth = window.innerWidth / 10;
-  const windowHeight = window.innerHeight / 10 ;
+  const windowWidth = window.innerWidth / 20;
+  const windowHeight = window.innerHeight / 20 ;
 
   const mouseX = e.clientX / windowWidth;
   const mouseY = e.clientY / windowHeight;
@@ -29,6 +28,10 @@ onMousemove(e: MouseEvent){
   /*console.log('this.mouseX',  mouseX);
   console.log('this.mouseY',  mouseY);*/
 }
+
+
+
+
 
 
 }
