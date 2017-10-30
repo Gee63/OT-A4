@@ -31,6 +31,7 @@ import { UploadFormComponent } from './upload-form/upload-form.component';
 import { ContactShowMapDirectiveDirective } from './contact-show-map-directive.directive';
 import { AuthComponentComponent } from './auth-component/auth-component.component';
 import { AuthServiceService } from './auth-service.service';
+import { MouseMoveBackgroundDirectiveDirective } from './mouse-move-background-directive.directive';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { AuthServiceService } from './auth-service.service';
     DepartmentsDirectiveDirective,
     UploadFormComponent,
     ContactShowMapDirectiveDirective,
-    AuthComponentComponent
+    AuthComponentComponent,
+    MouseMoveBackgroundDirectiveDirective
   ],
   imports: [
     BrowserModule,

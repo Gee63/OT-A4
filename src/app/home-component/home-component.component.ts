@@ -10,11 +10,25 @@ export class HomeComponentComponent implements OnInit {
   MyContainerID;
 
   constructor(private el: ElementRef) {
-    //console.log(this.el.nativeElement);
-    this.MyContainerID = "home-container";
   }
 
+  backgroundX;
+  backgroundY;
+
+  /*set component vars to the output event values - then use them to edit the inline styles to make the background move with the mouse movements*/
+  transformX(e){
+    console.log(e);
+    this.backgroundX = e;
+
+  }
+
+  transformY(e){
+    console.log(e);
+    this.backgroundY = e;
+  }
   ngOnInit() {
    // console.log(this.el.nativeElement.children[0].id);
   }
 }
+
+

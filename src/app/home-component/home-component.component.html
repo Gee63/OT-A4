@@ -1,5 +1,8 @@
 
-<div id="home-container" class="container-element">
+<div id="home-container" class="container-element" >
+  <!--listen for output events from mouse-move-background-directive - trigger component events on these listeners-->
+  <div class="inner" appMouseMoveBackgroundDirective (mouseMoveX)="transformX($event)" (mouseMoveY)="transformY($event)"
+       [ngStyle]="{'background-position' :  'calc( 50% - ' + backgroundX + 'px) calc( 50% - ' + backgroundY + 'px)' }">
 
     <div id="homeLogo"></div>
 
@@ -11,7 +14,6 @@
         <a routerLink="/contact">contact</a>
       </div>
     </nav>
-
   </div>
-
+  </div>
 

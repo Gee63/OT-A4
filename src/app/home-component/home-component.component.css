@@ -5,47 +5,56 @@
   top: -80px;
   left: 0;
   position: relative;
-  background: url("../../assets/home-bg-desktop.jpg") center center no-repeat/cover; }
-  #home-container #homeLogo {
-    width: 50%;
-    max-width: 320px;
-    background: url("../../assets/home-center-logo.png") center center;
-    height: 100%;
-    max-height: 492px;
-    margin: auto;
-    background-size: contain;
-    background-repeat: no-repeat;
-    transform: translateY(-50%);
-    top: 50%;
-    position: relative; }
-  #home-container nav#desktop {
-    height: 125px;
-    width: 100%;
-    background-color: #424242;
-    position: fixed;
-    bottom: 0;
-    display: block; }
-    #home-container nav#desktop .nav-inner {
-      width: 100%;
+  overflow: hidden; }
+  #home-container .inner {
+    /*add the same amount of pixels as the amove you devide the screen width by inside the mouse-move-background-directive*/
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    background: url("../../assets/home-bg-desktop.jpg") center center no-repeat/cover; }
+    #home-container .inner #homeLogo {
+      width: 50%;
+      max-width: 320px;
+      background: url("../../assets/home-center-logo.png") center center;
+      height: 100%;
+      max-height: 492px;
       margin: auto;
-      max-width: 960px;
-      text-align: center;
+      background-size: contain;
+      background-repeat: no-repeat;
       transform: translateY(-50%);
       top: 50%;
-      position: relative;
-      height: 50px; }
-      #home-container nav#desktop .nav-inner a {
-        display: inline-block;
+      position: relative; }
+    #home-container .inner nav#desktop {
+      height: 125px;
+      width: 100%;
+      background-color: #424242;
+      position: fixed;
+      bottom: 0;
+      display: block; }
+      #home-container .inner nav#desktop .nav-inner {
         width: 100%;
-        max-width: 235px;
+        margin: auto;
+        max-width: 960px;
         text-align: center;
         transform: translateY(-50%);
         top: 50%;
         position: relative;
-        color: #fff;
-        text-decoration: none;
-        font-size: 32px;
-        font-family: aileronregular; }
+        height: 50px; }
+        #home-container .inner nav#desktop .nav-inner a {
+          display: inline-block;
+          width: 100%;
+          max-width: 235px;
+          text-align: center;
+          transform: translateY(-50%);
+          top: 50%;
+          position: relative;
+          color: #fff;
+          text-decoration: none;
+          font-size: 32px;
+          font-family: aileronregular; }
 
 @media screen and (max-width: 1024px) {
   #home-container {
@@ -54,7 +63,7 @@
     /*nav#mobile{
       display: block;
     }*/ }
-    #home-container nav#desktop {
+    #home-container .inner nav#desktop {
       display: none; } }
 
 /*# sourceMappingURL=home-component.component.css.map */

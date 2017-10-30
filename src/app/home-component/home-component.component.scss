@@ -10,39 +10,50 @@ $hamburger-color: #54a6d7;
   top:-80px;
   left:0;
   position: relative;
-  background: url("../../assets/home-bg-desktop.jpg") center center no-repeat / cover;
+  overflow: hidden;
 
-  #homeLogo{
-    width: 50%;
-    max-width: 320px;
-    background: url("../../assets/home-center-logo.png") center center;
-    height: 100%;
-    max-height: 492px;
-    margin: auto;
-    background-size: contain;
-    background-repeat: no-repeat;
-    transform: translateY(-50%);
-    top: 50%;
-    position: relative;
-  }
 
-  nav#desktop{
-    height: 125px;
-    width: 100%;
-    background-color: #424242;
-    position: fixed;
-    bottom: 0;
-    display: block;
+  .inner{
+    /*add the same amount of pixels as the amove you devide the screen width by inside the mouse-move-background-directive*/
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    background: url("../../assets/home-bg-desktop.jpg") center center no-repeat / cover;
 
-    .nav-inner{
-      width: 100%;
+    #homeLogo{
+      width: 50%;
+      max-width: 320px;
+      background: url("../../assets/home-center-logo.png") center center;
+      height: 100%;
+      max-height: 492px;
       margin: auto;
-      max-width: 960px;
-      text-align: center;
+      background-size: contain;
+      background-repeat: no-repeat;
       transform: translateY(-50%);
       top: 50%;
       position: relative;
-      height: 50px;
+    }
+
+    nav#desktop{
+      height: 125px;
+      width: 100%;
+      background-color: #424242;
+      position: fixed;
+      bottom: 0;
+      display: block;
+
+      .nav-inner{
+        width: 100%;
+        margin: auto;
+        max-width: 960px;
+        text-align: center;
+        transform: translateY(-50%);
+        top: 50%;
+        position: relative;
+        height: 50px;
 
         a{
           display: inline-block;
@@ -57,8 +68,11 @@ $hamburger-color: #54a6d7;
           font-size: $nav-font-size;
           font-family: $nav-font-family;
         }
+      }
     }
   }
+
+
 
 }
 
@@ -66,9 +80,12 @@ $hamburger-color: #54a6d7;
 #home-container{
   height: calc(100vh - 70px);
   top:0;
+  .inner{
     nav#desktop{
       display: none;
     }
+  }
+
     /*nav#mobile{
       display: block;
     }*/
