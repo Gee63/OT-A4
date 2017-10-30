@@ -1,4 +1,4 @@
-$nav-font-color: #58585a;
+$nav-font-color: #fff;
 $nav-font-size: 20px;
 $nav-font-family: aileronregular;
 $hamburger-color: #54a6d7;
@@ -115,13 +115,18 @@ $animationSpeed: 0.3s;
 
   .nav-slide{
     position: absolute;
-    background-color: #fff;
     width: 100%;
-    height: 226px;
+    height: 335px;
     top: 70px;
     left: 0;
     transition: 0.3s ease-out;
     overflow: hidden;
+
+    background: #424242;
+    background: -moz-linear-gradient(top, #424242 0%, #646464 100%);
+    background: -webkit-linear-gradient(top, #424242 0%,#646464 100%);
+    background: linear-gradient(to bottom, #424242 0%,#646464 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424242', endColorstr='#646464',GradientType=0 );
 
     /*&.open{
       transition: 0.3s ease-out;
@@ -134,29 +139,60 @@ $animationSpeed: 0.3s;
 
       a{
         display: block;
-        padding: 12px 10px;
-        border-top: 1px #58585a solid;
+        padding: 12px 0;
         text-decoration: none;
         font-family: $nav-font-family;
         font-size: $nav-font-size;
         color: $nav-font-color;
         text-align: center;
+        height: 65px;
 
-        &:last-child{
-          border-bottom: 1px #000 solid;
-        }
+
 
         &.active{
           span{
-            color: #54a6d7;
+            i{
+              color: #54a6d7;
+            }
+            span{
+              color: #54a6d7;
+
+
+            }
           }
+
         }
 
+
+
         span{
-          animation: menuLinksClosed $animationSpeed ease-out forwards;
+          width: 200px;
+          height: 45px;
+          display: inline-block;
           position: relative;
-          display: block;
-          line-height: 1;
+
+          i{
+            margin: 0 35px 0 0;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            position: relative;
+            left: 0;
+            top: 50%;
+            width: 20%;
+          }
+
+          span{
+            -webkit-animation: menuLinksClosed 0.3s ease-out forwards;
+            animation: menuLinksClosed 0.3s ease-out forwards;
+            position: relative;
+            line-height: 1;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            height: 40px;
+            text-align: left;
+            width: calc( 80% - 35px);
+          }
         }
       }
     }

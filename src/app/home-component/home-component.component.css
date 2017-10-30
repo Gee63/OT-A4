@@ -21,7 +21,7 @@
   #home-container nav#desktop {
     height: 125px;
     width: 100%;
-    background-color: #fff;
+    background-color: #424242;
     position: fixed;
     bottom: 0;
     display: block; }
@@ -42,7 +42,7 @@
         transform: translateY(-50%);
         top: 50%;
         position: relative;
-        color: #58585a;
+        color: #fff;
         text-decoration: none;
         font-size: 32px;
         font-family: aileronregular; }

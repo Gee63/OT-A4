@@ -1,6 +1,5 @@
 import {Directive, HostListener} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Renderer2 } from '@angular/render';
 
 @Directive({
   selector: '[appMobileMenuDirective]'
@@ -10,7 +9,7 @@ export class MobileMenuDirective {
   containerToMoveDown;
   urlStringStrip;
 
-  constructor( private activatedRoute: ActivatedRoute, private render: Renderer2) {
+  constructor( private activatedRoute: ActivatedRoute) {
   }
 
   @HostListener('click') click() {
