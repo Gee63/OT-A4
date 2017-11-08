@@ -68,7 +68,10 @@
         position: relative;
         font-family: "aileronlight";
         font-weight: bold;
-        color: #fff; }
+        color: #fff;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
       #careers-container #vacancy-container .vacancy .department-hide {
         display: none; }
       #careers-container #vacancy-container .vacancy.finance {

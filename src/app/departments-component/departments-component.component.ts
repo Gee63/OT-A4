@@ -73,7 +73,6 @@ export class DepartmentsComponentComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('')
   }
 
 }

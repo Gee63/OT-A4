@@ -14,8 +14,8 @@ export class MouseMoveBackgroundDirectiveDirective {
 @HostListener('mousemove', ['$event'])
 
 onMousemove(e: MouseEvent){
-  const windowWidth = window.innerWidth / 20;
-  const windowHeight = window.innerHeight / 20 ;
+  const windowWidth = window.innerWidth / 40;
+  const windowHeight = window.innerHeight / 40 ;
 
   const mouseX = e.clientX / windowWidth;
   const mouseY = e.clientY / windowHeight;

@@ -7,8 +7,6 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HomeComponentComponent implements OnInit {
 
-
-
   constructor() {
   }
 
@@ -24,8 +22,5 @@ export class HomeComponentComponent implements OnInit {
     this.backgroundY = e;
   }
   ngOnInit() {
-   // console.log(this.el.nativeElement.children[0].id);
   }
 }
-
-

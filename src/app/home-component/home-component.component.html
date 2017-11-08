@@ -4,12 +4,20 @@
   <div class="inner" appMouseMoveBackgroundDirective (mouseMoveX)="transformX($event)" (mouseMoveY)="transformY($event)"
        [ngStyle]="{'background-position' :  'calc( 50% - ' + backgroundX + 'px) calc( 50% - ' + backgroundY + 'px)' }">
 
-    <div id="homeLogo" >
-        <div class="inner" appMouseMoveBackgroundDirective [ngStyle]="{'background-position' :  'calc( 50% - ' + backgroundX + 'px) calc( 50% - ' + backgroundY + 'px)' }">
+
+    <div id="homeLogoContainer">
+      <div id="homeLogo">
+        <div class="inner" appMouseMoveBackgroundDirective
+             [ngStyle]="{'background-position' :  'calc( 50% - ' + backgroundX + 'px) calc( 50% - ' + backgroundY + 'px)' }">
           <div class="lines">
           </div>
         </div>
+      </div>
+      <div class="osiris-logo-text">
+        <img src="../../assets/osiris-logo-text.png">
+      </div>
     </div>
+
 
     <nav id="desktop">
       <div class="nav-inner">

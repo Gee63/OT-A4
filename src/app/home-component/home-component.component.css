@@ -8,34 +8,41 @@
   overflow: hidden; }
   #home-container .inner {
     /*add the same amount of pixels as the amove you devide the screen width by inside the mouse-move-background-directive*/
-    width: calc(100% + 20px);
-    height: calc(100% + 20px);
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
     left: 0;
     right: 0;
     top: 0;
     position: absolute;
     background: url("../../assets/home-bg-desktop.jpg") center center no-repeat/cover; }
-    #home-container .inner #homeLogo {
-      margin: auto;
-      background-size: contain;
-      background-repeat: no-repeat;
+    #home-container .inner #homeLogoContainer {
       transform: translateY(-50%);
-      top: 50%;
-      position: relative;
-      border-radius: 50%;
-      width: 320px;
-      height: 320px;
-      overflow: hidden; }
-      #home-container .inner #homeLogo .inner {
-        background: url("../../assets/logo-background.png") center center;
-        background-position: -20px -20px; }
-        #home-container .inner #homeLogo .inner .lines {
-          background: url("../../assets/logo-whites.png") center center;
-          width: 95%;
-          height: 95%;
-          background-size: contain; }
+      top: 40%;
+      position: absolute;
+      width: 100%; }
+      #home-container .inner #homeLogoContainer #homeLogo {
+        margin: auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+        border-radius: 50%;
+        width: 320px;
+        height: 320px;
+        overflow: hidden; }
+        #home-container .inner #homeLogoContainer #homeLogo .inner {
+          background: url("../../assets/logo-background.png") center center;
+          background-position: -20px -20px;
+          position: relative; }
+          #home-container .inner #homeLogoContainer #homeLogo .inner .lines {
+            background: url("../../assets/logo-whites.png") center center;
+            width: 90%;
+            height: 90%;
+            background-size: contain; }
+      #home-container .inner #homeLogoContainer .osiris-logo-text img {
+        margin: 30px auto 0;
+        display: block; }
     #home-container .inner nav#desktop {
-      height: 125px;
+      height: 90px;
       width: 100%;
       background-color: #424242;
       position: fixed;
@@ -72,5 +79,35 @@
     }*/ }
     #home-container .inner nav#desktop {
       display: none; } }
+@media screen and (max-width: 768px) {
+  #home-container .inner {
+    width: 100%;
+    height: 100%; }
+    #home-container .inner #homeLogoContainer #homeLogo {
+      width: 260px;
+      height: 260px; }
+      #home-container .inner #homeLogoContainer #homeLogo .inner {
+        width: 100%;
+        height: 100%; }
+        #home-container .inner #homeLogoContainer #homeLogo .inner .lines {
+          width: calc(85% + 40px);
+          height: calc(85% + 40px); }
+    #home-container .inner #homeLogoContainer .osiris-logo-text img {
+      width: 290px; } }
+@media screen and (max-width: 414px) {
+  #home-container .inner {
+    width: 100%;
+    height: 100%; }
+    #home-container .inner #homeLogoContainer #homeLogo {
+      width: 200px;
+      height: 200px; }
+      #home-container .inner #homeLogoContainer #homeLogo .inner {
+        background-position: -116px -30px; }
+        #home-container .inner #homeLogoContainer #homeLogo .inner .lines {
+          width: calc(80% + 40px);
+          height: calc(80% + 40px); }
+    #home-container .inner #homeLogoContainer .osiris-logo-text img {
+      width: 210px;
+      margin-top: 15px; } }
 
 /*# sourceMappingURL=home-component.component.css.map */
