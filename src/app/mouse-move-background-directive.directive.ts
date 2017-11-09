@@ -33,23 +33,31 @@ onMousemove(e: MouseEvent){
   console.log('this.mouseY',  mouseY);*/
 }
 
-  @HostListener("window:devicemotion", ['$event'])
+  @HostListener("window:deviceorientation", ['$event'])
   OnDeviceMotion(e){
     console.log(e);
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
 
-    const mouseX = e.acceleration.x * windowWidth;
-    const mouseY = e.acceleration.y * windowHeight;
+    const windowWidth = window.innerWidth / 40;
+    const windowHeight = window.innerHeight / 40 ;
 
-    //const mouseX = 0.01 * windowWidth;
-    //const mouseY = 0.01 * windowHeight;
+    const mouseX = e.alpha / windowWidth;
+    const mouseY = e.beta / windowHeight;
+
+    // JS math works in radians, so convert
 
     this.mouseMoveX.emit(mouseX);
     this.mouseMoveY.emit(mouseY);
 
+    console.log("change");
+
   }
-  
+
 }
+
+
+
+
+
+
 
 
