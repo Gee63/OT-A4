@@ -16,6 +16,7 @@ import { InViewportModule } from 'ng-in-viewport';
 
 /*component additions*/
 import { AppComponent } from './app.component';
+import { AuthServiceService } from './auth-service.service';
 import { CareersComponentComponent } from './careers-component/careers-component.component';
 import { CultureComponentComponent } from './culture-component/culture-component.component';
 import { ContactComponentComponent } from './contact-component/contact-component.component';
@@ -30,8 +31,8 @@ import { DepartmentsDirectiveDirective } from './departments-directive.directive
 import { UploadFormComponent } from './upload-form/upload-form.component';
 import { ContactShowMapDirectiveDirective } from './contact-show-map-directive.directive';
 import { AuthComponentComponent } from './auth-component/auth-component.component';
-import { AuthServiceService } from './auth-service.service';
 import { MouseMoveBackgroundDirectiveDirective } from './mouse-move-background-directive.directive';
+import { AccelerometerDirectiveDirective } from './accelerometer-directive.directive';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { MouseMoveBackgroundDirectiveDirective } from './mouse-move-background-d
     UploadFormComponent,
     ContactShowMapDirectiveDirective,
     AuthComponentComponent,
-    MouseMoveBackgroundDirectiveDirective
+    MouseMoveBackgroundDirectiveDirective,
+    AccelerometerDirectiveDirective
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-home-component',
@@ -7,20 +7,38 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HomeComponentComponent implements OnInit {
 
+
   constructor() {
+
   }
 
   backgroundX;
   backgroundY;
 
+  X;
+  Y;
+
   /*set component vars to the output event values - then use them to edit the inline styles to make the background move with the mouse movements*/
   transformX(e){
     this.backgroundX = e;
+
+    this.X = e;
   }
 
   transformY(e){
     this.backgroundY = e;
+
+    this.Y = e;
   }
+
+
+
+
+
+
   ngOnInit() {
+
   }
 }
+
+

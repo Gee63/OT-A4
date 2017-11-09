@@ -2,8 +2,8 @@
 
   <div class="inner">
     <div class="department" *ngFor="let department of departments" appDepartmentsDirective [departmentNameShort]="department.nameShort" [departmentDesc]="department.description" (click)="onClick(department.nameShort)">
-      <div class="icon" [ngStyle]="{background: 'url(' + '../../assets/' + department.nameShort + '-icon.png' + ') center center no-repeat'}">
-        <img src="../../assets/{{department.link}}.svg" />
+      <div class="icon" [ngStyle]="{background: 'url(' + './assets/' + department.nameShort + '-icon.png' + ') center center no-repeat'}">
+        <img src="./assets/{{department.link}}.svg" />
       </div>
       <!--only show the names if the url matches careers-->
       <div class="name {{department.name}}" *ngIf="page == 'careers'"><span>{{department.name}}</span></div>

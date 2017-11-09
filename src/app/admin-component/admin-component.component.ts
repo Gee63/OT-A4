@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
-import { AuthServiceService } from '../auth-service.service';
 import * as firebase from 'firebase/app';
 import * as Materialize from 'angular2-materialize';
+import { AuthServiceService } from '../auth-service.service';
+import { User } from './interface';
 
 
 @Component({
@@ -20,6 +21,10 @@ export class AdminComponentComponent implements OnInit {
   positionTitle;
   department;
   link;
+
+  user: User;
+
+  selectOptions;
 
   /*declare toast because webstorm doesnt know where it comes from (materialize)... i just dont like the red error lines*/
   toast;

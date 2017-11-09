@@ -1,4 +1,3 @@
-
 <div id="home-container" class="container-element" >
   <!--listen for output events from mouse-move-background-directive - trigger component events on these listeners-->
   <div class="inner" appMouseMoveBackgroundDirective (mouseMoveX)="transformX($event)" (mouseMoveY)="transformY($event)"
@@ -14,9 +13,16 @@
         </div>
       </div>
       <div class="osiris-logo-text">
-        <img src="../../assets/osiris-logo-text.png">
+        <img src="./assets/osiris-logo-text.png">
       </div>
+
     </div>
+
+    <div id="accelerometer" appAccelerometerDirective>
+      <div id="x">X: {{X}}</div>
+      <div id="y">Y: {{Y}}</div>
+    </div>
+
 
 
     <nav id="desktop">

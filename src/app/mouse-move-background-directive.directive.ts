@@ -9,7 +9,9 @@ export class MouseMoveBackgroundDirectiveDirective {
   @Output() mouseMoveX:EventEmitter<any> = new EventEmitter<any>();
   @Output() mouseMoveY:EventEmitter<any> = new EventEmitter<any>();
 
-  constructor() { }
+  constructor() {
+
+  }
 
 @HostListener('mousemove', ['$event'])
 
@@ -23,17 +25,31 @@ onMousemove(e: MouseEvent){
   this.mouseMoveX.emit(mouseX);
   this.mouseMoveY.emit(mouseY);
 
+
+
   //bg.style.transform = 'translate3d(-'+ mouseX + '%, -' + mouseY + '%, 0);';
 
   /*console.log('this.mouseX',  mouseX);
   console.log('this.mouseY',  mouseY);*/
 }
 
+  @HostListener("window:devicemotion", ['$event'])
+  OnDeviceMotion(e){
+    console.log(e);
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
 
+    const mouseX = e.acceleration.x * windowWidth;
+    const mouseY = e.acceleration.y * windowHeight;
 
+    //const mouseX = 0.01 * windowWidth;
+    //const mouseY = 0.01 * windowHeight;
 
+    this.mouseMoveX.emit(mouseX);
+    this.mouseMoveY.emit(mouseY);
 
-
+  }
+  
 }
 
 

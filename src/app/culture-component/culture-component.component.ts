@@ -26,17 +26,17 @@ export class CultureComponentComponent implements OnInit {
       "footer": "cooperation collaboration",
       "innerblocks": [
         {
-          "backgroundImage": "../../assets/who-we-are-1.jpg",
+          "backgroundImage": "./assets/who-we-are-1.jpg",
           "width": "50%",
           "height": "50%"
         },
         {
-          "backgroundImage": "../../assets/who-we-are-2.jpg",
+          "backgroundImage": "./assets/who-we-are-2.jpg",
           "width": "50%",
           "height": "50%"
         },
         {
-          "backgroundImage": "../../assets/who-we-are-3.jpg",
+          "backgroundImage": "./assets/who-we-are-3.jpg",
           "width": "100%",
           "height": "50%"
         },
@@ -45,7 +45,7 @@ export class CultureComponentComponent implements OnInit {
 
     {
       "iconHeader": "Culture",
-      "icon": "../../assets/icon1.png",
+      "icon": "./assets/icon1.png",
       "text1": "We’re definitely outta-the-box people, from all around the world, with a common passion for all things digital. At Osiris, we’re willing to go the extra mile, put in an extra hour and look for unconventional and creative working solutions, because we genuinely love what we do.",
       "background": "#a1d05d",
       "textAnimate" :"textAnimate",
@@ -55,7 +55,7 @@ export class CultureComponentComponent implements OnInit {
     {
       "innerblocks": [
         {
-          "backgroundImage": "../../assets/who-we-are-4.jpg",
+          "backgroundImage": "./assets/who-we-are-4.jpg",
           "width": "100%",
           "height": "100%"
         },
@@ -65,12 +65,12 @@ export class CultureComponentComponent implements OnInit {
     {
       "innerblocks": [
         {
-          "backgroundImage": "../../assets/who-we-are-5.jpg",
+          "backgroundImage": "./assets/who-we-are-5.jpg",
           "width": "100%",
           "height": "50%"
         },
         {
-          "backgroundImage": "../../assets/who-we-are-6.jpg",
+          "backgroundImage": "./assets/who-we-are-6.jpg",
           "width": "100%",
           "height": "50%"
         },
@@ -79,7 +79,7 @@ export class CultureComponentComponent implements OnInit {
 
     {
       "iconHeader": "Perks",
-      "icon": "../../assets/icon2.png",
+      "icon": "./assets/icon2.png",
       "text1": "An Osiris day usually starts with freshly brewed coffee made by our in-house barista or a helping of fruit from the O’ Canteen. Cold chilly days are made better at Osiris with warm hot chocolate and ready-made popcorn. We also get rewarded with rejuvenating massages from our very own masseuse.",
       "background": "#d95555",
       "textAnimate" :"textAnimate",
@@ -90,12 +90,12 @@ export class CultureComponentComponent implements OnInit {
       "footer": "cooperation collaboration",
       "innerblocks": [
         {
-          "backgroundImage": "../../assets/who-we-are-7.jpg",
+          "backgroundImage": "./assets/who-we-are-7.jpg",
           "width": "100%",
           "height": "50%"
         },
         {
-          "backgroundImage": "../../assets/who-we-are-8.jpg",
+          "backgroundImage": "./assets/who-we-are-8.jpg",
           "width": "100%",
           "height": "50%"
         },
@@ -105,22 +105,22 @@ export class CultureComponentComponent implements OnInit {
     {
       "innerblocks": [
         {
-          "backgroundImage": "../../assets/who-we-are-9.jpg",
+          "backgroundImage": "./assets/who-we-are-9.jpg",
           "width": "50%",
           "height": "50%"
         },
         {
-          "backgroundImage": "../../assets/who-we-are-10.jpg",
+          "backgroundImage": "./assets/who-we-are-10.jpg",
           "width": "50%",
           "height": "50%"
         },
         {
-          "backgroundImage": "../../assets/who-we-are-11.jpg",
+          "backgroundImage": "./assets/who-we-are-11.jpg",
           "width": "50%",
           "height": "50%"
         },
         {
-          "backgroundImage": "../../assets/who-we-are-12.jpg",
+          "backgroundImage": "./assets/who-we-are-12.jpg",
           "width": "50%",
           "height": "50%"
         },
@@ -143,6 +143,7 @@ export class CultureComponentComponent implements OnInit {
       this.renderer.removeClass(event.target, 'scrolledAnimate');
     }
   }
+
 
   ngOnInit() {
     this.angularReady = true;
