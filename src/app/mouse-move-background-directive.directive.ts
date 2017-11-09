@@ -37,7 +37,7 @@ onMousemove(e: MouseEvent){
   OnDeviceMotion(e){
     console.log(e);
 
-    const windowWidth = window.innerWidth / 2 ;
+    const windowWidth = window.innerWidth;
 
     const mouseX = e.beta / windowWidth;
     const mouseY = e.gamma / windowWidth;
