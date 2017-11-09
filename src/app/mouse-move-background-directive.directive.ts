@@ -40,8 +40,8 @@ onMousemove(e: MouseEvent){
     const windowWidth = window.innerWidth / 10;
     const windowHeight = window.innerHeight / 10;
 
-    const mouseX = e.alpha * windowWidth;
-    const mouseY = e.gamma * windowHeight;
+    const mouseX = e.alpha / windowWidth;
+    const mouseY = e.gamma / windowHeight;
 
     // JS math works in radians, so convert
 
