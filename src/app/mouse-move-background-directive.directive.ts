@@ -39,13 +39,13 @@ onMousemove(e: MouseEvent){
 
     const windowWidth = window.innerWidth;
 
-    const mouseX = e.beta / windowWidth * 1000;
-    const mouseY = e.gamma / windowWidth * 1000;
+    const beta = e.beta / windowWidth * 500;
+    const gamma = e.gamma / windowWidth * 500;
 
     // JS math works in radians, so convert
 
-    this.mouseMoveX.emit(mouseX);
-    this.mouseMoveY.emit(mouseY);
+    this.mouseMoveX.emit(gamma);
+    this.mouseMoveY.emit(beta);
 
     console.log("change");
 
