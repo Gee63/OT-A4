@@ -7,7 +7,7 @@
   position: relative;
   overflow: hidden; }
   #home-container .inner {
-    /*add the same amount of pixels as the amove you devide the screen width by inside the mouse-move-background-directive*/
+    /*add the same amount of pixels as the amount you divide the screen width by inside the mouse-move-background-directive*/
     width: calc(100% + 40px);
     height: calc(100% + 40px);
     left: 0;
@@ -16,6 +16,8 @@
     position: absolute;
     background: url("../../assets/home-bg-desktop.jpg") center center no-repeat/cover; }
     #home-container .inner #homeLogoContainer {
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       top: 40%;
       position: absolute;
@@ -53,6 +55,8 @@
         margin: auto;
         max-width: 960px;
         text-align: center;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         top: 50%;
         position: relative;
@@ -62,6 +66,8 @@
           width: 100%;
           max-width: 235px;
           text-align: center;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
           transform: translateY(-50%);
           top: 50%;
           position: relative;
@@ -77,12 +83,14 @@
     /*nav#mobile{
       display: block;
     }*/ }
-    #home-container .inner nav#desktop {
-      display: none; } }
+    #home-container .inner {
+      width: 100%; }
+      #home-container .inner nav#desktop {
+        display: none; } }
 @media screen and (max-width: 768px) {
   #home-container .inner {
-    width: 100%;
-    height: 100%; }
+    /* width: 100%;
+     height: 100%;*/ }
     #home-container .inner #homeLogoContainer #homeLogo {
       width: 260px;
       height: 260px; }
@@ -96,8 +104,8 @@
       width: 290px; } }
 @media screen and (max-width: 414px) {
   #home-container .inner {
-    width: 100%;
-    height: 100%; }
+    /* width: 100%;
+     height: 100%;*/ }
     #home-container .inner #homeLogoContainer #homeLogo {
       width: 200px;
       height: 200px; }

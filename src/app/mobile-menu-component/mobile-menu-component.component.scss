@@ -19,6 +19,8 @@ $animationSpeed: 0.3s;
 
     .hamburger{
       position: absolute;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       top: 50%;
       margin-right: 10px;
@@ -70,6 +72,8 @@ $animationSpeed: 0.3s;
       margin: auto;
       width: 180px;
       height: 58px;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       top: 50%;
       position: relative;
@@ -81,7 +85,9 @@ $animationSpeed: 0.3s;
 
 
     &.open{
-      transition: 0$animationSpeed ease-out;
+      -webkit-transition: $animationSpeed ease-out;
+      -o-transition: $animationSpeed ease-out;
+      transition: $animationSpeed ease-out;
       left: 0;
 
       .line1{
@@ -104,6 +110,8 @@ $animationSpeed: 0.3s;
       #links{
 
         span{
+          -webkit-transform: translateX(-80px);
+          -ms-transform: translateX(-80px);
           transform: translateX(-80px);
           line-height: 1;
         }
@@ -212,6 +220,26 @@ $animationSpeed: 0.3s;
 }
 
 
+@-webkit-keyframes openMenuLine1 {
+  0%{
+    -ms-transform: rotate(0deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(0deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(0deg);
+    transform-origin: 20%;
+  }
+  100%{
+    -ms-transform: rotate(45deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(45deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(45deg);
+    transform-origin: 20%;
+  }
+
+}
+
 @keyframes openMenuLine1 {
   0%{
     -ms-transform: rotate(0deg);
@@ -230,6 +258,14 @@ $animationSpeed: 0.3s;
     transform-origin: 20%;
   }
 
+}
+@-webkit-keyframes openMenuLine2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes openMenuLine2 {
@@ -261,7 +297,25 @@ $animationSpeed: 0.3s;
 
 }
 
+@-webkit-keyframes openMenuLine3 {
+  0%{
+    -ms-transform: rotate(0deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(0deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(0deg);
+    transform-origin: 20%;
+  }
+  100%{
+    -ms-transform: rotate(-45deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(-45deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(-45deg);
+    transform-origin: 20%;
+  }
 
+}
 
 @keyframes closeMenuLine1 {
   0%{
@@ -283,6 +337,36 @@ $animationSpeed: 0.3s;
 
 }
 
+@-webkit-keyframes closeMenuLine1 {
+  0%{
+    -ms-transform: rotate(45deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(45deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(45deg);
+    transform-origin: 20%;
+  }
+  100%{
+    -ms-transform: rotate(0deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(0deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(0deg);
+    transform-origin: 20%;
+  }
+
+}
+
+@-webkit-keyframes closeMenuLine2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 @keyframes closeMenuLine2 {
   0% {
     opacity: 0;
@@ -291,6 +375,27 @@ $animationSpeed: 0.3s;
     opacity: 1;
   }
 }
+
+@-webkit-keyframes closeMenuLine3 {
+  0%{
+    -ms-transform: rotate(-45deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(-45deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(-45deg);
+    transform-origin: 20%;
+  }
+  100%{
+    -ms-transform: rotate(0deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(0deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(0deg);
+    transform-origin: 20%;
+  }
+
+}
+
 
 @keyframes closeMenuLine3 {
   0%{
@@ -311,4 +416,5 @@ $animationSpeed: 0.3s;
   }
 
 }
+
 

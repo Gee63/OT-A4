@@ -14,7 +14,7 @@ $hamburger-color: #54a6d7;
 
 
   .inner{
-    /*add the same amount of pixels as the amove you devide the screen width by inside the mouse-move-background-directive*/
+    /*add the same amount of pixels as the amount you divide the screen width by inside the mouse-move-background-directive*/
     width: calc(100% + 40px);
     height: calc(100% + 40px);
     left: 0;
@@ -22,8 +22,11 @@ $hamburger-color: #54a6d7;
     top: 0;
     position: absolute;
     background: url("../../assets/home-bg-desktop.jpg") center center no-repeat / cover;
+    //transition: background-position 0.1s linear;
 
     #homeLogoContainer{
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       top: 40%;
       position: absolute;
@@ -76,6 +79,8 @@ $hamburger-color: #54a6d7;
         margin: auto;
         max-width: 960px;
         text-align: center;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         top: 50%;
         position: relative;
@@ -86,6 +91,8 @@ $hamburger-color: #54a6d7;
           width: 100%;
           max-width: 235px;
           text-align: center;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
           transform: translateY(-50%);
           top: 50%;
           position: relative;
@@ -107,6 +114,7 @@ $hamburger-color: #54a6d7;
   height: calc(100vh - 70px);
   top:0;
   .inner{
+    width: 100%;
     nav#desktop{
       display: none;
     }
@@ -122,8 +130,8 @@ $hamburger-color: #54a6d7;
 @media screen and (max-width: 768px) {
   #home-container {
     .inner {
-      width: 100%;
-      height: 100%;
+     /* width: 100%;
+      height: 100%;*/
       #homeLogoContainer {
         #homeLogo {
           width: 260px;
@@ -152,8 +160,8 @@ $hamburger-color: #54a6d7;
 @media screen and (max-width: 414px) {
   #home-container {
     .inner {
-      width: 100%;
-      height: 100%;
+     /* width: 100%;
+      height: 100%;*/
       #homeLogoContainer {
         #homeLogo {
           width: 200px;

@@ -15,6 +15,7 @@ export class HomeComponentComponent implements OnInit {
   backgroundX;
   backgroundY;
 
+
   X;
   Y;
 

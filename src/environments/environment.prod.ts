@@ -1,5 +1,5 @@
 export const environment = {
-  production: true,
+  production: false,
   firebase: {
     apiKey: "AIzaSyA2sAl7uqKzKXHwlxIetEPHzbvCgm3jNJY",
     authDomain: "osiris-website.firebaseapp.com",

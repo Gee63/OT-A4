@@ -32,7 +32,11 @@ body{
       }
       .text.textAnimate{
         opacity: 1;
+        -webkit-transition: 0.2s ease-in-out;
+        -o-transition: 0.2s ease-in-out;
         transition: 0.2s ease-in-out;
+        -webkit-transition-delay: 0.2s;
+        -o-transition-delay: 0.2s;
         transition-delay: 0.2s;
       }
       .icon{
@@ -49,7 +53,11 @@ body{
         }
         .textAnimate{
           opacity: 1;
+          -webkit-transition: 0.2s ease-in-out;
+          -o-transition: 0.2s ease-in-out;
           transition: 0.2s ease-in-out;
+          -webkit-transition-delay: 0.2s;
+          -o-transition-delay: 0.2s;
           transition-delay: 0.2s;
         }
         .icon{
@@ -70,6 +78,8 @@ body{
       &.iconHeader{
         top: 15%;
         position: relative;
+        -webkit-transition: 0.2s linear;
+        -o-transition: 0.2s linear;
         transition: 0.2s linear;
       }
     }
@@ -97,6 +107,8 @@ body{
 
       &.textAnimate{
         opacity: 0;
+        -webkit-transition: 0s ease-in-out;
+        -o-transition: 0s ease-in-out;
         transition: 0s ease-in-out;
       }
     }
@@ -107,6 +119,8 @@ body{
       width: 105px;
       top: 15%;
       position: relative;
+      -webkit-transition: 0.2s linear;
+      -o-transition: 0.2s linear;
       transition: 0.2s linear;
     }
 
@@ -142,6 +156,8 @@ body{
       width: 100%;
 
       .inner-blocks{
+        -webkit-transition: opacity 0.5s ;
+        -o-transition: opacity 0.5s ;
         transition: opacity 0.5s ;
         display: block;
         float: left;

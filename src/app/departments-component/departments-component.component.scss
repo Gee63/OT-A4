@@ -13,13 +13,14 @@ $font3: 'aileronregular';
   .inner {
     width: 100%;
 
-
     .department {
       display: inline-block;
       margin: auto;
       padding-top: 20px;
       vertical-align: top;
       cursor: pointer;
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
       transform: scale(0.9);
 
       .icon {
@@ -31,6 +32,8 @@ $font3: 'aileronregular';
         img {
           width: 80px;
           position: relative;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
           transform: translateY(-50%);
           top: 50%;
         }
@@ -44,6 +47,8 @@ $font3: 'aileronregular';
           display: block;
           position: relative;
           top: 50%;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
           transform: translateY(-50%);
           line-height: 0.7;
         }
@@ -62,6 +67,8 @@ $font3: 'aileronregular';
         }
       }
       &:hover {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
         transform: scale(1);
       }
     }
@@ -77,16 +84,15 @@ $font3: 'aileronregular';
     }
   }
 
-    &.whatwedo {
-      background-color: #6cb4df;
-      .inner{
-        min-width: 1270px;
-        .department{
-          width: 180px;
-        }
+  &.whatwedo {
+    background-color: #6cb4df;
+    .inner {
+      min-width: 1270px;
+      .department {
+        width: 180px;
       }
     }
-
+  }
 
 }
 
@@ -97,7 +103,8 @@ $font3: 'aileronregular';
 
       .inner {
         .department {
-          webkit-transform: scale(1);
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
           transform: scale(1);
           float: left;
 
@@ -126,31 +133,32 @@ $font3: 'aileronregular';
       }
 
     }
-    &.careers{
-      .inner{
+    &.careers {
+      .inner {
         min-width: 930px;
-        .department{
+        .department {
           padding-top: 10px;
           width: 130px;
 
           .name {
             height: 60px;
-            span{
-            font-family: $font2;
-            font-size: 20px;
-            line-height: 1;
-          }}
+            span {
+              font-family: $font2;
+              font-size: 20px;
+              line-height: 1;
+            }
+          }
 
-          .icon{
+          .icon {
             width: 110px;
             height: 110px;
 
-            img{
+            img {
               width: 65px;
             }
           }
         }
       }
-       }
+    }
   }
 }

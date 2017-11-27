@@ -51,6 +51,10 @@
   #apply-form-container .show {
     display: block !important; }
 
+@keyframes autofill {
+  to {
+    color: #666;
+    background: #e2e2e2; } }
 @-webkit-keyframes autofill {
   to {
     color: #666;

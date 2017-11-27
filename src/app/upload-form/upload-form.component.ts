@@ -13,6 +13,7 @@ import * as firebase from 'firebase';
 export class UploadFormComponent implements OnInit {
 
   form: FormGroup;
+  dataLayer;
 
   constructor( private fb: FormBuilder, private af: AngularFireModule, private db: AngularFireDatabase) {
 
@@ -72,11 +73,17 @@ export class UploadFormComponent implements OnInit {
 
         this.saveFileData(upload);
 
+
+        (<any>window).dataLayer.push({
+          'event':'apply_success'
+        });
+
         (<HTMLInputElement>document.getElementById('applicantForm')).classList.add('hide');
         (<HTMLInputElement>document.getElementById('formThanks')).classList.add('show');
       }
     );
   }
+  
 
 
   // Writes the file details to the realtime db

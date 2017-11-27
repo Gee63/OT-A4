@@ -20,6 +20,8 @@ $nav-font-family: aileronregular;
     background-repeat: no-repeat;
     position: absolute;
     left: 20px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     top: 50%;
     outline: none;
@@ -27,6 +29,8 @@ $nav-font-family: aileronregular;
 
   .links{
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     position: absolute;
     right: 0;

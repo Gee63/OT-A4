@@ -22,7 +22,11 @@ body {
       height: 0; }
     #culture-container .block.scrolledAnimate .text.textAnimate {
       opacity: 1;
+      -webkit-transition: 0.2s ease-in-out;
+      -o-transition: 0.2s ease-in-out;
       transition: 0.2s ease-in-out;
+      -webkit-transition-delay: 0.2s;
+      -o-transition-delay: 0.2s;
       transition-delay: 0.2s; }
     #culture-container .block.scrolledAnimate .icon {
       top: -20px; }
@@ -32,7 +36,11 @@ body {
       height: 0; }
     #culture-container .block.textAnimate:hover .textAnimate {
       opacity: 1;
+      -webkit-transition: 0.2s ease-in-out;
+      -o-transition: 0.2s ease-in-out;
       transition: 0.2s ease-in-out;
+      -webkit-transition-delay: 0.2s;
+      -o-transition-delay: 0.2s;
       transition-delay: 0.2s; }
     #culture-container .block.textAnimate:hover .icon {
       top: -20px; }
@@ -46,6 +54,8 @@ body {
       #culture-container .block .header.iconHeader {
         top: 15%;
         position: relative;
+        -webkit-transition: 0.2s linear;
+        -o-transition: 0.2s linear;
         transition: 0.2s linear; }
     #culture-container .block .footer {
       margin: 0;
@@ -68,6 +78,8 @@ body {
       text-align: right; }
       #culture-container .block .text.textAnimate {
         opacity: 0;
+        -webkit-transition: 0s ease-in-out;
+        -o-transition: 0s ease-in-out;
         transition: 0s ease-in-out; }
     #culture-container .block .icon {
       margin: 20px auto;
@@ -75,6 +87,8 @@ body {
       width: 105px;
       top: 15%;
       position: relative;
+      -webkit-transition: 0.2s linear;
+      -o-transition: 0.2s linear;
       transition: 0.2s linear; }
     #culture-container .block .corner {
       background: url("../../assets/corner-graphic.png");
@@ -99,6 +113,8 @@ body {
       height: 100%;
       width: 100%; }
       #culture-container .block .inner-block .inner-blocks {
+        -webkit-transition: opacity 0.5s;
+        -o-transition: opacity 0.5s;
         transition: opacity 0.5s;
         display: block;
         float: left;

@@ -98,6 +98,8 @@ body {
     width: 100%; }
     #mobile .nav-bar .hamburger {
       position: absolute;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       top: 50%;
       margin-right: 10px;
@@ -138,6 +140,8 @@ body {
       margin: auto;
       width: 180px;
       height: 58px;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       top: 50%;
       position: relative; }
@@ -145,7 +149,9 @@ body {
         width: 100%;
         outline: none; }
     #mobile .nav-bar.open {
-      transition: 0 0.3s ease-out;
+      -webkit-transition: 0.3s ease-out;
+      -o-transition: 0.3s ease-out;
+      transition: 0.3s ease-out;
       left: 0; }
       #mobile .nav-bar.open .line1 {
         -webkit-animation: openMenuLine1 0.3s ease-out forwards;
@@ -160,6 +166,8 @@ body {
         -o-animation: openMenuLine3 0.3s ease-out forwards;
         animation: openMenuLine3 0.3s ease-out forwards; }
       #mobile .nav-bar.open #links span {
+        -webkit-transform: translateX(-80px);
+        -ms-transform: translateX(-80px);
         transform: translateX(-80px);
         line-height: 1; }
   #mobile .nav-slide {
@@ -223,6 +231,21 @@ body {
 @media screen and (max-width: 1024px) {
   #mobile {
     display: block; } }
+@-webkit-keyframes openMenuLine1 {
+  0% {
+    -ms-transform: rotate(0deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(0deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(0deg);
+    transform-origin: 20%; }
+  100% {
+    -ms-transform: rotate(45deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(45deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(45deg);
+    transform-origin: 20%; } }
 @keyframes openMenuLine1 {
   0% {
     -ms-transform: rotate(0deg);
@@ -238,12 +261,32 @@ body {
     -webkit-transform-origin: 20% 40%;
     transform: rotate(45deg);
     transform-origin: 20%; } }
+@-webkit-keyframes openMenuLine2 {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
 @keyframes openMenuLine2 {
   0% {
     opacity: 1; }
   100% {
     opacity: 0; } }
 @keyframes openMenuLine3 {
+  0% {
+    -ms-transform: rotate(0deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(0deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(0deg);
+    transform-origin: 20%; }
+  100% {
+    -ms-transform: rotate(-45deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(-45deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(-45deg);
+    transform-origin: 20%; } }
+@-webkit-keyframes openMenuLine3 {
   0% {
     -ms-transform: rotate(0deg);
     -ms-transform-origin: 20% 40%;
@@ -273,11 +316,46 @@ body {
     -webkit-transform-origin: 20% 40%;
     transform: rotate(0deg);
     transform-origin: 20%; } }
+@-webkit-keyframes closeMenuLine1 {
+  0% {
+    -ms-transform: rotate(45deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(45deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(45deg);
+    transform-origin: 20%; }
+  100% {
+    -ms-transform: rotate(0deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(0deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(0deg);
+    transform-origin: 20%; } }
+@-webkit-keyframes closeMenuLine2 {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 @keyframes closeMenuLine2 {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
+@-webkit-keyframes closeMenuLine3 {
+  0% {
+    -ms-transform: rotate(-45deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(-45deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(-45deg);
+    transform-origin: 20%; }
+  100% {
+    -ms-transform: rotate(0deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(0deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(0deg);
+    transform-origin: 20%; } }
 @keyframes closeMenuLine3 {
   0% {
     -ms-transform: rotate(-45deg);

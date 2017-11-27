@@ -160,6 +160,8 @@ $font1 : 'aileronlight';
     }
 
     &.showMap{
+      -webkit-transform: translateX(-100vw);
+      -ms-transform: translateX(-100vw);
       transform: translateX(-100vw);
     }
 
@@ -171,10 +173,13 @@ $font1 : 'aileronlight';
     left: -10%;
     top: -30px;
     position: absolute;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
 
 
     &.blur{
+      -webkit-filter: blur(20px);
       filter: blur(20px);
     }
   }

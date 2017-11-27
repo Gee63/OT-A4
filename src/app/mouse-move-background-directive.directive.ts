@@ -33,25 +33,47 @@ onMousemove(e: MouseEvent){
   console.log('this.mouseY',  mouseY);*/
 }
 
+  beta;
+  gamma;
+
   @HostListener("window:deviceorientation", ['$event'])
   OnDeviceMotion(e){
     console.log(e);
 
+    const initialBetaPostion = e.beta;
+    const initialGammaPostion = e.gamma;
+
     const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
 
-    const beta = e.beta / windowWidth * 500;
-    const gamma = e.gamma / windowWidth * 500;
+    this.beta = e.beta / windowWidth * 300;
+    this.gamma = e.gamma / windowHeight * 300;
 
-    // JS math works in radians, so convert
 
-    this.mouseMoveX.emit(gamma);
-    this.mouseMoveY.emit(beta);
+    if(this.beta > 40){
+      this.beta = 40;
+    }
 
-    console.log("change");
+    if(this.beta < -40){
+      this.beta = -40;
+    }
+
+    if(this.gamma > 40){
+      this.gamma = 40
+    }
+
+    if(this.gamma < -40){
+      this.gamma = -40
+    }
+
+
+    this.mouseMoveX.emit(this.gamma);
+    this.mouseMoveY.emit(this.beta);
 
   }
 
 }
+
 
 
 

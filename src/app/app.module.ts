@@ -32,7 +32,6 @@ import { UploadFormComponent } from './upload-form/upload-form.component';
 import { ContactShowMapDirectiveDirective } from './contact-show-map-directive.directive';
 import { AuthComponentComponent } from './auth-component/auth-component.component';
 import { MouseMoveBackgroundDirectiveDirective } from './mouse-move-background-directive.directive';
-import { AccelerometerDirectiveDirective } from './accelerometer-directive.directive';
 
 
 @NgModule({
@@ -52,8 +51,7 @@ import { AccelerometerDirectiveDirective } from './accelerometer-directive.direc
     UploadFormComponent,
     ContactShowMapDirectiveDirective,
     AuthComponentComponent,
-    MouseMoveBackgroundDirectiveDirective,
-    AccelerometerDirectiveDirective
+    MouseMoveBackgroundDirectiveDirective
   ],
   imports: [
     BrowserModule,
