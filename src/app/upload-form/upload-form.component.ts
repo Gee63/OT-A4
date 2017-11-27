@@ -73,7 +73,7 @@ export class UploadFormComponent implements OnInit {
 
         this.saveFileData(upload);
 
-
+        //GTM DataLayer Event
         (<any>window).dataLayer.push({
           'event':'apply_success'
         });
@@ -83,7 +83,7 @@ export class UploadFormComponent implements OnInit {
       }
     );
   }
-  
+
 
 
   // Writes the file details to the realtime db

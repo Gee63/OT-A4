@@ -43,6 +43,11 @@ export class CareersComponentComponent implements OnInit  {
   closeModal(){
     document.getElementById('modal').classList.remove('active');
     (<HTMLElement>document.getElementById('body')).classList.remove('no-scroll');
+
+    //GTM DataLayer Event
+    (<any>window).dataLayer.push({
+      'event':'vacancy_close'
+    });
   }
 
   applyModal(job){
