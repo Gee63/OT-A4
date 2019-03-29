@@ -1,5 +1,9 @@
 # OsirisWebsite
 
+Visit https://gee63.github.io/OT-A4/home
+
+This was a concept for my companies website. Not 100% Complete. Design was taken in a different direction near the end of the build.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.5.
 
 ## Development server
